@@ -28,6 +28,7 @@ jobs:
         run: |
           .venv/bin/python strumenti/controlla_coperture.py
           .venv/bin/python strumenti/controlla_fonti.py
+          .venv/bin/python strumenti/istantanea.py
 
       - name: Build HTML, PDF (Typst) e DOCX
         run: quarto render

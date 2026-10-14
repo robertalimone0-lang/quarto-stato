@@ -93,6 +93,14 @@ Programma politico del partito Quarto Stato, redatto come un business plan pubbl
 - Modello del debito: base tendenziale del DPFP del 2 ottobre 2026; il programmatico con la clausola per la difesa è uno scenario di confronto. Avanzo aggiuntivo anno per anno dal modello del programma.
 - Grafici rigenerati nella build dai dati aggiornati; le versioni del 9 ottobre 2026 non entrano nel documento.
 
+## Volume tecnico «Simulazioni e quadro di finanza pubblica»
+- Volume separato dal libro del programma, stesso sistema di build. Tutte le tabelle sono generate dal modello (`quadro(variante)`) e dai CSV, senza numeri scritti a mano; il controllo «nessun numero senza fonte» vale anche qui. Struttura: 1) metodo e regole del modello; 2) scenari centrale, prudente e avverso, con e senza riconoscimento dell'evasione; 3) sensibilità; 4) registro delle decisioni D con opzioni provate, numeri e motivo della scelta, comprese le scartate (varianti in `dati/decisioni.yaml`); 5) fonti e stato di validazione; 6) riproducibilità.
+- Capitolo 1: sezione «Perimetro del quadro», cosa contiene il tendenziale DPFP e cosa resta fuori (politiche invariate e misure in scadenza, strutture PNRR dopo il 2026, rimborso NGEU e bilancio UE 2028–2034, pensioni, passività potenziali, drenaggio fiscale, una tantum, dividendi, ETS ed ETS2, difesa al 2% del PIL come scelta dichiarata, D29), con stima d'ordine di grandezza e fonte primaria per ogni lacuna.
+- Capitolo 3: oltre alla sensibilità su un'ipotesi alla volta, uno scenario combinato (crescita bassa, spread alto, recupero dall'evasione al minimo, riordino più lento, ipotesi da validare ai valori peggiori) con l'effetto su Priorità 1, Priorità 2, coda e debito al 2031.
+- Finché ci sono voci V aperte il volume esce come «versione di lavoro», con l'hash del commit e il numero di voci da validare in copertina.
+- Test di non regressione (`strumenti/istantanea.py`) nei controlli della build: il modello deve riprodurre esattamente `strumenti/istantanea_riferimento.json`. Ogni aggiornamento del riferimento con `--salva` va in un commit che indica il codice della decisione che lo giustifica, il numero di valori cambiati e un riepilogo delle differenze principali (stampato da `--salva`).
+- Ordine di lavoro: 1) modello parametrico e test (fatto); 2) verifica del perimetro; 3) modulo della scuola e funzioni per prima casa, cedolare e forfettario; 4) ossatura del volume; 5) capitoli, uno alla volta.
+
 ## Come lavorare
 - Prima di scrivere o modificare file, mostra il piano e attendi l'approvazione.
 - Una sezione alla volta.

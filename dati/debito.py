@@ -14,8 +14,8 @@ except ImportError:
 ANNI = list(range(2025, 2033))
 
 
-def _quadro(nome):
-    q = {int(r["anno"]): r for r in M.DPFP if r["quadro"] == nome}
+def _quadro(nome, m=None):
+    q = {int(r["anno"]): r for r in (m or M).DPFP if r["quadro"] == nome}
     d = {y: float(q[y]["debito_pil"]) / 100 for y in q}
     g = {y: float(q[y]["crescita_pil_nominale"]) / 100 for y in q}
     s = {y: float(q[y]["saldo_primario"]) / 100 for y in q}
@@ -29,9 +29,9 @@ def _quadro(nome):
     return d, g, s, i, sf
 
 
-def percorso(quadro="tendenziale", ds=None, dg=0.0, dg_da=2029, shock=0.0, shock_da=2028, vita=7.9):
-    """Debito/PIL in percentuale. ds: avanzo aggiuntivo in quota di PIL per anno."""
-    d0, g, s, i, sf = _quadro(quadro)
+def percorso(quadro="tendenziale", ds=None, dg=0.0, dg_da=2029, shock=0.0, shock_da=2028, vita=7.9, m=None):
+    """Debito/PIL in percentuale. ds: avanzo aggiuntivo in quota di PIL per anno. m: quadro (None = programma)."""
+    d0, g, s, i, sf = _quadro(quadro, m)
     d = {2025: d0[2025]}
     for y in range(2026, 2033):
         gg = g[y] + (dg if y >= dg_da else 0.0)
@@ -40,25 +40,27 @@ def percorso(quadro="tendenziale", ds=None, dg=0.0, dg_da=2029, shock=0.0, shock
     return {y: 100 * v for y, v in d.items()}
 
 
-def avanzo_programma(s, confronto=False):
-    _, fl = M.flussi(s, confronto)
-    return {y: fl[y]["saldo"] / M.PIL[y] for y in M.Y}
+def avanzo_programma(s, confronto=False, m=None):
+    m = m or M
+    _, fl = m.flussi(s, confronto)
+    return {y: fl[y]["saldo"] / m.PIL[y] for y in m.Y}
 
 
-def avanzo_avverso_con_salvaguardia():
-    _, fl = M.flussi("avverso")
-    sv = M.salvaguardia()
-    return {y: (fl[y]["saldo"] + sv[y]["g2"] + sv[y]["g3"] + sv[y]["g4"]) / M.PIL[y] for y in M.Y}
+def avanzo_avverso_con_salvaguardia(m=None):
+    m = m or M
+    _, fl = m.flussi("avverso")
+    sv = m.salvaguardia()
+    return {y: (fl[y]["saldo"] + sv[y]["g2"] + sv[y]["g3"] + sv[y]["g4"]) / m.PIL[y] for y in m.Y}
 
 
-def scenari():
-    t = percorso()
-    out = {"Tendenziale DPFP": t, "Programmatico DPFP (confronto)": percorso("programmatico")}
-    out["Programma, centrale"] = percorso(ds=avanzo_programma("centrale"))
-    out["Programma, prudente"] = percorso(ds=avanzo_programma("prudente"))
-    out["Programma, avverso con salvaguardia"] = percorso(ds=avanzo_avverso_con_salvaguardia())
-    out["Programma, centrale con piu crescita"] = percorso(ds=avanzo_programma("centrale"), dg=0.003)
-    out["Programma, centrale con stress sui tassi"] = percorso(ds=avanzo_programma("centrale"), shock=0.01)
+def scenari(m=None):
+    t = percorso(m=m)
+    out = {"Tendenziale DPFP": t, "Programmatico DPFP (confronto)": percorso("programmatico", m=m)}
+    out["Programma, centrale"] = percorso(ds=avanzo_programma("centrale", m=m), m=m)
+    out["Programma, prudente"] = percorso(ds=avanzo_programma("prudente", m=m), m=m)
+    out["Programma, avverso con salvaguardia"] = percorso(ds=avanzo_avverso_con_salvaguardia(m), m=m)
+    out["Programma, centrale con piu crescita"] = percorso(ds=avanzo_programma("centrale", m=m), dg=0.003, m=m)
+    out["Programma, centrale con stress sui tassi"] = percorso(ds=avanzo_programma("centrale", m=m), shock=0.01, m=m)
     return out
 
 
