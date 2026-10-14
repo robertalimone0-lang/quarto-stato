@@ -248,3 +248,43 @@ File: `dati/spese_fiscali/base_quattro_categorie.csv`, con il motivo di ogni voc
 Nella variante senza riconoscimento la Priorità 2 coperta nel 2031 scende quindi a circa 3,6 miliardi.
 
 **Saldo 2027 nello scenario avverso:** −0,95 miliardi, chiuso con il gradino 4 della salvaguardia (rinvio dei nuovi ingressi della Priorità 1) su una Priorità 1 del 2027 di 5,72 miliardi. Decisione dell'autrice del 14 ottobre 2026.
+
+## 10. Prima casa: decisione D23 (mercoledì 14 ottobre 2026)
+
+**Misura.** La rendita dell'abitazione principale diventa imponibile in modo graduale lungo una curva continua del reddito complessivo: zero fino a 60.000 euro, piena imponibilità a 150.000 euro e oltre.
+- Gettito statico: circa 0,37 miliardi.
+- Contribuenti interessati: 1,37 milioni.
+- La curva è **rivedibile con la riforma del catasto**: con rendite aggiornate ai valori di mercato, la soglia può spostarsi dal reddito al valore dell'immobile.
+
+**Classificazione.** La voce 187 (3,76 miliardi) si divide in due:
+- quota dei redditi fino a 60.000 euro: 3,05 miliardi, strutturale, non si tocca;
+- quota oltre 60.000 euro: 0,71 miliardi, aggredibile come voce sensibile aperta per decisione dell'autrice. La curva ne recupera 0,37.
+
+| Categoria (2028) | Miliardi |
+|---|---|
+| Escluse per equità o decisione | 32,4 |
+| Strutturali | 8,7 |
+| Vincolate | 19,2 |
+| Aggredibili | 22,2 |
+| Voci minori | 2,2 |
+| **Totale** | **84,7** |
+
+**Base del profilo A:** 5,22 miliardi (4,85 più 0,37), con lo stesso aumento lineare del 20% l'anno, a regime nel 2031.
+
+| Grandezza | Valore |
+|---|---|
+| Priorità 2 coperta per anno, 2027–2031 | 0,33 / 4,57 / 6,16 / 6,16 / 6,97 |
+| Priorità 2 rinviata in coda | 10,4 |
+| Margine prudente | ≥ 0 ogni anno |
+| Saldo 2027 avverso (chiuso con il rinvio dei nuovi ingressi della Priorità 1) | −0,93 |
+| Debito 2031: centrale / prudente / avverso con salvaguardia | 131,9 / 133,35 / 133,6 |
+
+**Gradini della D22 con base 5,22** (variante senza riconoscimento, prudente, miliardi)
+
+| Anno | Scarto dopo la Riforma 1 | a) Sussidi | b) Spending | c) Cedolare | d) Bonus | e) Slittamento | Priorità 2 coperta prima / dopo |
+|---|---|---|---|---|---|---|---|
+| 2027 | +0,44 | — | — | — | — | — | 0,33 / 0,33 |
+| 2028 | −1,15 | — | — | — | 0,05 | 1,10 | 4,57 / 3,52 |
+| 2029 | −2,69 | 0,85 | 0,65 | — | 0,11 | 1,08 | 6,16 / 5,13 |
+| 2030 | −4,05 | 0,85 | 0,65 | — | 0,16 | 2,39 | 6,16 / 3,88 |
+| 2031 | −4,80 | 0,85 | 0,65 | — | 0,21 | 3,09 | 6,97 / 4,03 |
