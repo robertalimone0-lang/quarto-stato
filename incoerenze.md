@@ -69,5 +69,25 @@ Chiusi il 14 ottobre 2026:
 - **I10.** Il cofinanziamento nazionale degli investimenti è trattato come cofinanziamento di programmi UE ed escluso dalla spesa netta. Va verificato voce per voce: i prestiti BEI restano nella spesa netta.
 - **I11.** Le riduzioni di spesa (spending review, affitti passivi, incentivi, risparmi dell'audit sanitario e della Riforma 18) abbassano direttamente la spesa netta.
 
-- **V21. Elenco delle spese fiscali per la riserva condizionata.** Va costruito sul Rapporto annuale sulle spese fiscali del MEF, con beneficio medio per decile di reddito.
+- **V21. Elenco delle spese fiscali per la riserva condizionata.** Il Rapporto annuale sulle spese fiscali 2025 del MEF (giugno 2026, 573 misure) dà costo, frequenza e beneficio pro capite, ma non la distribuzione per reddito. La distribuzione per decili è stata calcolata sulle statistiche delle dichiarazioni 2025 (anno d'imposta 2024) del Dipartimento delle Finanze, per ventili di reddito complessivo. Limiti:
+  - i dati precedono le regole in vigore dal 2025 (tetto alle detrazioni per i redditi oltre 75.000 euro e aliquote ridotte dei bonus edilizi, L. 207/2024), già incluse nel tendenziale: il gettito va ricalcolato sulle regole vigenti;
+  - le detrazioni edilizie ed energetiche si fruiscono in rate decennali; applicare la riduzione solo alle spese future rende il gettito graduale, applicarla anche alle rate in corso solleva un problema di affidamento;
+  - il gettito delle deduzioni è stimato con l'aliquota marginale per ventile.
+- **D21. Rapporto tra riserva e base del riordino.** La base di 11 miliardi non ha ancora l'elenco nominativo (Giorno 2 del calendario di revisione mai svolto). Le voci della riserva vanno tenute fuori dalla base, oppure base e riserva vanno costruite insieme.
 - **V22. Riconoscimento della Riforma 1.** Le quote del 75% e del 50% sono una proposta prudente della redazione, da negoziare con la Commissione nel Piano rivisto e da validare con l'UPB.
+
+## Spese fiscali e riserva (mercoledì 14 ottobre 2026)
+
+- **D22 (decisa: ordine dei gradini). Scarto della riserva.** La curva continua sui bonus edilizi, applicata solo alle spese nuove e al netto del tetto della L. 207/2024, rende circa 54 milioni per ogni annualità di spese: 0,21 miliardi nel 2031, 0,43 nel 2035. Nella variante senza riconoscimento la riserva (sussidi dannosi 0,85, spending review 0,65 e curva, valori prudenti) copre 1,61 miliardi nel 2029, 1,66 nel 2030 e 1,71 nel 2031, contro un fabbisogno di 1,32, 3,58 e 4,43. Scarto: +0,29 nel 2029, −1,92 nel 2030, −2,72 nel 2031.
+- **V23. Gettito del tetto L. 207/2024.** La relazione tecnica non lo espone separatamente. Il valore di 79 milioni per annualità è dedotto dalla crescita annua della riga IRPEF nella tabella degli effetti dei commi 9 e 10.
+- **V24. Flusso delle spese nuove.** Il gettito a regime della curva usa un fattore del 55% (forbice 40–70%) tra il flusso annuo di detrazioni con le regole vigenti (aliquote ridotte dalla L. 207/2024) e lo stock 2024. Da validare con il Dipartimento delle Finanze.
+- **V25. Totale delle spese fiscali.** Il Rapporto 2025 indica 122,6 miliardi nel 2026 per 573 misure; le sorgenti usavano 119 miliardi (2025). La base del riordino resta fissata a 11 miliardi nominali.
+- **S11. Regime forfettario.** Il reddito forfettario non entra nel reddito complessivo, quindi le tavole per ventile non ne descrivono la distribuzione. Servono le tavole sul quadro LM o l'Osservatorio sulle partite IVA.
+- **S12. Redditi finanziari.** Tassati quasi solo alla fonte: non compaiono nelle dichiarazioni e il Rapporto non li censisce come spesa fiscale, salvo i PIR (103 milioni). Per la distribuzione serve l'Indagine sui bilanci delle famiglie della Banca d'Italia.
+
+## Verifica della base (mercoledì 14 ottobre 2026)
+
+- **D23. Base del riordino non ricostruibile.** Con le esclusioni decise, la base realistica vale circa 5,1 miliardi contro 11. Conseguenze: Priorità 2 coperta nel 2031 da 11,4 a 6,9 miliardi; quota in coda da 6,0 a 10,5; saldo avverso 2027 di nuovo negativo (−0,59). Dettaglio in `incoerenze/report-riserva.md`.
+- **D24.** La voce 152 (maggiorazione per nuove assunzioni, 1,33 miliardi) è usata due volte: riordino degli incentivi della Riforma 19 e Piano Lavoro Stabile. Va assegnata a una sola misura.
+- **V26. Risposta comportamentale alla cedolare.** Evidenze sul 2011 solo da stampa; sconto del 30–50% ipotizzato. Manca uno studio primario.
+- **V27. Estrazione del Rapporto 2025.** Il parser ricostruisce 126,7 miliardi di effetti 2026 contro 129,7 ufficiali; 326 misure quantificate lette contro 406. Le voci minori (256 misure, 2,2 miliardi) vanno elencate una per una.
