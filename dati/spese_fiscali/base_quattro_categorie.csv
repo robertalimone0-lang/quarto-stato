@@ -4,7 +4,7 @@ n,classe,voce,effetto_2028_mln,effetto_2026_mln,tributo,missione,categoria,motiv
 304,E,Assegno unico non imponibile,5715.6,-5648.0,IRPEF,"24 DIRITTI SOCIALI, POLITICHE SOCIALI E FAMIGLIA",equita,esclusa per decisione gia presa
 233,K,Spese sanitarie al 19% (solo sopra la soglia ISEE),4873.9,-4873.9,IRPEF,20 TUTELA DELLA SALUTE,equita,sotto la soglia ISEE esclusa; la parte sopra soglia e aggredibile solo con decisione esplicita
 398,E,"Pensioni di guerra, invalidita e rendite esenti",3918.3,-3918.3,IRPEF,26 POLITICHE PER IL LAVORO,equita,esclusa per decisione gia presa
-187,K,Deduzione della rendita dell'abitazione principale,3762.8,-3762.8,IRPEF,19 CASA E ASSETTO URBANISTICO,strutturale,non tassare la rendita figurativa della casa in cui si abita e una regola del disegno IRPEF; non si tocca
+187,K,Deduzione della rendita dell'abitazione principale,3762.8,-3762.8,IRPEF,19 CASA E ASSETTO URBANISTICO,strutturale,"regola del disegno IRPEF; opzione aperta (D23): curva sui redditi oltre 60.000 euro, circa 0,37 miliardi statici"
 550,S,Regime forfettario,3490.8,-3490.8,,29 POLITICHE ECONOMICO-FINANZIARIE E DI BILANCIO E TUTELA DELLA FINANZA PUBBLICA,aggredibile,regime sostitutivo: solo con decisione esplicita
 208,S,Cedolare secca,3353.9,-3353.9,,19 CASA E ASSETTO URBANISTICO,aggredibile,regime sostitutivo: solo con decisione esplicita
 391,E,Previdenza complementare,2830.0,-2830.0,IRPEF,25 POLITICHE PREVIDENZIALI,equita,esclusa per decisione gia presa
@@ -24,7 +24,7 @@ n,classe,voce,effetto_2028_mln,effetto_2026_mln,tributo,missione,categoria,motiv
 434,K,Premi di produttivita al 5%,815.3,-815.3,IRPEF,26 POLITICHE PER IL LAVORO,aggredibile,sensibile: fuori dalla base proposta salvo decisione
 139,C,Riallineamento fiscale dell'avviamento,814.3,-2200.3,,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,
 277,K,Spese di istruzione al 19%,737.2,-737.2,IRPEF,21 TUTELA E VALORIZZAZIONE DEI BENI E ATTIVITA’ CULTURALI E PAESAGGISTICI,aggredibile,sensibile: fuori dalla base proposta salvo decisione
-215,R,Bonus mobili (riserva sulle spese nuove),660.8,-790.9,IRPEF,19 CASA E ASSETTO URBANISTICO,aggredibile,"voce della riserva, sulle sole spese nuove"
+215,R,Bonus mobili (riserva sulle spese nuove),660.8,-790.9,IRPEF,19 CASA E ASSETTO URBANISTICO,vincolata,rate del bonus mobili gia avviate: legittimo affidamento; la riserva colpisce solo le spese nuove
 425,C,Compensi sportivi dilettantistici esenti,651.6,-651.6,IRPEF,26 POLITICHE PER IL LAVORO,aggredibile,
 388,C,Sostitutiva sulle prestazioni svizzere di prepensionamento,563.7,-563.7,,25 POLITICHE PREVIDENZIALI,vincolata,prestazioni svizzere di prepensionamento: possibile vincolo convenzionale con la Svizzera; tolta dalla base finche non verificato
 214,L,"Sismabonus acquisti, rate in corso",558.7,-10162.4,IRPEF,19 CASA E ASSETTO URBANISTICO,vincolata,rate di bonus edilizi gia avviati: legittimo affidamento

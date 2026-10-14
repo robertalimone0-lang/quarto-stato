@@ -207,3 +207,44 @@ File: `dati/spese_fiscali/base_quattro_categorie.csv`, con il motivo di ogni voc
 - Nello scenario avverso il buco del 2027 (−0,95) riguarda la Priorità 1 stessa, perché la Priorità 2 del 2027 è già quasi nulla. Va chiuso con il gradino 4 della salvaguardia (rinvio dei nuovi ingressi) o con un avvio più lento della sanità e del welfare nel 2027.
 - Il debito cambia di pochi decimi.
 - La quota della Priorità 2 in coda sale a 10,7–12,1 miliardi.
+
+## 9. Correzioni e verifiche richieste (secondo controllo)
+
+**Riconciliazione dei totali.** Le voci classificate (70) valgono 82,49 miliardi, le voci minori (256) 2,19: insieme 84,68, il totale 2028 delle sole misure quantificate. I "2 miliardi mancanti" erano le voci minori, omesse nella tabella in quattro categorie. Il confronto va fatto con questi 84,7 miliardi, non con i 129,7 del totale 2026 (che comprende le rate decrescenti dei bonus edilizi).
+
+**Quattro categorie corrette (2028, miliardi)**
+
+| Categoria | Miliardi |
+|---|---|
+| Escluse per equità o decisione | 32,4 |
+| Strutturali | 9,5 |
+| Vincolate | 19,2 (comprende ora il bonus mobili) |
+| Aggredibili | 21,5 |
+| Voci minori, da classificare una per una | 2,2 |
+| **Totale** | **84,7** |
+
+**La "riserva 0,7".** Era la voce 215, cioè le rate del bonus mobili già avviate. La riserva colpisce solo le spese nuove, quindi quelle rate sono vincolate per legittimo affidamento e ora stanno in quella categoria. La riserva del 13,1% sulle spese fiscali non esiste più.
+
+**Sussidi dannosi.** Le voci 64 e 461 (agevolazioni sulle accise, 1,35 miliardi) sono fuori dalla base del riordino, quindi con la base non c'è doppio conteggio. Il rischio esiste però dentro i sussidi dannosi: la copertura di base (6 miliardi netti) e il gradino a) (+1 miliardo) attingono allo stesso catalogo del Ministero dell'Ambiente, che non ha ancora un elenco nominativo. Finché non c'è, il controllo automatico non può escludere che la stessa accisa finanzi entrambi (V29).
+
+**Prima casa (D23 riaperta).** La classificazione "non si tocca" valeva per un taglio generalizzato. Una curva che renda imponibile in modo graduale la rendita dell'abitazione principale per i redditi tra 60.000 e 150.000 euro (piena oltre 150.000) riguarda 1,37 milioni di contribuenti e vale circa 0,37 miliardi statici: rendita non imponibile oltre 60.000 euro pari a 1,56 miliardi, all'aliquota marginale con le addizionali. Una curva sui valori catastali alti non si può stimare con le tavole delle dichiarazioni: servono i dati del catasto. Le imposte d'acquisto sulla prima casa (registro, ipotecaria, catastale) non hanno dati per reddito. La scelta resta all'autrice.
+
+**Confronto storico integrato**
+- *Superbonus:* è una spesa fiscale censita dal Rapporto (voce 211). La riduzione dell'aliquota dal 110% al 90% (DL 176/2022), poi al 70% e al 65%, e lo stop alla cessione dei crediti (DL 11/2023, poi DL 39/2024) sono tagli di ordine miliardario a una singola agevolazione. Le relazioni tecniche con gli importi non sono state reperite in questa sessione (V30). Sono interventi d'emergenza su una misura fuori controllo e producono effetti soprattutto sulle spese future.
+- *ACE:* non è tra le spese fiscali del Rapporto 2023 (verificato sul testo). La sua abrogazione (D.Lgs. 216/2023) è un ampliamento di base di ordine miliardario ma fuori dal perimetro; importo da validare.
+
+**Conclusione.** Il "massimo storico di 1 miliardo" regge solo per i riordini trasversali delle detrazioni. Tagli singoli di ordine miliardario sono avvenuti (Superbonus). La difficoltà del profilo A sta altrove: chiede circa 0,97 miliardi in più ogni anno (20% di 4,85, crescita lineare) per cinque anni consecutivi, cosa mai avvenuta.
+
+**Gradini della D22 con base 4,85 e profilo A** (variante senza riconoscimento, prudente, miliardi)
+
+| Anno | Scarto | Dopo la Riforma 1 legislativa | a) Sussidi | b) Spending | c) Cedolare | d) Bonus | e) Slittamento della Priorità 2 | Priorità 2 coperta prima / dopo |
+|---|---|---|---|---|---|---|---|---|
+| 2027 | +0,41 | +0,41 | — | — | — | — | — | 0,31 / 0,31 |
+| 2028 | −2,12 | −1,16 | — | — | — | 0,05 | 1,11 | 4,45 / 3,34 |
+| 2029 | −4,58 | −2,65 | 0,85 | 0,65 | — | 0,11 | 1,05 | 5,93 / 4,88 |
+| 2030 | −6,96 | −4,07 | 0,85 | 0,65 | — | 0,16 | 2,41 | 5,93 / 3,52 |
+| 2031 | −8,67 | −4,82 | 0,85 | 0,65 | — | 0,21 | 3,11 | 6,69 / 3,58 |
+
+Nella variante senza riconoscimento la Priorità 2 coperta nel 2031 scende quindi a circa 3,6 miliardi.
+
+**Saldo 2027 nello scenario avverso:** −0,95 miliardi, chiuso con il gradino 4 della salvaguardia (rinvio dei nuovi ingressi della Priorità 1) su una Priorità 1 del 2027 di 5,72 miliardi. Decisione dell'autrice del 14 ottobre 2026.
