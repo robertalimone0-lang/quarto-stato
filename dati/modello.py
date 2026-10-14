@@ -193,8 +193,12 @@ def salvaguardia(primo=2028):
     base_p2, base_p1 = P2[primo - 1], p1(primo - 1)
     for y in Y:
         buco = margine_fase1(s, y)
-        if y < primo or buco >= 0:
-            righe[y] = dict(buco=buco, g1=0.0, g2=0.0, g3=0.0, g4=0.0, residuo=min(0.0, buco))
+        if buco >= 0:
+            righe[y] = dict(buco=buco, g1=0.0, g2=0.0, g3=0.0, g4=0.0, residuo=0.0)
+            continue
+        if y < primo:  # primo anno: solo il rinvio dei nuovi ingressi della Priorita 1 (gradino 4)
+            g4 = min(-buco, p1(y) * MULT[s])
+            righe[y] = dict(buco=buco, g1=0.0, g2=0.0, g3=0.0, g4=g4, residuo=min(0.0, buco + g4))
             continue
         tardive = sum(float(r["costo_regime"]) * rampa(r["rampa"])[y] for r in _TARDIVE) * P2[y] / p2_fabbisogno(y) * MULT[s]
         cap = [0.0, tardive, max(0.0, (P2[y] - base_p2) * MULT[s] - tardive), max(0.0, (p1(y) - base_p1) * MULT[s])]

@@ -89,7 +89,7 @@ La regola di fondo è una sola: **lo scenario prudente chiude ogni anno con un m
 
 ## Priorità e calendario di avvio {#sec-priorita}
 
-Le spese hanno due livelli.
+Le spese hanno due livelli. In ogni slittamento le stabilizzazioni degli insegnanti slittano per ultime.
 
 - **Priorità 1, diritti essenziali:** salute, welfare e povertà, giustizia, carceri, contrasto alle mafie, tutele per chi evade per sopravvivere. Parte per prima e non si taglia.
 - **Priorità 2, trasformazioni:** scuola, pensioni, lavoro, casa, contrasto all'evasione, calmiere dei prezzi, Stato digitale, investimenti. Cresce nei limiti dello scenario prudente.
@@ -98,7 +98,9 @@ Il calendario della prima legge di bilancio segue tre regole.
 
 1. **Tutte le coperture di classe A e B si approvano nella prima legge di bilancio**, con un calendario pubblico di soppressione delle agevolazioni. Il costo politico è concentrato nel primo anno: tutte le categorie che perdono un'agevolazione si oppongono nello stesso momento. Il programma lo accetta perché anticipa le risorse: con questa scelta la Priorità 2 coperta nel 2028 arriva a `{python} it(M.P2[2028], 1)` miliardi.
 2. **La Priorità 2 del 2027 parte dal 1° luglio 2027**, dopo la prima certificazione trimestrale delle coperture.
-3. **Il cofinanziamento degli investimenti di Fase 1 parte nel 2028.** La regola è fissa e non dipende dai dati del primo trimestre. Con queste due regole il saldo del 2027 è positivo anche nello scenario avverso: `{python} it(M.margine_fase1("avverso", 2027), 2, segno=True)` miliardi.
+3. **Il cofinanziamento degli investimenti di Fase 1 parte nel 2028.** La regola è fissa e non dipende dai dati del primo trimestre.
+
+Nello scenario avverso il 2027 resta scoperto per `{python} it(-M.margine_fase1("avverso", 2027), 2)` miliardi anche con queste regole, perché le coperture del primo anno sono basse. Lo scarto si chiude con il rinvio dei nuovi ingressi della Priorità 1, il quarto gradino della salvaguardia, che scatta solo in quello scenario; un avvio più lento di sanità e welfare costerebbe invece in tutti gli scenari.
 
 ## L'attivazione condizionata {#sec-attivazione}
 
@@ -149,7 +151,7 @@ righe = [(y, it(r["buco"], 2, segno=True), it(r["g1"], 2), it(r["g2"], 2), it(r[
 Markdown(tabella_md(["Anno", "Saldo prima", "1. Coda", "2. P2 non avviata", "3. P2 rallentata", "4. Nuovi ingressi P1", "Residuo"], righe))
 ```
 
-Il buco si chiude in ogni anno. Il peso ricade quasi per intero sul terzo gradino: nello scenario avverso la Priorità 2 resta ferma ai livelli del primo anno, e la Priorità 1 rinvia i nuovi ingressi per al massimo `{python} it(max(r["g4"] for r in avv.values()), 1)` miliardi l'anno.
+Il buco si chiude in ogni anno. Nel 2027 lo chiude il quarto gradino, perché il primo consuntivo non è ancora disponibile; dal 2028 il peso si divide tra il terzo e il quarto gradino: nello scenario avverso la Priorità 2 resta ferma ai livelli del primo anno, e la Priorità 1 rinvia i nuovi ingressi fino a `{python} it(max(r["g4"] for r in avv.values()), 1)` miliardi nel 2031, senza ridurre alcuna prestazione già riconosciuta.
 
 ## Certificazione e controllo indipendente {#sec-certificazione}
 
