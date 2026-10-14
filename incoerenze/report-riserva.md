@@ -552,3 +552,33 @@ Con l'opzione A la scuola torna dentro i 6,8 anche per i corsi se l'aumento scen
 | 7,5 | 9,8 | 9,7 | 8,7 | 6,6 | 8,7 | 6,3 |
 
 Nel 2020 la rilevazione non si è svolta. L'8,7% compare nel 2023 e nel 2025. Il calo del 2026 segue un aumento nel 2025. Rispetto al 2019, ultimo anno pre-pandemico, il 2026 è più basso di 1,2 punti.
+
+## 16. Voci scolastiche del Piano Lavoro Stabile (D28) (mercoledì 14 ottobre 2026)
+
+**Decise**
+- *Scuole difficili.* Assorbite nella M23. La M23 aggiunge il punteggio di carriera per chi resta almeno tre anni, senza costo. Le classi meno numerose restano non finanziate (S13). Perimetro: le 3.198 scuole del DM 170/2022; il 5% si sceglie sui valori INVALSI per scuola (richiesta in `incoerenze/richiesta-invalsi-v38.md`); fino ad allora vale l'ordinamento per quota del riparto per iscritto, dichiarato provvisorio.
+- *Tutor.* Il tutor dell'anno di prova esiste già: DM 226 del martedì 16 agosto 2022, art. 12, adottato ai sensi della L. 107/2015, art. 1, comma 118. Il dirigente designa un tutor ogni tre docenti in prova al massimo; il compenso è a carico delle risorse per il miglioramento dell'offerta formativa; l'attività entra nel fascicolo personale. In questa legislatura il programma aggiunge solo il punteggio di carriera per il tutor, senza costo. Le ore riconosciute passano alla seconda legislatura.
+- *Organico di rete.* Seconda legislatura, dichiarato nel capitolo sulla scuola come prossimo passo contro le supplenze brevi (0,5–0,6 miliardi netti secondo il file 07).
+
+**Contratti al 31 agosto (da decidere)**
+- *Platea.* Supplenze fino al termine residue in ciascun anno, dopo stabilizzazioni (perimetro 0,97) e mancati rinnovi. Dai dati MIM 2024/25 sono a orario parziale il 56% delle supplenze comuni fino al termine (37.489 su 66.903) e il 12% di quelle in deroga (15.291 su 125.462). Con lo spezzone medio pari a mezzo posto (ipotesi da validare): 0,72 posti equivalenti per supplenza comune, 0,94 per supplenza in deroga.
+- *Costo lordo.* Luglio e agosto, circa 5.360 euro per posto equivalente (costo della supplenza del registro, da validare).
+- *NASpI evitata.* Soglia 2026 di 1.456,72 euro, massimo 1.584,70 (INPS, circolare n. 4/2026). Con una retribuzione media di circa 2.000 euro la NASpI vale circa 1.228 euro al mese; decorre dall'ottavo giorno dopo il 30 giugno, quindi copre circa 55 giorni: circa 2.250 euro per supplente. L'INPS non pubblica il numero dei supplenti della scuola che percepiscono la NASpI estiva né la spesa: la stima assume che tutti la chiedano e va validata con l'INPS (V41). Il costo netto è di circa 3.110 euro per posto equivalente.
+
+| Anno di attivazione | Supplenze comuni fino al termine | Supplenze in deroga | Posti equivalenti | Costo lordo (miliardi) | Costo netto della NASpI (miliardi) |
+|---|---|---|---|---|---|
+| 2027 | 64.577 | 110.462 | 150.329 | 0,81 | 0,47 |
+| 2028 | 62.251 | 91.862 | 131.171 | 0,70 | 0,41 |
+| 2029 | 59.925 | 70.362 | 109.286 | 0,59 | 0,34 |
+| 2030 | 57.599 | 40.862 | 79.881 | 0,43 | 0,25 |
+| 2031 | 55.273 | 25.462 | 63.731 | 0,34 | 0,20 |
+| 2032 | 52.947 | 25.462 | 62.056 | 0,33 | 0,19 |
+
+- *Prova in coda davanti a Q15, al costo netto.* Lo scorrimento attiva la voce nel 2030 al costo del 2030 (0,25). La Riforma 19 ridotta (Q10) passa dal 2031 al 2032.
+- *Dopo Q10.* La posizione dopo Q10 non basta: lo scorrimento attiva comunque per prima la voce più piccola e Q10 slitta al 2032. Per tenere Q10 nel 2031 serve una regola esplicita: la voce si attiva solo dopo Q10, senza scorrimento davanti a Q10. Con questa regola Q10 resta nel 2031 e i contratti al 31 agosto si attivano nel 2032, a 0,19 miliardi netti. Nello scenario prudente nulla cambia.
+
+**Personale ATA (da decidere)**
+- *Dati MIM 2024/25.* 179.295 ATA di ruolo; 56.463 supplenti, di cui 17.781 annuali al 31 agosto (posto vacante) e 38.682 fino al termine (53.457 nel 2023/24). Il dataset non distingue i profili (collaboratori, assistenti, tecnici).
+- *Comma 828.* Dal 2026/27 la L. 207/2024 taglia 2.174 posti ATA. Con la stessa regola dei docenti (90% dei posti vacanti meno i posti tagliati) i posti ATA stabilizzabili sono 0,9 × 17.781 − 2.174 = 13.829.
+- *Costo della stabilizzazione.* I supplenti annuali hanno già lo stipendio estivo: la stabilizzazione costa la progressione di carriera, circa 1.000–2.000 euro l'anno per posto (stima della redazione, da validare sul Conto annuale RGS): 0,01–0,03 miliardi. Il file 07 indica 0,1–0,2 miliardi: la differenza corrisponde ai contratti al 31 agosto per i 38.682 supplenti fino al termine (lordo 0,15–0,19, netto della NASpI 0,07–0,10, a 2.000–2.400 euro lordo Stato al mese, da validare).
+- *Opzioni.* A) stabilizzazione dei 13.829 posti vacanti in Priorità 1, dentro i 6,8 della scuola con l'aumento salariale da 4,19 a circa 4,16 miliardi; B) A più contratti al 31 agosto per gli ATA fino al termine, uniti alla voce di coda dei docenti; C) solo la regola di legge (posto vacante da due anni in ruolo d'ufficio) con attuazione dalla seconda legislatura; D) tutto alla seconda legislatura. La condanna della Corte di giustizia UE sulla reiterazione dei contratti ATA (file 07) rende rischiose C e D.

@@ -338,3 +338,43 @@ fonti:
     url: "https://www.mim.gov.it/web/guest/-/decreto-ministeriale-n-170-del-24-giugno-2022"
     data: "2022-06-24"
     stato: verificato
+  naspi_soglia_2026:
+    valore: 1456.72
+    decimali: 2
+    unita: "euro mensili di retribuzione di riferimento NASpI (75% fino alla soglia, 25% oltre)"
+    fonte: "INPS, circolare n. 4 del mercoledì 28 gennaio 2026"
+    url: "https://www.inps.it/content/dam/inps-site/it/scorporati/circolari-e-messaggi/2026/01/Circolare_15147/Allegati/16539_Circolare-numero-4-del-28-01-2026.pdf"
+    data: "2026-01-28"
+    stato: verificato
+  naspi_massimo_2026:
+    valore: 1584.70
+    decimali: 2
+    unita: "euro mensili, importo massimo NASpI"
+    fonte: "INPS, circolare n. 4 del mercoledì 28 gennaio 2026"
+    url: "https://www.inps.it/content/dam/inps-site/it/scorporati/circolari-e-messaggi/2026/01/Circolare_15147/Allegati/16539_Circolare-numero-4-del-28-01-2026.pdf"
+    data: "2026-01-28"
+    stato: verificato
+  supplenti_fino_termine_orario_parziale:
+    valore: 37489
+    decimali: 0
+    unita: "supplenze fino al termine su posto comune a orario non intero, 2024/25 (su 66.903; sostegno 15.291 su 125.462)"
+    fonte: "MIM, open data DS9999DOCSUPXXV, campo CONTRATTOORARIOINTERO"
+    url: "https://dati.istruzione.it/opendata/opendata/catalogo/elements1/?area=Personale%20Scuola"
+    data: "2025-08-31"
+    stato: verificato
+  ata_supplenti_2024_25:
+    valore: 56463
+    decimali: 0
+    unita: "supplenti ATA (statale): 17.781 annuali al 31 agosto, 38.682 fino al termine (2023/24: 53.457)"
+    fonte: "MIM, open data DS0630ATASUP"
+    url: "https://dati.istruzione.it/opendata/opendata/catalogo/elements1/?area=Personale%20Scuola"
+    data: "2025-08-31"
+    stato: verificato
+  ata_ruolo_2024_25:
+    valore: 179295
+    decimali: 0
+    unita: "personale ATA a tempo indeterminato (statale)"
+    fonte: "MIM, open data DS0610ATATIT"
+    url: "https://dati.istruzione.it/opendata/opendata/catalogo/elements1/?area=Personale%20Scuola"
+    data: "2025-08-31"
+    stato: verificato
