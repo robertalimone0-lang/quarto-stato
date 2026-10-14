@@ -186,3 +186,43 @@ fonti:
     url: "https://temi.camera.it/leg19/temi/piano-strutturale-di-bilancio-italia-2025-2029.html"
     data: "2025-02-01"
     stato: verificato
+  studenti_calo_annuo:
+    valore: 115000
+    decimali: 0
+    unita: "studenti in meno all'anno"
+    fonte: "Stime ministeriali riportate da Orizzonte Scuola (110.000-120.000 l'anno fino al 2033/34); dato primario MIM da reperire"
+    url: "https://www.orizzontescuola.it/fra-10-anni-meno-studenti-e-cattedre-una-riduzione-di-10-12mila-posti-di-lavoro-ogni-anno-valditara-lancia-lallarme/"
+    data: "2026-10-14"
+    stato: da_validare
+  posti_comuni_2026_27:
+    valore: 614572
+    decimali: 0
+    unita: "posti comuni di organico"
+    fonte: "Nota MIM sugli organici 2026/27, riportata da Orizzonte Scuola"
+    url: "https://www.orizzontescuola.it/organici-docenti-2026-2027-meno-1-407-cattedre-per-lofferta-formativa-134-in-piu-posti-sul-sostegno-nota-con-istruzioni-operative/"
+    data: "2026-10-14"
+    stato: da_validare
+  supplenze_annuali_2025_26:
+    valore: 182641
+    decimali: 0
+    unita: "contratti a termine dei docenti"
+    fonte: "Dati MIM comunicati ai sindacati (24 settembre 2025), riportati da Tecnica della Scuola"
+    url: "https://www.tecnicadellascuola.it/docenti-immissioni-in-ruolo-precari-e-idonei-2025-26-quasi-20mila-posti-non-assegnati-e-i-precari-aumentano-gia-180mila-contratti-annuali"
+    data: "2025-10-07"
+    stato: da_validare
+  costo_supplenza_annuale:
+    valore: 29500
+    decimali: 0
+    unita: "euro di costo per l'amministrazione"
+    fonte: "Stima della redazione: trattamento iniziale del ruolo per i mesi di servizio (meta contratti al 31 agosto, meta al 30 giugno) con oneri riflessi; il Conto annuale RGS non pubblica il costo del personale non di ruolo"
+    url: "https://contoannuale.rgs.mef.gov.it/ext/Documents/LE%20RETRIBUZIONI%20MEDIE.pdf"
+    data: "2026-10-14"
+    stato: da_validare
+  rinnovi_statali_2030:
+    valore: 6112
+    decimali: 0
+    unita: "milioni di euro dal 2030"
+    fonte: "L. 207/2024: oneri per il rinnovo del contratto del personale statale 2028-2030 (1.954 nel 2028, 4.027 nel 2029, 6.112 dal 2030), riportati da Ancrel; comma da verificare sul testo"
+    url: "https://www.italiaoggi.it/ordini-e-professioni/ancrel/i-revisori-devono-inserire-in-bilancio-gli-oneri-del-ccnl-2025-2027-wzyo0vfl"
+    data: "2025-01-10"
+    stato: da_validare

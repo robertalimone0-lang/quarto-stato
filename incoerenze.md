@@ -104,3 +104,7 @@ Chiusi il 14 ottobre 2026:
 - **V33. Voci minori nella base.** 0,66 miliardi (30% di 256 misure) ancora da elencare una per una.
 - **Decisioni del 14 ottobre 2026 (seconda tornata).** Riforma 19 ridotta (0,5 miliardi, attivabile nel 2031); stabilizzazioni degli insegnanti in Priorità 1 (0,75); salvaguardia corretta: tutta la Priorità 2 non avviata slitta prima di qualsiasi rinvio della Priorità 1.
 - **Q15 non si attiva entro il 2035** in nessuno scenario: richiede che il solo gettito certificato dall'evasione copra 6 miliardi e viene dopo le altre voci della coda.
+- **Decisione del 14 ottobre 2026.** Tranche salariale degli insegnanti dal dividendo demografico (0,60 / 0,82 / 1,00 miliardi nel 2029–2031); residuo alle classi più piccole. Dettaglio in `incoerenze/report-riserva.md`, sezione 13.
+- **V35. Dividendo demografico.** Calo degli studenti, posti di organico e numero di supplenze vengono da stampa specializzata che riporta dati MIM: servono le pubblicazioni del MIM. Il costo della supplenza annuale (29.500 euro) è una stima della redazione: il Conto annuale RGS non pubblica il costo del personale non di ruolo.
+- **V36. Rinnovi 2028–2030.** Gli importi della L. 207/2024 (1.954 / 4.027 / 6.112 milioni) vengono da Ancrel: comma da verificare sul testo della legge.
+- **S13. Promessa del file 01 sulle classi.** La Riforma 3 (punto 6) prometteva di lasciare nella scuola tutte le risorse del calo degli studenti; ora quelle risorse finanziano prima la tranche salariale e solo il residuo va alle classi (0,04 miliardi nel 2031, crescente dopo).

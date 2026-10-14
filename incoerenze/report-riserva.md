@@ -383,3 +383,44 @@ Nel 2031 slitta il 25,5% dei nuovi ingressi della Priorità 1. Il valore era 23%
 | 2029 | −2,32 | 0,85 | 0,65 | 0,38 | 0,11 | 0,33 | 4,73 / 4,42 |
 | 2030 | −4,16 | 0,85 | 0,65 | 0,38 | 0,16 | 2,12 | 4,73 / 2,72 |
 | 2031 | −4,93 | 0,85 | 0,65 | 0,38 | 0,21 | 2,84 | 5,17 / 2,47 |
+
+## 13. Tranche salariale degli insegnanti finanziata dal dividendo demografico (mercoledì 14 ottobre 2026)
+
+**Rinnovi ordinari.** La L. 207/2024 stanzia per il rinnovo del contratto del personale statale 2028–2030 1.954 milioni nel 2028, 4.027 nel 2029 e 6.112 dal 2030. Il dato viene da Ancrel; il comma va verificato sul testo della legge. I rinnovi ordinari sono quindi nel tendenziale. L'aumento reale degli insegnanti previsto dal programma si aggiunge a quei rinnovi, e il capitolo sulla scuola lo dichiara.
+
+**Dividendo demografico (COP17)**
+- *Ipotesi:* 115.000 studenti in meno l'anno; posti comuni in meno a parità di rapporto (614.572 posti per circa 7 milioni di studenti), cioè circa 10.100 posti l'anno.
+- *Sovrapposizione con il tendenziale:* i 5.660 posti del comma 828 e i 1.407 del 2026/27 cadono prima del 2027. Dal dividendo sono tolti i 2.510 posti di potenziamento previsti nel 2027/28–2028/29.
+- *Costo per posto:* 80% supplenze annuali a 29.500 euro (metà al 31 agosto, metà al 30 giugno, trattamento iniziale del ruolo con oneri) e 20% posti di ruolo a 45.000 euro, per una media di 32.600 euro. Il Conto annuale RGS pubblica solo le retribuzioni del personale di ruolo, quindi il costo della supplenza è una stima della redazione (da validare).
+
+| Anno | 2027 | 2028 | 2029 | 2030 | 2031 |
+|---|---|---|---|---|---|
+| Posti in meno nell'anno | 8.842 | 8.842 | 10.097 | 10.097 | 10.097 |
+| Dividendo cumulato (miliardi) | 0,29 | 0,58 | 0,91 | 1,24 | 1,56 |
+| Al tasso prudente (70%) | 0,20 | 0,40 | 0,63 | 0,86 | 1,09 |
+| Tranche salariale (prezzi dello scenario centrale) | — | — | 0,60 | 0,82 | 1,00 |
+| Classi più piccole nelle zone a rischio di dispersione | — | — | — | — | 0,04 |
+
+I risparmi del 2027 e del 2028 non sono contabilizzati: la tranche parte nel 2029. Nel 2029 non arriva a 1,0 miliardi, quindi parte dal valore disponibile (0,60) e cresce con il dividendo. Dal 2032 il residuo crescente va alle classi più piccole.
+
+**Supplenze, stabilizzazioni e mancati rinnovi**
+
+| Anno | Supplenze iniziali (2025/26) | Stabilizzate, cumulate | Non rinnovate per il calo degli studenti, cumulate | Residue |
+|---|---|---|---|---|
+| 2027 | 182.641 | 15.000 | 7.074 | 160.567 |
+| 2028 | 182.641 | 33.600 | 14.147 | 134.894 |
+| 2029 | 182.641 | 55.100 | 22.225 | 105.316 |
+| 2030 | 182.641 | 84.600 | 30.302 | 67.739 |
+| 2031 | 182.641 | 100.000 | 38.380 | 44.261 |
+
+**Nessun doppio conteggio**
+- Le 100.000 stabilizzazioni (0,75 miliardi a circa 7.500 euro per posto, secondo il file 07) riguardano soprattutto i posti di sostegno in deroga (76.100), che non calano con gli studenti, e circa 24.000 posti comuni vacanti da due anni.
+- I mancati rinnovi riguardano solo posti comuni (106.541 supplenze in tutto).
+
+**Il punto politico da scrivere.** Circa il 28% della riduzione delle supplenze entro il 2031 avviene per mancato rinnovo, perché servono meno posti, e non con assunzioni. Il traguardo del Piano Lavoro Stabile (meno di 30.000 supplenze annuali) richiede il perimetro di 1,40 miliardi, quindi la soluzione del conflitto S1.
+
+**Effetto sul quadro**
+- Priorità 2 coperta: 0,17 / 4,04 / 5,56 / 5,56 / 6,21 miliardi.
+- Quota rinviata in coda: 10,44.
+- Q15 scende a 4,45: la prima metà dell'aumento in coda passa da 2,25 a 1,25.
+- Nessuna voce della coda slitta.
