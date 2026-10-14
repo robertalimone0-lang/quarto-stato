@@ -288,3 +288,42 @@ Nella variante senza riconoscimento la Priorità 2 coperta nel 2031 scende quind
 | 2029 | −2,69 | 0,85 | 0,65 | — | 0,11 | 1,08 | 6,16 / 5,13 |
 | 2030 | −4,05 | 0,85 | 0,65 | — | 0,16 | 2,39 | 6,16 / 3,88 |
 | 2031 | −4,80 | 0,85 | 0,65 | — | 0,21 | 3,09 | 6,97 / 4,03 |
+
+## 11. Decisioni D24, D25 e gradino c) (mercoledì 14 ottobre 2026)
+
+**Base del riordino (profilo A).** 3,52 miliardi (4,85 meno la voce 152), con circa 0,70 miliardi in più ogni anno dal 2027 al 2031, crescita lineare. La rampa annua resta sotto il massimo storico dei riordini trasversali, circa 1 miliardo.
+- *Voci minori:* dentro i 3,52 ci sono ancora 0,66 miliardi di voci minori (il 30% di 2,19 miliardi, 256 misure), da elencare una per una prima della pubblicazione.
+- *Prima casa (D23):* riga separata COP16, 0,37 miliardi dal 2028. È una decisione politica distinta, rivedibile con la riforma del catasto.
+- *Totale delle due righe:* 3,89 miliardi.
+
+**Voce 152 (D24).** La maggiorazione per le nuove assunzioni resta come agevolazione del Piano Lavoro Stabile, solo per le assunzioni a tempo indeterminato. Esce dal riordino e dalla copertura della Riforma 19.
+- Da verificare se la norma vigente (D.Lgs. 216/2023) la limita già al tempo indeterminato: in quel caso la condizione non cambia il costo.
+- Il costo netto della Riforma 19 in coda (Q10) sale da 0,70 a 1,95 miliardi (forbice 1,4–2,5), perché perde il riordino degli incentivi. Se le decontribuzioni annuali, distinte dalla voce 152, restano nel riordino, il costo torna verso 0,70: la composizione del riordino degli incentivi va verificata.
+- Con il nuovo costo, nello scenario centrale la Riforma 19 non si attiva entro il 2035.
+
+**Gradino c), cedolare al 21%:** 0,38 miliardi nel prudente (limite inferiore), 0,45 nel centrale (valore medio). Le evidenze sulla risposta comportamentale vengono solo dalla stampa (V26).
+
+**Quadro di Fase 1 (miliardi)**
+
+| Grandezza | Valore |
+|---|---|
+| Priorità 2 coperta per anno, 2027–2031 | 0,22 / 4,30 / 5,37 / 5,37 / 5,92 |
+| Priorità 2 rinviata in coda | 11,44 (di cui 5,45 nuova voce Q15, composizione da decidere) |
+| Margine prudente | 0,29 / 0 / 0,49 / 0 / 0 |
+| Margine centrale | 1,24 / 3,42 / 5,88 / 5,79 / 6,01 |
+| Saldo 2027 avverso | −1,01, chiuso con il rinvio dei nuovi ingressi della Priorità 1 |
+| Debito 2031 (centrale / prudente / avverso con salvaguardia) | 131,9 / 133,35 / 133,6 |
+
+**Gradini della D22** (variante senza riconoscimento, prudente, miliardi). Lo scarto è calcolato sulla Priorità 2 già ridotta dal profilo A: la spesa di Fase 1 è quella che il profilo consente, e lo slittamento si aggiunge alla quota già rinviata in coda.
+
+| Anno | Scarto dopo la Riforma 1 | a) Sussidi | b) Spending | c) Cedolare | d) Bonus | e) Slittamento | Priorità 2 coperta prima / dopo |
+|---|---|---|---|---|---|---|---|
+| 2027 | +0,29 | — | — | — | — | — | 0,22 / 0,22 |
+| 2028 | −1,18 | — | — | — | 0,05 | 1,12 | 4,30 / 3,22 |
+| 2029 | −2,50 | 0,85 | 0,65 | 0,38 | 0,11 | 0,51 | 5,37 / 4,88 |
+| 2030 | −4,12 | 0,85 | 0,65 | 0,38 | 0,16 | 2,08 | 5,37 / 3,39 |
+| 2031 | −4,89 | 0,85 | 0,65 | 0,38 | 0,21 | 2,79 | 5,92 / 3,26 |
+
+**Confronto con il passaggio precedente.** Senza riconoscimento la Priorità 2 coperta nel 2031 passa da 3,58 a 3,26 miliardi (−0,32). Prima dello slittamento passa da 6,69 a 5,92 (−0,77). Nello scenario centrale non scatta nessun gradino.
+
+**Salvaguardia.** In ogni slittamento le stabilizzazioni degli insegnanti slittano per ultime. Appartengono alla Priorità 2 (scuola e Piano Lavoro Stabile), quindi la regola opera nei gradini 2 e 3 della salvaguardia e nel gradino e) della riserva. Il rinvio dei nuovi ingressi del 2027 riguarda la Priorità 1 e non le tocca.

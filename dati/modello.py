@@ -211,3 +211,51 @@ def sanita_pil(s, attiva, y, base=6.4):
     extra = sum(_profilo(v, y - attiva[v["codice"]]) * MULT[s] for v in CODA
                 if v["codice"] in ("Q07", "Q08") and v["codice"] in attiva and y >= attiva[v["codice"]])
     return base + 100 * (11.0 * MULT[s] + extra) / PIL[y]
+
+
+# ---------------- percorso di spesa netta e riserva condizionata (D19, D20, D22) ----------------
+RICONOSCIMENTO_R1 = 3.85  # quota della Riforma 1 riconosciuta in via prudente come misure discrezionali (D20)
+_RAMPA_EV = rampa("2028:0.25;2029:0.5;2030:0.75;2031:1")
+RISERVA = _csv("riserva.csv")
+
+
+def _cofinanziamento_fase1(y):
+    """Cofinanziamento di programmi UE, escluso dalla spesa netta (quota di Fase 1, dal 2028)."""
+    if y <= 2027:
+        return 0.0
+    return _cof_fase1 * rampa(_cof["rampa"])[y] * (P2[y] / p2_fabbisogno(y))
+
+
+def scarto_spesa_netta(s, y, riconoscimento=False):
+    """Coperture valide ai fini UE meno spesa di Fase 1 rilevante per la spesa netta (miliardi)."""
+    spesa = costo_fase1(s, y) - _cofinanziamento_fase1(y) * MULT[s]
+    if riconoscimento:
+        valide = copertura(s, y)
+    else:
+        valide = sum(float(r["nominale"]) * float(r[f"tasso_{_sc(s)}"]) * rampa(r["rampa"])[y]
+                     * float(r["quota_ue_senza_riconoscimento"]) for r in COPERTURE)
+        valide += RICONOSCIMENTO_R1 * _RAMPA_EV[y]
+    return valide - spesa
+
+
+def gradini(s, curva_bonus):
+    """Copertura dei gradini della riserva nella variante senza riconoscimento. curva_bonus: {anno: miliardi}."""
+    out = {}
+    for y in Y:
+        bisogno = max(0.0, -scarto_spesa_netta(s, y))
+        riga = {"scarto": scarto_spesa_netta(s, y)}
+        for g in RISERVA:
+            k = g["gradino"]
+            if k == "d":
+                cap = curva_bonus.get(y, 0.0)
+            elif k == "e":
+                cap = P2[y] * MULT[s]
+            else:
+                cap = float(g[_sc(s)]) if y >= int(g["dal"]) else 0.0
+            u = min(cap, bisogno)
+            riga[k] = u
+            bisogno -= u
+        riga["residuo"] = -bisogno
+        riga["p2_dopo"] = P2[y] - riga["e"] / MULT[s]
+        out[y] = riga
+    return out

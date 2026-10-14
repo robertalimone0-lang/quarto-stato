@@ -97,3 +97,8 @@ Chiusi il 14 ottobre 2026:
 - **V29.** I sussidi ambientalmente dannosi (base 6 miliardi e gradino a) da 1 miliardo) non hanno un elenco nominativo: va costruito per escludere che la stessa voce finanzi due misure.
 - **V30.** Importi delle relazioni tecniche su Superbonus (DL 176/2022, DL 11/2023, DL 39/2024) e abrogazione dell'ACE (D.Lgs. 216/2023) non reperiti.
 - **Decisione del 14 ottobre 2026.** Saldo 2027 nello scenario avverso: si chiude con il rinvio dei nuovi ingressi della Priorità 1 (gradino 4).
+- **Decisioni del 14 ottobre 2026.** D25 profilo A (riordino 3,52 + prima casa 0,37); D24 voce 152 al Piano Lavoro Stabile; gradino c) approvato (0,38 prudente, 0,45 centrale); stabilizzazioni degli insegnanti per ultime negli slittamenti.
+- **D26. Q15.** La Priorità 2 rinviata cresce di 5,45 miliardi con il profilo A. Composizione (quali voci della Priorità 2) e posizione in coda da decidere.
+- **V31. Riordino degli incentivi della Riforma 19.** Senza la voce 152 il costo netto passa da 0,70 a 1,95 miliardi. Da verificare quali decontribuzioni annuali restano disponibili.
+- **V32. Voce 152.** Da verificare se il D.Lgs. 216/2023 limita già la maggiorazione alle assunzioni a tempo indeterminato.
+- **V33. Voci minori nella base.** 0,66 miliardi (30% di 256 misure) ancora da elencare una per una.
