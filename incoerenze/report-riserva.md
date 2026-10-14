@@ -327,3 +327,59 @@ Nella variante senza riconoscimento la Priorità 2 coperta nel 2031 scende quind
 **Confronto con il passaggio precedente.** Senza riconoscimento la Priorità 2 coperta nel 2031 passa da 3,58 a 3,26 miliardi (−0,32). Prima dello slittamento passa da 6,69 a 5,92 (−0,77). Nello scenario centrale non scatta nessun gradino.
 
 **Salvaguardia.** In ogni slittamento le stabilizzazioni degli insegnanti slittano per ultime. Appartengono alla Priorità 2 (scuola e Piano Lavoro Stabile), quindi la regola opera nei gradini 2 e 3 della salvaguardia e nel gradino e) della riserva. Il rinvio dei nuovi ingressi del 2027 riguarda la Priorità 1 e non le tocca.
+
+## 12. Decisioni sulla voce 152, Riforma 19, stabilizzazioni e Q15 (mercoledì 14 ottobre 2026)
+
+**V32, verificata sul testo.** Il nuovo testo unico delle imposte sui redditi (D.Lgs. 19 giugno 2026, n. 117, art. 104, commi 10-18, in vigore dal 1° gennaio 2027) riprende la maggiorazione dell'art. 4 del D.Lgs. 216/2023 con le stesse condizioni:
+- solo assunzioni a tempo indeterminato;
+- incremento netto dei dipendenti stabili;
+- +20%, fino a +10% in più per le categorie dell'Allegato G.
+
+Il comma 17 la applica ai periodi d'imposta dal 2025 al 2027: dal 2028 non esiste più a legislazione vigente.
+
+**Opzione A nel Piano Lavoro Stabile.** Dal 2028 la maggiorazione sale al 30% per le sole trasformazioni di contratti a termine in contratti stabili.
+- È una proroga mirata, quindi un costo nuovo rispetto al tendenziale: circa 0,67 miliardi l'anno se le trasformazioni sono un terzo delle assunzioni stabili (da validare).
+- La finanzia la penalità sul turnover, a saldo zero.
+- Serve una deroga al comma 13, che esclude l'agevolazione quando il totale dei dipendenti non cresce: nelle trasformazioni non cresce.
+
+**Riforma 19 ridotta (Q10):** 0,5 miliardi, attivazione nel 2031 nello scenario centrale. Contiene:
+- conto delle competenze per disoccupati e persone con bassa istruzione, con la formazione a risultato;
+- competenze di base per adulti;
+- consulenti dei centri per l'impiego.
+
+Credito per il secondo reddito, educazione finanziaria e microcredito sono dichiarati riforma di seconda legislatura.
+
+**Stabilizzazioni degli insegnanti in Priorità 1** (perimetro 0,75): costo 0,11 / 0,25 / 0,41 / 0,63 / 0,75 miliardi dal 2027 al 2031. Nella salvaguardia slittano per ultime anche dentro la Priorità 1. Nello scenario avverso il rinvio dei nuovi ingressi resta molto sotto la capacità della Priorità 1 senza le stabilizzazioni, quindi in nessun anno le raggiunge.
+
+**Q15 (`dati/q15.csv`)**
+
+| Voce | Miliardi |
+|---|---|
+| Costo di rinvio basso: congedo di paternità, garanzia di lavoro, fondo per la pensione di garanzia, Stato digitale | 1,85 |
+| Costo di rinvio medio: lavori gravosi, fondo affitto | 1,00 |
+| Scuola: prima metà dell'aumento salariale | 2,25 |
+| Scuola: ulteriore rampa (tempo pieno e mense oltre il 2031, interpretazione da confermare) | 0,35 |
+| **Totale** | **5,45** |
+
+Q15 è in fondo alla coda e si attiva solo con il gettito certificato del contrasto all'evasione. Nelle proiezioni non si attiva entro il 2035.
+
+**Quadro aggiornato (miliardi)**
+
+| Grandezza | Valore |
+|---|---|
+| Priorità 2 coperta, 2027–2031 | 0,17 / 4,04 / 4,73 / 4,73 / 5,17 |
+| Rinviata in coda | 11,44 |
+| Margine prudente | ≥ 0 ogni anno |
+| Debito 2031 (centrale / prudente / avverso con salvaguardia) | 131,9 / 133,3 / 133,6 |
+| Scenario avverso, rinvio dei nuovi ingressi della Priorità 1 (2027–2031) | 0,89 / 0,71 / 2,37 / 4,67 / 5,58 |
+
+Nel 2031 slitta il 25,5% dei nuovi ingressi della Priorità 1. Il valore era 23% prima dello spostamento delle stabilizzazioni in Priorità 1.
+
+**Gradini della D22** (variante senza riconoscimento, prudente)
+
+| Anno | Scarto | a | b | c | d | e | Priorità 2 coperta prima / dopo |
+|---|---|---|---|---|---|---|---|
+| 2028 | −1,19 | — | — | — | 0,05 | 1,14 | 4,04 / 2,96 |
+| 2029 | −2,32 | 0,85 | 0,65 | 0,38 | 0,11 | 0,33 | 4,73 / 4,42 |
+| 2030 | −4,16 | 0,85 | 0,65 | 0,38 | 0,16 | 2,12 | 4,73 / 2,72 |
+| 2031 | −4,93 | 0,85 | 0,65 | 0,38 | 0,21 | 2,84 | 5,17 / 2,47 |

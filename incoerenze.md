@@ -98,7 +98,9 @@ Chiusi il 14 ottobre 2026:
 - **V30.** Importi delle relazioni tecniche su Superbonus (DL 176/2022, DL 11/2023, DL 39/2024) e abrogazione dell'ACE (D.Lgs. 216/2023) non reperiti.
 - **Decisione del 14 ottobre 2026.** Saldo 2027 nello scenario avverso: si chiude con il rinvio dei nuovi ingressi della Priorità 1 (gradino 4).
 - **Decisioni del 14 ottobre 2026.** D25 profilo A (riordino 3,52 + prima casa 0,37); D24 voce 152 al Piano Lavoro Stabile; gradino c) approvato (0,38 prudente, 0,45 centrale); stabilizzazioni degli insegnanti per ultime negli slittamenti.
-- **D26. Q15.** La Priorità 2 rinviata cresce di 5,45 miliardi con il profilo A. Composizione (quali voci della Priorità 2) e posizione in coda da decidere.
+- **D26 (decisa).** Q15 composta (`dati/q15.csv`), in fondo alla coda, sbloccata dal gettito certificato del contrasto all'evasione. **I12:** la quota di 0,35 attribuita a una rampa più lenta del tempo pieno e delle mense oltre il 2031 è un'interpretazione della redazione da confermare.
 - **V31. Riordino degli incentivi della Riforma 19.** Senza la voce 152 il costo netto passa da 0,70 a 1,95 miliardi. Da verificare quali decontribuzioni annuali restano disponibili.
-- **V32. Voce 152.** Da verificare se il D.Lgs. 216/2023 limita già la maggiorazione alle assunzioni a tempo indeterminato.
+- **V32 (verificata).** Il nuovo TUIR (D.Lgs. 117/2026, art. 104, commi 10-18) riprende la maggiorazione solo per il tempo indeterminato e solo fino al periodo d'imposta 2027. **V34:** l'opzione A richiede una proroga dal 2028 (costo stimato circa 0,67 miliardi, se le trasformazioni sono un terzo delle assunzioni stabili, a saldo zero con la penalità sul turnover) e una deroga al comma 13, che esclude l'agevolazione quando il totale dei dipendenti non cresce, come accade nelle trasformazioni.
 - **V33. Voci minori nella base.** 0,66 miliardi (30% di 256 misure) ancora da elencare una per una.
+- **Decisioni del 14 ottobre 2026 (seconda tornata).** Riforma 19 ridotta (0,5 miliardi, attivabile nel 2031); stabilizzazioni degli insegnanti in Priorità 1 (0,75); salvaguardia corretta: tutta la Priorità 2 non avviata slitta prima di qualsiasi rinvio della Priorità 1.
+- **Q15 non si attiva entro il 2035** in nessuno scenario: richiede che il solo gettito certificato dall'evasione copra 6 miliardi e viene dopo le altre voci della coda.

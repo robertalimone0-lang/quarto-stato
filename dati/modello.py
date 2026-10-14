@@ -129,6 +129,16 @@ def _profilo(voce, k):
     return float(voce["costo_regime"]) * p[min(k, len(p) - 1)]
 
 
+def _fonte_ok(voce, s, y, costo):
+    """Voci legate a una leva (colonna fonte): il gettito certificato di quella leva deve coprire il costo con la soglia."""
+    f = voce.get("fonte", "")
+    if not f:
+        return True
+    r = next(x for x in LEVE if x["codice"] == f)
+    g = {a: float(r[s]) * rampa(r["rampa"])[a] for a in Y}
+    return _cert(g, y) >= SOGLIA * costo
+
+
 def simula_coda(s, confronto=False):
     g = {y: leva(s, y, confronto=confronto) for y in Y}
     x = {y: eccedenza(s, y) for y in Y}
@@ -141,6 +151,8 @@ def simula_coda(s, confronto=False):
             if not resto:
                 break
             c0 = float(resto[0]["costo_regime"]) * MULT[s]
+            if not _fonte_ok(resto[0], s, y, c0):
+                break
             if prenotato + libero >= SOGLIA * c0:
                 attiva[resto[0]["codice"]] = y
                 impegnato += c0
@@ -151,7 +163,7 @@ def simula_coda(s, confronto=False):
             disp = libero - nuova
             for v in resto[1:]:
                 c = float(v["costo_regime"]) * MULT[s]
-                if disp >= SOGLIA * c:
+                if disp >= SOGLIA * c and _fonte_ok(v, s, y, c):
                     attiva[v["codice"]] = y
                     impegnato += c
                     disp -= c
@@ -190,15 +202,16 @@ _TARDIVE = [r for r in MISURE if r["priorita"] == "2" and min(int(p.split(":")[0
 
 def salvaguardia(primo=2028):
     s, righe = "avverso", {}
-    base_p2, base_p1 = P2[primo - 1], p1(primo - 1)
+    base_p2, base_p1 = 0.0, p1(primo - 1)  # nello scenario avverso la Priorita 2 del 2027 non e mai partita
     for y in Y:
         buco = margine_fase1(s, y)
         if buco >= 0:
             righe[y] = dict(buco=buco, g1=0.0, g2=0.0, g3=0.0, g4=0.0, residuo=0.0)
             continue
-        if y < primo:  # primo anno: solo il rinvio dei nuovi ingressi della Priorita 1 (gradino 4)
-            g4 = min(-buco, p1(y) * MULT[s])
-            righe[y] = dict(buco=buco, g1=0.0, g2=0.0, g3=0.0, g4=g4, residuo=min(0.0, buco + g4))
+        if y < primo:  # primo anno: la Priorita 2 di luglio non parte (gradino 2), poi rinvio dei nuovi ingressi P1 (gradino 4)
+            g2 = min(-buco, P2[y] * MULT[s])
+            g4 = min(-buco - g2, p1(y) * MULT[s])
+            righe[y] = dict(buco=buco, g1=0.0, g2=g2, g3=0.0, g4=g4, residuo=min(0.0, buco + g2 + g4))
             continue
         tardive = sum(float(r["costo_regime"]) * rampa(r["rampa"])[y] for r in _TARDIVE) * P2[y] / p2_fabbisogno(y) * MULT[s]
         cap = [0.0, tardive, max(0.0, (P2[y] - base_p2) * MULT[s] - tardive), max(0.0, (p1(y) - base_p1) * MULT[s])]
