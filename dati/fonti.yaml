@@ -187,13 +187,37 @@ fonti:
     data: "2025-02-01"
     stato: verificato
   studenti_calo_annuo:
-    valore: 115000
+    valore: 89426
     decimali: 0
-    unita: "studenti in meno all'anno"
-    fonte: "Stime ministeriali riportate da Orizzonte Scuola (110.000-120.000 l'anno fino al 2033/34); dato primario MIM da reperire"
-    url: "https://www.orizzontescuola.it/fra-10-anni-meno-studenti-e-cattedre-una-riduzione-di-10-12mila-posti-di-lavoro-ogni-anno-valditara-lancia-lallarme/"
-    data: "2026-10-14"
-    stato: da_validare
+    unita: "studenti in meno (primaria e secondaria statali, dal 2023/24 al 2024/25)"
+    fonte: "MIM, open data DS0030ALUCORSOINDCLASTA (6.262.143 nel 2023/24, 6.172.717 nel 2024/25); scuola dell'infanzia esclusa"
+    url: "https://dati.istruzione.it/opendata/opendata/catalogo/elements1/?area=Studenti"
+    data: "2025-08-31"
+    stato: verificato
+  classi_calo_annuo:
+    valore: 1272
+    decimali: 0
+    unita: "classi in meno (primaria e secondaria statali, dal 2023/24 al 2024/25)"
+    fonte: "MIM, open data DS0030ALUCORSOINDCLASTA (327.150 classi nel 2023/24, 325.878 nel 2024/25)"
+    url: "https://dati.istruzione.it/opendata/opendata/catalogo/elements1/?area=Studenti"
+    data: "2025-08-31"
+    stato: verificato
+  supplenti_2024_25:
+    valore: 236782
+    decimali: 0
+    unita: "docenti supplenti (statale)"
+    fonte: "MIM, open data DS9999DOCSUPXXV: posto comune 30.215 annuali e 66.903 fino al termine; sostegno 14.202 annuali e 125.462 fino al termine"
+    url: "https://dati.istruzione.it/opendata/opendata/catalogo/elements1/?area=Personale%20Scuola"
+    data: "2025-08-31"
+    stato: verificato
+  docenti_ruolo_2024_25:
+    valore: 739581
+    decimali: 0
+    unita: "docenti a tempo indeterminato (statale)"
+    fonte: "MIM, open data DS0600DOCTIT: posto comune 629.537, sostegno 110.044"
+    url: "https://dati.istruzione.it/opendata/opendata/catalogo/elements1/?area=Personale%20Scuola"
+    data: "2025-08-31"
+    stato: verificato
   posti_comuni_2026_27:
     valore: 614572
     decimali: 0
@@ -222,7 +246,79 @@ fonti:
     valore: 6112
     decimali: 0
     unita: "milioni di euro dal 2030"
-    fonte: "L. 207/2024: oneri per il rinnovo del contratto del personale statale 2028-2030 (1.954 nel 2028, 4.027 nel 2029, 6.112 dal 2030), riportati da Ancrel; comma da verificare sul testo"
-    url: "https://www.italiaoggi.it/ordini-e-professioni/ancrel/i-revisori-devono-inserire-in-bilancio-gli-oneri-del-ccnl-2025-2027-wzyo0vfl"
-    data: "2025-01-10"
+    fonte: "L. 207/2024, art. 1, comma 131: oneri per il rinnovo 2028-2030 del personale statale (1.954 nel 2028, 4.027 nel 2029, 6.112 dal 2030), al lordo di contributi e IRAP; testo riportato nel dossier della Camera"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/ID0011fvol1.pdf"
+    data: "2025-01-31"
+    stato: verificato
+  rinnovi_statali_2027:
+    valore: 5550
+    decimali: 0
+    unita: "milioni di euro dal 2027"
+    fonte: "L. 207/2024, art. 1, comma 128: oneri per il rinnovo 2025-2027 del personale statale (1.755 nel 2025, 3.550 nel 2026, 5.550 dal 2027); testo riportato nel dossier della Camera"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/ID0011fvol1.pdf"
+    data: "2025-01-31"
+    stato: verificato
+  taglio_organico_828:
+    valore: 5660
+    decimali: 0
+    unita: "posti dell'organico dell'autonomia dal 2025/26"
+    fonte: "L. 207/2024, art. 1, comma 828 (anche 2.174 posti ATA dal 2026/27); testo riportato nel dossier della Camera"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/ID0011fvol3.pdf"
+    data: "2025-01-31"
+    stato: verificato
+  posti_calo_classi_annuo:
+    valore: 2326
+    decimali: 0
+    unita: "posti di docente in meno l'anno a parita di alunni per classe (primaria e secondaria statali)"
+    fonte: "Calcolo della redazione su MIM, open data DS0030ALUCORSOINDCLASTA e DS0600DOCTIT: classi 2023/24-2024/25 primaria -1.020, secondaria I grado -599, secondaria II grado +347; docenti per classe 1,82 / 2,02 / 2,12 (primaria 222.349 docenti su 122.389 classi); infanzia esclusa"
+    url: "https://dati.istruzione.it/opendata/opendata/catalogo/elements1/?area=Studenti"
+    data: "2025-08-31"
+    stato: verificato
+  potenziamento_tagliato_annuo:
+    valore: 1255
+    decimali: 0
+    unita: "posti di potenziamento l'anno tagliati nel tendenziale (2027/28 e 2028/29)"
+    fonte: "Redazione: 2.510 posti nel biennio ripartiti in parti uguali; norma e ripartizione da verificare sul testo"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/ID0011fvol3.pdf"
+    data: "2026-10-14"
+    stato: da_validare
+  costo_posto_dividendo:
+    valore: 32600
+    decimali: 0
+    unita: "euro per posto in meno"
+    fonte: "Stima della redazione: 80% supplenze a 29.500 euro e 20% posti di ruolo a 45.000 euro (Conto annuale RGS per il ruolo)"
+    url: "https://contoannuale.rgs.mef.gov.it/ext/Documents/LE%20RETRIBUZIONI%20MEDIE.pdf"
+    data: "2026-10-14"
+    stato: da_validare
+  tfa_sostegno_x_ciclo:
+    valore: 35784
+    decimali: 0
+    unita: "posti autorizzati nei corsi di specializzazione sul sostegno (X ciclo, 48 atenei)"
+    fonte: "DM MUR n. 436 del giovedì 26 giugno 2025, riportato da stampa specializzata; da riscontrare sul decreto"
+    url: "https://www.ticonsiglio.com/decreto-tfa-sostegno-2025-x-ciclo-pubblicato/"
+    data: "2025-06-26"
+    stato: da_validare
+  tfa_sostegno_xi_ciclo:
+    valore: 30241
+    decimali: 0
+    unita: "posti autorizzati nei corsi di specializzazione sul sostegno (XI ciclo, a.a. 2025/26, senza secondaria di II grado)"
+    fonte: "Nota MUR n. 4660 del martedì 14 aprile 2026, in attesa del decreto definitivo, riportata da stampa specializzata"
+    url: "https://www.newsistruzione.it/2026/06/02/tfa-sostegno-xi-ciclo-30241-posti-preselettiva-luglio"
+    data: "2026-04-14"
+    stato: da_validare
+  indire_specializzati:
+    valore: 18137
+    decimali: 0
+    unita: "docenti che hanno concluso i percorsi INDIRE di specializzazione sul sostegno (DL 71/2024, primo ciclo)"
+    fonte: "Dichiarazione della sottosegretaria all'Istruzione riportata da Orizzonte Scuola; percorsi prorogati al 31 dicembre 2026 (DL 127/2025)"
+    url: "https://www.orizzontescuola.it/tfa-sostegno-indire-in-fase-di-avvio-30mila-nuovi-specializzati-per-il-sostegno-dallinfanzia-alla-secondaria-di-ii-grado-i-numeri/"
+    data: "2026-10-14"
+    stato: da_validare
+  dispersione_implicita_2026:
+    valore: 6.3
+    decimali: 1
+    unita: "% degli studenti dell'ultimo anno della secondaria di II grado (8,7% nel 2025)"
+    fonte: "INVALSI, Rapporto nazionale 2026, presentato giovedì 16 luglio 2026; riportato da stampa, da riscontrare sul rapporto. Il dato per scuola non è pubblicato: va richiesto all'INVALSI (V38)"
+    url: "https://www.invalsiopen.it/"
+    data: "2026-07-16"
     stato: da_validare

@@ -4,6 +4,7 @@ Registro aggiornato a mercoledì 14 ottobre 2026. Codici: D = decisione richiest
 
 ## Decisioni richieste
 
+- **D27. Perimetro delle stabilizzazioni oltre 0,75 (conflitto S1).** Il perimetro massimo spendibile è 0,97 + 0,09 miliardi: i 0,22 aggiuntivi stabilizzano circa 30.000 posti di sostegno in deroga in più. Opzioni di finanziamento dentro i 6,8 miliardi della scuola nel report, sezione 14. Fino alla decisione si applica 0,75.
 - **D18. Strumenti di build.** Quarto e matplotlib non sono installati: i comandi sono stati proposti il 14 ottobre 2026.
 
 ## Decisioni prese il 14 ottobre 2026, seconda tornata (chiuse)
@@ -42,7 +43,7 @@ Chiusi il 14 ottobre 2026:
 
 ## Conflitti tra sorgenti ancora aperti
 
-- **S1.** La parte scolastica del Piano Lavoro Stabile (1,6–2,1 miliardi) dovrebbe stare dentro i 6,8 della scuola, che però prevedono 0,5–1 per la stabilizzazione.
+- **S1.** La parte scolastica del Piano Lavoro Stabile (1,6–2,1 miliardi) dovrebbe stare dentro i 6,8 della scuola, che però prevedono 0,5–1 per la stabilizzazione. Sul bacino MIM 2024/25 il perimetro 1,40 supera il bacino stabilizzabile: il massimo spendibile è 0,97 + 0,09 (D27). Con i corsi in Priorità 1 la scuola vale 6,89 miliardi (6,05 + 0,75 + 0,09).
 - **S2.** Il riordino degli incentivi all'assunzione (1,0–1,5 miliardi) copre la Riforma 19, mentre il Piano Lavoro Stabile usa gli stessi bonus per lo sgravio sulle stabilizzazioni.
 - **S3.** La sintesi del file 04 dice "circa 11 miliardi", i costi dello stesso file valgono 13. Va scelto quali voci entrano negli 11.
 - **S4.** Il file 04 rimanda al registro "F15", che nel file 01 è il costo di cassa delle pensioni.
@@ -104,7 +105,16 @@ Chiusi il 14 ottobre 2026:
 - **V33. Voci minori nella base.** 0,66 miliardi (30% di 256 misure) ancora da elencare una per una.
 - **Decisioni del 14 ottobre 2026 (seconda tornata).** Riforma 19 ridotta (0,5 miliardi, attivabile nel 2031); stabilizzazioni degli insegnanti in Priorità 1 (0,75); salvaguardia corretta: tutta la Priorità 2 non avviata slitta prima di qualsiasi rinvio della Priorità 1.
 - **Q15 non si attiva entro il 2035** in nessuno scenario: richiede che il solo gettito certificato dall'evasione copra 6 miliardi e viene dopo le altre voci della coda.
-- **Decisione del 14 ottobre 2026.** Tranche salariale degli insegnanti dal dividendo demografico (0,60 / 0,82 / 1,00 miliardi nel 2029–2031); residuo alle classi più piccole. Dettaglio in `incoerenze/report-riserva.md`, sezione 13.
+- **Decisione del 14 ottobre 2026 (superata).** Tranche salariale degli insegnanti dal dividendo demografico calcolato sugli studenti; sostituita dalle decisioni della terza tornata (report, sezione 14).
 - **V35. Dividendo demografico.** Calo degli studenti, posti di organico e numero di supplenze vengono da stampa specializzata che riporta dati MIM: servono le pubblicazioni del MIM. Il costo della supplenza annuale (29.500 euro) è una stima della redazione: il Conto annuale RGS non pubblica il costo del personale non di ruolo.
 - **V36. Rinnovi 2028–2030.** Gli importi della L. 207/2024 (1.954 / 4.027 / 6.112 milioni) vengono da Ancrel: comma da verificare sul testo della legge.
-- **S13. Promessa del file 01 sulle classi.** La Riforma 3 (punto 6) prometteva di lasciare nella scuola tutte le risorse del calo degli studenti; ora quelle risorse finanziano prima la tranche salariale e solo il residuo va alle classi (0,04 miliardi nel 2031, crescente dopo).
+- **S13. Promessa del file 01 sulle classi.** La Riforma 3 (punto 6) prometteva di usare le risorse del calo degli studenti per classi più piccole nelle zone a rischio di dispersione. Le risorse restano nella scuola e finanziano l'indennità per gli insegnanti delle scuole a rischio di dispersione (M23); le classi più piccole non sono finanziate in questa legislatura.
+
+## Scuola: bacino MIM, dividendo sulle classi, stabilizzazioni (mercoledì 14 ottobre 2026, terza tornata)
+
+- **Decisioni.** Dividendo demografico sulle classi (COP17, 0,30 miliardi nel 2031); indennità M23 sul 5% delle scuole per dispersione implicita INVALSI (0,20 miliardi, circa 48.800 docenti, 338 euro lordo Stato al mese); corsi gratuiti di specializzazione sul sostegno in Priorità 1 (M24, 0,09); i 0,09 di Priorità 2 spostati in coda sono una quota dell'aumento salariale della scuola (Q15 a 5,54); perimetro delle stabilizzazioni 0,75 fino alla decisione D27; traguardi al 2031: meno di 30.000 supplenze su posto vacante (14.652) e 55.227 supplenze in deroga sul sostegno. Dettaglio in `incoerenze/report-riserva.md`, sezione 14.
+- **Bacino.** I valori 182.641 e 76.100 sono sostituiti dal dato MIM 2024/25 (236.782 supplenti, di cui 139.664 sul sostegno). La voce `supplenze_annuali_2025_26` resta nel registro come dato di stampa, senza uso nel quadro.
+- **V37. Dati MIM per fascia di graduatoria.** Servono, per provincia e ordine di scuola: supplenti per fascia di graduatoria (GPS prima e seconda fascia, MAD), titolo di specializzazione sul sostegno, anni di servizio, posti in deroga ripetuti da almeno due anni. Richiesta al MIM e, in mancanza di risposta entro 30 giorni, istanza di accesso civico generalizzato (D.Lgs. 33/2013, art. 5, comma 2).
+- **V38. Dispersione implicita per scuola.** Il Rapporto INVALSI 2026 (giovedì 16 luglio 2026) pubblica il dato nazionale (6,3%) e regionale; il dato per istituto va richiesto all'INVALSI, anche con accesso civico generalizzato. Il 6,3% va riscontrato sul rapporto.
+- **V39. Ritmo delle specializzazioni.** Posti TFA (X ciclo 35.784, XI ciclo 30.241) e percorsi INDIRE (18.137 specializzati) da stampa specializzata: vanno riscontrati sui decreti MUR. Manca la quota dei supplenti in deroga già specializzati (V37) e il costo per posto di corso (0,09 miliardi l'anno corrispondono a circa 26.000–30.000 posti a 3.000–3.500 euro, stima della redazione).
+- **V40. Dividendo.** Posti di potenziamento tagliati nel tendenziale (1.255 l'anno nel 2027 e 2028) e costo per posto (32.600 euro) da validare. V35 resta aperto per il costo della supplenza.

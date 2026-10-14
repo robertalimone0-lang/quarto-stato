@@ -19,5 +19,6 @@ M17,R14 riga: riconoscimento dei titoli esteri (09),2,0.08,2028:0.5;2029:1,corre
 M18,R14 riga: laboratorio nazionale di valutazione (08),2,0.025,2027:1,corrente,
 M19,R14 riga: gestione dei seggi digitali (05),2,0.01,2029:1,corrente,
 M20,R14 riga: conto unico e seggi digitali (08 e 05),2,0.15,2027:0.25;2028:0.4167;2029:0.1667;2030:0.1667;2031:0,una_tantum,importi una tantum distribuiti su quattro anni
-M21,Stabilizzazioni degli insegnanti,1,0.75,2027:0.15;2028:0.336;2029:0.551;2030:0.846;2031:1,corrente,"perimetro 0,75 (Riforma 3); il perimetro 1,40 del Piano Lavoro Stabile dipende dal conflitto S1; nella salvaguardia slittano per ultime anche dentro la Priorita 1"
-M23,Classi piu piccole nelle zone a rischio di dispersione (residuo del dividendo demografico),2,0.043,2031:1,corrente,cresce con il dividendo oltre il 2031
+M21,Stabilizzazioni degli insegnanti,1,0.75,2027:0.15;2028:0.336;2029:0.551;2030:0.846;2031:1,corrente,"perimetro 0,75: 15.563 posti comuni vacanti (90% di 30.215 meno la riduzione cumulata al 2031), 14.202 sostegno su posto vacante, 70.235 sostegno in deroga al ritmo delle specializzazioni; perimetro massimo 0,97 in attesa della decisione su S1; nella salvaguardia slittano per ultime anche dentro la Priorita 1"
+M23,Indennita per gli insegnanti delle scuole a rischio di dispersione,2,0.198,2029:0.491;2030:0.745;2031:1,corrente,"5% delle scuole per dispersione implicita INVALSI, circa 48.800 docenti, 338 euro lordo Stato al mese a regime; finanziata da COP17 al tasso prudente"
+M24,Corsi gratuiti di specializzazione sul sostegno,1,0.09,2027:1,corrente,"ritmo delle stabilizzazioni in deroga (M21); la quota di Priorita 2 spostata e l'aumento salariale della scuola in Q15"

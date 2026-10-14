@@ -424,3 +424,84 @@ I risparmi del 2027 e del 2028 non sono contabilizzati: la tranche parte nel 202
 - Quota rinviata in coda: 10,44.
 - Q15 scende a 4,45: la prima metà dell'aumento in coda passa da 2,25 a 1,25.
 - Nessuna voce della coda slitta.
+
+## 14. Bacino MIM dei supplenti, dividendo sulle classi e stabilizzazioni (mercoledì 14 ottobre 2026)
+
+Sostituisce la sezione 13 per dividendo, tranche e tabella delle supplenze.
+
+**Bacino dei supplenti (MIM, open data 2024/25)**
+
+| | Al 31 agosto (posto vacante) | Fino al termine (30 giugno) | Totale |
+|---|---|---|---|
+| Posti comuni | 30.215 | 66.903 | 97.118 |
+| Sostegno | 14.202 | 125.462 (deroga) | 139.664 |
+| Totale | 44.417 | 192.365 | 236.782 |
+
+**Dividendo demografico sulle classi (COP17)**
+- Classi perse dal 2023/24 al 2024/25 (MIM): primaria −1.020, secondaria di I grado −599, secondaria di II grado +347. Docenti per classe: 1,82, 2,02, 2,12. A parità di alunni per classe servono circa 2.326 posti in meno l'anno; infanzia esclusa.
+- Al netto dei posti di potenziamento già tagliati nel tendenziale (1.255 l'anno nel 2027 e nel 2028). Costo per posto 32.600 euro (da validare).
+
+| Anno | 2027 | 2028 | 2029 | 2030 | 2031 |
+|---|---|---|---|---|---|
+| Posti in meno nell'anno | 1.071 | 1.071 | 2.326 | 2.326 | 2.326 |
+| Dividendo cumulato (miliardi) | 0,03 | 0,07 | 0,15 | 0,22 | 0,30 |
+| Al tasso prudente (70%) | 0,02 | 0,05 | 0,10 | 0,16 | 0,21 |
+| Indennità M23 (prezzi dello scenario centrale) | — | — | 0,10 | 0,15 | 0,20 |
+
+Il dividendo calcolato sugli studenti (1,56 miliardi) sopravvalutava il calo dei posti: gli studenti in meno si distribuiscono su classi che restano aperte.
+
+**Indennità per gli insegnanti delle scuole a rischio di dispersione (M23).** 5% delle scuole, ordinate per dispersione implicita INVALSI: circa 48.800 docenti sul totale di 976.363 di ruolo e supplenti. A regime 0,20 miliardi, 338 euro lordo Stato al mese, 255 euro lordo dipendente. Dimensionata sul dividendo al tasso prudente al netto del rincaro dei costi del 5%. Fonte dell'indicatore: INVALSI, Rapporto nazionale 2026 (giovedì 16 luglio 2026), dispersione implicita nazionale al 6,3% (8,7% nel 2025); il dato per istituto va richiesto all'INVALSI (V38). La misura si valuta confrontando la mobilità dei docenti e la dispersione implicita delle scuole appena sopra e appena sotto la soglia del 5%.
+
+**Stabilizzazioni con il perimetro 0,75 (circa 7.500 euro per posto, 100.000 posti)**
+- Posti comuni: solo posti vacanti, al netto della riduzione cumulata dei posti al 2031 (11.630) e di un margine del 10% per la mobilità: 0,9 × 30.215 − 11.630 = 15.563.
+- Sostegno su posto vacante: 14.202.
+- Sostegno in deroga: 70.235, al ritmo delle specializzazioni.
+
+| Anno | Stabilizzate, cumulate | Non rinnovate per il calo delle classi, cumulate | Supplenze residue | Comuni su posto vacante | Comuni fino al termine | Sostegno su posto vacante | Sostegno in deroga |
+|---|---|---|---|---|---|---|---|
+| 2027 | 15.000 | 2.326 | 219.456 | 27.881 | 64.577 | 12.072 | 114.927 |
+| 2028 | 33.600 | 4.652 | 198.530 | 24.986 | 62.251 | 9.430 | 101.863 |
+| 2029 | 55.100 | 6.978 | 174.704 | 21.640 | 59.925 | 6.377 | 86.763 |
+| 2030 | 84.600 | 9.304 | 142.878 | 17.049 | 57.599 | 2.187 | 66.043 |
+| 2031 | 100.000 | 11.630 | 125.152 | 14.652 | 55.273 | 0 | 55.227 |
+
+- I mancati rinnovi valgono il 10,4% della riduzione delle supplenze al 2031.
+- La riduzione dei posti colpisce soprattutto le supplenze fino al termine; il tetto sui posti vacanti la sconta per intero, quindi è prudente.
+
+**Traguardi al 2031**
+- Supplenze su posto vacante (al 31 agosto): da 44.417 a 14.652, sotto 30.000.
+- Supplenze in deroga sul sostegno: da 125.462 a 55.227 con il perimetro 0,75; 25.462 con il perimetro massimo.
+- Supplenze residue totali: 125.152, di cui 55.273 comuni fino al termine (spezzoni e posti non vacanti, precariato strutturale) e 55.227 in deroga. Il programma elimina il precariato su posto vacante e dichiara il precariato strutturale che resta.
+
+**Perimetro massimo.** Il bacino stabilizzabile è di 129.765 posti (15.563 comuni, 14.202 sostegno vacante, 100.000 in deroga): 0,97 miliardi più 0,09 di corsi. Il perimetro 1,40 del Piano Lavoro Stabile (circa 186.700 posti) supera il bacino. Con il bacino massimo restano 95.387 supplenze.
+
+**Corsi gratuiti di specializzazione (M24, Priorità 1, 0,09 l'anno).** Spostano 0,09 di Priorità 2 in coda. La voce che cede è l'aumento salariale della scuola: la quota in Q15 passa da 2,60 a 2,69 e Q15 da 5,45 a 5,54. Motivo: l'aumento è già scaglionato in coda, resta nel perimetro della scuola e non tocca le voci a costo di rinvio medio (gravosi, fondo affitto).
+
+**Ritmo delle specializzazioni (verifica a)**
+- Offerta attuale: TFA X ciclo 35.784 posti (DM MUR 436 del giovedì 26 giugno 2025), XI ciclo 30.241 (nota MUR 4660 del martedì 14 aprile 2026, senza secondaria di II grado); percorsi INDIRE per chi ha tre anni di servizio sul sostegno, 18.137 specializzati nel primo ciclo, prorogati al 31 dicembre 2026. Dati da stampa specializzata (V39).
+- Fabbisogno: 70.235 stabilizzazioni in deroga con 0,75, cioè circa 14.000 l'anno; 100.000 con il perimetro massimo, cioè 20.000 l'anno dal 2027.
+- Manca il numero dei supplenti in deroga già specializzati (V37). In sua assenza, l'anno in cui si arriva alle stabilizzazioni dipende dal flusso annuo di specializzati tra i supplenti in deroga:
+
+| Specializzati in deroga l'anno | Cumulato al 2031 | 70.235 (perimetro 0,75) | 100.000 (perimetro massimo) |
+|---|---|---|---|
+| 15.000 | 75.000 | 2031 | 2033 |
+| 20.000 | 100.000 | 2030 | 2031 |
+| 25.000 | 125.000 | 2029 | 2030 |
+
+- I 0,09 miliardi pagano circa 26.000–30.000 posti di corso l'anno (3.000–3.500 euro per posto, stima della redazione). Il perimetro massimo entro il 2031 richiede che almeno 20.000 posti l'anno vadano ai supplenti in deroga in aggiunta all'offerta attuale, quindi un aumento della capacità degli atenei. Senza questo aumento il perimetro massimo si raggiunge nel 2033 e i 0,22 aggiuntivi restano in parte inutilizzati fino ad allora.
+
+**Opzioni per i 0,22 aggiuntivi dentro i 6,8 miliardi della scuola (verifica b, D27).** Composizione della Riforma 3 (file 01): aumento salariale 4,5; stabilizzazione 0,5–1 (0,75 nel quadro); tempo pieno e mense circa 1,0; diritto allo studio circa 0,5. Le stabilizzazioni sono in Priorità 1: ogni aumento sposta in coda la stessa quota di Priorità 2.
+
+| Opzione | Da dove vengono i 0,22 | A cosa si rinuncia |
+|---|---|---|
+| A | aumento salariale da 4,5 a 4,28 miliardi | l'aumento reale scende dal 10% a circa il 9,5%; la coda non cresce |
+| B | tempo pieno e mense da 1,0 a 0,78 | circa un quinto dell'estensione del tempo pieno e delle mense gratuite, quindi meno classi a tempo pieno nel Mezzogiorno |
+| C | voce aggiuntiva in coda, attivata dal gettito certificato | nessuna rinuncia nella scuola; i 30.000 posti in deroga aggiuntivi diventano condizionati al gettito ed escono dalla Priorità 1 |
+| D | indennità M23 | la misura sulle scuole a rischio di dispersione sparisce |
+
+Con l'opzione A la scuola torna dentro i 6,8 anche per i corsi se l'aumento scende a 4,19 (0,22 + 0,09). In ogni opzione il perimetro massimo ha effetto entro il 2031 solo se il flusso di specializzati in deroga raggiunge 20.000 l'anno.
+
+**Effetto sul quadro**
+- Priorità 2 coperta: 0,13 / 3,95 / 4,79 / 4,79 / 5,28 miliardi.
+- Quota rinviata in coda: 11,53, uguale alla somma delle voci di coda.
+- Prudente ≥ 0 in ogni anno. Anni di attivazione della coda invariati.
