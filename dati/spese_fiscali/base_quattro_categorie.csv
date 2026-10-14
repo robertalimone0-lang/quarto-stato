@@ -1,0 +1,71 @@
+n,classe,voce,effetto_2028_mln,effetto_2026_mln,tributo,missione,categoria,motivo
+213,L,"Recupero edilizio, rate in corso",9340.4,-10858.7,IRPEF,19 CASA E ASSETTO URBANISTICO,vincolata,rate di bonus edilizi gia avviati: legittimo affidamento
+456,E,Cuneo fiscale lavoratori dipendenti,8569.3,-8569.3,IRPEF,26 POLITICHE PER IL LAVORO,equita,esclusa per decisione gia presa
+304,E,Assegno unico non imponibile,5715.6,-5648.0,IRPEF,"24 DIRITTI SOCIALI, POLITICHE SOCIALI E FAMIGLIA",equita,esclusa per decisione gia presa
+233,K,Spese sanitarie al 19% (solo sopra la soglia ISEE),4873.9,-4873.9,IRPEF,20 TUTELA DELLA SALUTE,equita,sotto la soglia ISEE esclusa; la parte sopra soglia e aggredibile solo con decisione esplicita
+398,E,"Pensioni di guerra, invalidita e rendite esenti",3918.3,-3918.3,IRPEF,26 POLITICHE PER IL LAVORO,equita,esclusa per decisione gia presa
+187,K,Deduzione della rendita dell'abitazione principale,3762.8,-3762.8,IRPEF,19 CASA E ASSETTO URBANISTICO,strutturale,non tassare la rendita figurativa della casa in cui si abita e una regola del disegno IRPEF; non si tocca
+550,S,Regime forfettario,3490.8,-3490.8,,29 POLITICHE ECONOMICO-FINANZIARIE E DI BILANCIO E TUTELA DELLA FINANZA PUBBLICA,aggredibile,regime sostitutivo: solo con decisione esplicita
+208,S,Cedolare secca,3353.9,-3353.9,,19 CASA E ASSETTO URBANISTICO,aggredibile,regime sostitutivo: solo con decisione esplicita
+391,E,Previdenza complementare,2830.0,-2830.0,IRPEF,25 POLITICHE PREVIDENZIALI,equita,esclusa per decisione gia presa
+219,L,"Bonus facciate, rate in corso",2826.1,-2826.1,IRPEF/IRES,19 CASA E ASSETTO URBANISTICO,vincolata,rate di bonus edilizi gia avviati: legittimo affidamento
+205,L,"Ecobonus, rate in corso",2703.9,-15273.4,IRPEF/IRES,19 CASA E ASSETTO URBANISTICO,vincolata,rate di bonus edilizi gia avviati: legittimo affidamento
+211,L,"Superbonus, rate in corso",2541.6,-16949.7,IRPEF,19 CASA E ASSETTO URBANISTICO,vincolata,rate di bonus edilizi gia avviati: legittimo affidamento
+185,K,Registro al 2% sulla prima casa,2187.9,-2187.9,,19 CASA E ASSETTO URBANISTICO,strutturale,imposta ridotta sull'acquisto della prima casa; toccarla colpisce chi compra la sola abitazione; non si tocca
+169,C,Crediti d'imposta per investimenti delle imprese,1823.0,-1823.0,,17 RICERCA E INNOVAZIONE,aggredibile,
+181,C,Esenzioni dall'imposta sulle assicurazioni,1423.7,-1423.7,,19 CASA E ASSETTO URBANISTICO,aggredibile,
+188,K,Interessi sui mutui per la prima casa,1380.7,-1380.7,IRPEF,19 CASA E ASSETTO URBANISTICO,strutturale,"interessi sui mutui per la prima casa, contratti in essere; non si tocca"
+152,C,Maggiorazione del costo del lavoro per nuove assunzioni (IRES),1327.9,-1329.7,IRES,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,
+64,X,Agevolazioni sulle accise (sussidi dannosi),1231.8,-1231.8,ACCISA,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,gia nel taglio dei sussidi ambientalmente dannosi: non conteggiata due volte
+110,E,Regime impatriati (CLAUDE.md),1062.3,-1483.1,IRPEF,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,equita,esclusa per decisione gia presa
+198,K,Catastale fissa sulla prima casa,885.3,-885.3,,19 CASA E ASSETTO URBANISTICO,strutturale,"come sopra, imposta catastale; non si tocca"
+400,E,Vitto e mense dei lavoratori,844.6,-844.6,IRPEF,26 POLITICHE PER IL LAVORO,equita,esclusa per decisione gia presa
+232,C,Deduzione dei contributi ai fondi sanitari integrativi,838.3,-838.3,IRPEF,20 TUTELA DELLA SALUTE,aggredibile,
+434,K,Premi di produttivita al 5%,815.3,-815.3,IRPEF,26 POLITICHE PER IL LAVORO,aggredibile,sensibile: fuori dalla base proposta salvo decisione
+139,C,Riallineamento fiscale dell'avviamento,814.3,-2200.3,,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,
+277,K,Spese di istruzione al 19%,737.2,-737.2,IRPEF,21 TUTELA E VALORIZZAZIONE DEI BENI E ATTIVITA’ CULTURALI E PAESAGGISTICI,aggredibile,sensibile: fuori dalla base proposta salvo decisione
+215,R,Bonus mobili (riserva sulle spese nuove),660.8,-790.9,IRPEF,19 CASA E ASSETTO URBANISTICO,aggredibile,"voce della riserva, sulle sole spese nuove"
+425,C,Compensi sportivi dilettantistici esenti,651.6,-651.6,IRPEF,26 POLITICHE PER IL LAVORO,aggredibile,
+388,C,Sostitutiva sulle prestazioni svizzere di prepensionamento,563.7,-563.7,,25 POLITICHE PREVIDENZIALI,vincolata,prestazioni svizzere di prepensionamento: possibile vincolo convenzionale con la Svizzera; tolta dalla base finche non verificato
+214,L,"Sismabonus acquisti, rate in corso",558.7,-10162.4,IRPEF,19 CASA E ASSETTO URBANISTICO,vincolata,rate di bonus edilizi gia avviati: legittimo affidamento
+87,K,IRES delle cooperative sulla riserva obbligatoria,500.9,-500.9,IRES,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,sensibile: fuori dalla base proposta salvo decisione
+71,C,Tonnage tax,484.7,-484.7,IRES,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,regime autorizzato come aiuto di Stato: l'autorizzazione consente di ridurlo
+283,E,Rientro di docenti e ricercatori (art. 44),473.9,-473.9,IRPEF,21 TUTELA E VALORIZZAZIONE DEI BENI E ATTIVITA’ CULTURALI E PAESAGGISTICI,equita,esclusa per decisione gia presa
+57,C,Agevolazioni di registro sui trasferimenti di terreni,457.8,-457.8,,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,
+231,E,Spese mediche per disabili,435.9,-435.9,IRPEF,20 TUTELA DELLA SALUTE,equita,esclusa per decisione gia presa
+197,K,Ipotecaria fissa sulla prima casa,427.8,-427.8,,19 CASA E ASSETTO URBANISTICO,strutturale,"come sopra, imposta ipotecaria; non si tocca"
+153,C,Credito d'imposta investimenti Mezzogiorno,415.8,-415.8,,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,
+195,C,Riduzione forfettaria del reddito dei fabbricati locati,415.5,-415.5,IRPEF,19 CASA E ASSETTO URBANISTICO,strutturale,"deduzione forfettaria dei costi di manutenzione: rappresenta costi di produzione del reddito; si puo toccare solo riducendo il forfait, gia in base al 100% come proposta da confermare"
+455,E,Ulteriore detrazione per lavoratori dipendenti,402.9,-402.9,IRPEF,26 POLITICHE PER IL LAVORO,equita,esclusa per decisione gia presa
+441,E,Trattamento integrativo,397.3,-397.3,IRPEF,26 POLITICHE PER IL LAVORO,equita,esclusa per decisione gia presa
+136,S,PIR-PMI (redditi finanziari),394.7,-291.7,IRPEF,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,regime sostitutivo: solo con decisione esplicita
+146,E,IVA: note di variazione nelle procedure concorsuali,393.0,-393.0,IVA,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,strutturale,note di variazione IVA nelle procedure concorsuali: regola di neutralita dell'IVA (direttiva e giurisprudenza UE); non si tocca
+129,C,Superammortamento,350.3,-350.3,IRPEF/IRES,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,
+192,E,Affitti dei giovani a basso reddito,347.5,-347.5,IRPEF,19 CASA E ASSETTO URBANISTICO,equita,esclusa per decisione gia presa
+428,E,Rivalutazione del TFR,329.3,-311.1,IRPEF,26 POLITICHE PER IL LAVORO,equita,esclusa per decisione gia presa
+302,E,Assegni periodici al coniuge separato,309.6,-309.6,IRPEF,"24 DIRITTI SOCIALI, POLITICHE SOCIALI E FAMIGLIA",equita,esclusa per decisione gia presa
+317,C,Premi assicurativi vita e infortuni al 19%,282.3,-282.3,IRPEF,"24 DIRITTI SOCIALI, POLITICHE SOCIALI E FAMIGLIA",aggredibile,
+224,E,Barriere architettoniche,280.8,-280.8,IRPEF,19 CASA E ASSETTO URBANISTICO,equita,esclusa per decisione gia presa
+431,E,Indennita di fine rapporto minime,260.9,-260.9,IRPEF,26 POLITICHE PER IL LAVORO,equita,esclusa per decisione gia presa
+170,C,Patent box,252.3,-244.5,IRPEF/IRES,17 RICERCA E INNOVAZIONE,aggredibile,
+78,C,Registro internazionale navale,250.4,-250.4,,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,"agevolazione consentita dagli orientamenti UE sul trasporto marittimo, non imposta"
+305,E,Assegni per i figli dei genitori separati,246.7,-246.7,IRPEF,"24 DIRITTI SOCIALI, POLITICHE SOCIALI E FAMIGLIA",equita,esclusa per decisione gia presa
+438,E,Indennita di fine servizio,235.3,-235.3,IRPEF,26 POLITICHE PER IL LAVORO,equita,esclusa per decisione gia presa
+499,C,IVA monofase editoria,206.0,-206.0,IVA,29 POLITICHE ECONOMICO-FINANZIARIE E DI BILANCIO E TUTELA DELLA FINANZA PUBBLICA,aggredibile,
+301,E,IRES ridotta per enti di beneficenza e istruzione,174.0,-174.0,IRES,"24 DIRITTI SOCIALI, POLITICHE SOCIALI E FAMIGLIA",equita,esclusa per decisione gia presa
+412,C,Fringe benefit sulle auto aziendali,169.6,0.0,IRPEF,26 POLITICHE PER IL LAVORO,aggredibile,
+72,C,Rivalutazione dei beni d'impresa,167.3,104.5,,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,
+303,E,Nuclei senza figli,164.1,-164.1,IRPEF,"24 DIRITTI SOCIALI, POLITICHE SOCIALI E FAMIGLIA",equita,esclusa per decisione gia presa
+422,C,Intramoenia: reddito al 75%,160.3,-160.3,IRPEF,26 POLITICHE PER IL LAVORO,aggredibile,
+386,E,Contributi colf e badanti,157.6,-157.6,IRPEF,25 POLITICHE PREVIDENZIALI,equita,esclusa per decisione gia presa
+315,K,Spese funebri al 19%,146.9,-146.9,IRPEF,"24 DIRITTI SOCIALI, POLITICHE SOCIALI E FAMIGLIA",aggredibile,sensibile: fuori dalla base proposta salvo decisione
+242,E,Prestazioni aggiuntive in sanita (Riforma 4),135.6,-135.9,,20 TUTELA DELLA SALUTE,equita,esclusa per decisione gia presa
+264,C,Credito d'imposta cinema,133.0,-133.0,,21 TUTELA E VALORIZZAZIONE DEI BENI E ATTIVITA’ CULTURALI E PAESAGGISTICI,aggredibile,
+461,X,Accise nelle zone franche (sussidi dannosi),118.6,-118.6,ACCISA,28 SVILUPPO E RIEQUILIBRIO TERRITORIALE,aggredibile,gia nel taglio dei sussidi ambientalmente dannosi: non conteggiata due volte
+131,C,Iperammortamento,110.9,-110.9,IRPEF/IRES,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,
+279,E,Spese per asili nido,103.2,-103.2,IRPEF,21 TUTELA E VALORIZZAZIONE DEI BENI E ATTIVITA’ CULTURALI E PAESAGGISTICI,equita,esclusa per decisione gia presa
+121,S,PIR delle casse previdenziali,103.0,-103.0,IRPEF,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,regime sostitutivo: solo con decisione esplicita
+147,S,Proventi da OICR,103.0,-103.0,,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,regime sostitutivo: solo con decisione esplicita
+288,E,Anticipazioni della previdenza complementare,86.7,-86.7,IRPEF,21 TUTELA E VALORIZZAZIONE DEI BENI E ATTIVITA’ CULTURALI E PAESAGGISTICI,equita,esclusa per decisione gia presa
+63,K,IRES delle cooperative,85.3,-85.3,IRES,11 COMPETITIVITA’ E SVILUPPO DELLE IMPRESE,aggredibile,sensibile: fuori dalla base proposta salvo decisione
+423,C,Voce 423,85.0,-85.0,IRPEF,26 POLITICHE PER IL LAVORO,aggredibile,

@@ -91,3 +91,5 @@ Chiusi il 14 ottobre 2026:
 - **D24.** La voce 152 (maggiorazione per nuove assunzioni, 1,33 miliardi) è usata due volte: riordino degli incentivi della Riforma 19 e Piano Lavoro Stabile. Va assegnata a una sola misura.
 - **V26. Risposta comportamentale alla cedolare.** Evidenze sul 2011 solo da stampa; sconto del 30–50% ipotizzato. Manca uno studio primario.
 - **V27. Estrazione del Rapporto 2025.** Il parser ricostruisce 126,7 miliardi di effetti 2026 contro 129,7 ufficiali; 326 misure quantificate lette contro 406. Le voci minori (256 misure, 2,2 miliardi) vanno elencate una per una.
+- **D25. Profilo realistico del riordino.** Il massimo mai ottenuto da un riordino è circa 1 miliardo l'anno; gli 11 miliardi lo superano di circa dieci volte. Profili proposti: A) base 4,85 a regime nel 2031; B) base 3,0 a regime nel 2029. In entrambi il buco del 2027 nello scenario avverso riguarda la Priorità 1 (−0,95). Dettaglio in `incoerenze/report-riserva.md`, sezioni 7 e 8.
+- **V28.** Esito del riordino della delega 2023 (circa 1 miliardo) da fonti di stampa; gettito del D.Lgs. 216/2023 non trovato nella relazione tecnica.

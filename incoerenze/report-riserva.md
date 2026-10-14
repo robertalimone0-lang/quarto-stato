@@ -161,3 +161,49 @@ Il gettito resta marginale.
 3. **Voce 152:** a quale misura va (base del riordino, Riforma 19 o Piano Lavoro Stabile).
 4. **Cedolare al 21%:** approvazione della stima netta di 0,38–0,53 miliardi come gradino c).
 5. **Forfettario:** curva d'uscita come misura con un costo, da quantificare.
+
+## 7. Classificazione in quattro categorie (aggiornamento del 14 ottobre 2026)
+
+File: `dati/spese_fiscali/base_quattro_categorie.csv`, con il motivo di ogni voce. Valori 2028, voci che fanno il 97% del totale.
+
+| Categoria | Miliardi | Contenuto |
+|---|---|---|
+| Escluse per equità o per decisione | 32,4 | lavoro dipendente e pensioni, Assegno unico, disabilità, famiglia, cura, previdenza complementare, impatriati e art. 44, spese sanitarie (sotto la soglia ISEE) |
+| Strutturali | 9,5 | prima casa (rendita non tassata, imposte d'acquisto ridotte, mutui in essere); note di variazione IVA; forfait delle spese sui fabbricati locati |
+| Vincolate (diritto UE, accordi internazionali, legittimo affidamento) | 18,5 | rate dei bonus edilizi già avviati; prestazioni svizzere di prepensionamento (vincolo convenzionale da verificare) |
+| Aggredibili | 22,2 | di cui regimi sostitutivi 7,5 (solo con decisione), sensibili 2,4, già nei sussidi dannosi 1,35, riserva 0,7, base 10,3 |
+
+**Strutturali: tocco o no**
+- *Prima casa:* non si tocca. Colpirebbe chi possiede la sola abitazione, cioè anche i redditi medi e bassi.
+- *Note di variazione IVA:* non si toccano. Garantiscono la neutralità dell'imposta richiesta dal diritto UE.
+- *Forfait delle spese sui fabbricati locati (5%):* si può ridurre, perché rappresenta costi reali. Resta in base al 100% come proposta da confermare, con l'interazione con la Riforma 8.
+
+**Aliquote IVA ridotte su alimentari e beni essenziali:** escluse. Il Rapporto del MEF le considera regole strutturali del tributo e non le censisce tra le 573 spese fiscali, quindi l'esclusione non cambia la base.
+
+**Base proposta aggiornata:** 4,85 miliardi. La voce 388 è tolta finché non si verifica il vincolo convenzionale.
+
+## 8. Confronto storico: quanto hanno prodotto i riordini
+
+| Episodio | Esito | Fonte |
+|---|---|---|
+| Serie 2017–2026 del Rapporto MEF | Le spese fiscali erariali sono salite da 54,5 a 129,7 miliardi (+138%) e da 468 a 573 misure. In dieci anni non c'è stato un anno di riduzione netta | MEF, Rapporto 2025, Tavola 14 |
+| Gruppo di lavoro Ceriani (2011) | 720 misure censite; nessun riordino conseguente | dossier del Senato |
+| Legge delega fiscale 2023 | Attese iniziali di 5–6 miliardi, ridotte a circa 1 miliardo | stampa (PMI.it, Il Sole 24 Ore), da validare |
+| D.Lgs. 216/2023 | Taglio di 260 euro delle detrazioni al 19% per i redditi oltre 50.000 euro, a copertura parziale del nuovo IRPEF; importo della relazione tecnica non trovato | da validare |
+| L. 207/2024 | Detrazioni per i figli fino a 30 anni: +0,32 miliardi; tetto alle detrazioni oltre 75.000 euro: circa 0,08 miliardi per annualità | relazione tecnica RGS |
+
+**Conclusione.** Nessun riordino ha mai prodotto più di circa 1 miliardo l'anno. Gli 11 miliardi superano di circa dieci volte il massimo storico; anche i 4,85 della base proposta lo superano di circa cinque volte.
+
+### Profili realistici e conseguenze sul quadro di Fase 1
+
+| Profilo | Priorità 2 coperta nel 2031 | Rinviata in coda | Margine prudente | Saldo 2027 avverso | Debito 2031 (C / P / A) |
+|---|---|---|---|---|---|
+| Base 11, a regime nel 2028 (attuale) | 11,4 | 6,0 | ≥ 0 | +0,08 | 131,5 / 133,2 / 133,6 |
+| **A.** Base 4,85, +20% l'anno, a regime nel 2031 (circa 1 miliardo l'anno, pari al massimo storico) | 6,7 | 10,7 | ≥ 0 | −0,95 | 131,9 / 133,4 / 133,6 |
+| **B.** Base 3,0, a regime nel 2029 (1 miliardo l'anno) | 5,3 | 12,1 | ≥ 0 | −0,95 | 131,9 / 133,3 / 133,6 |
+
+**Effetti comuni ai due profili**
+- La Priorità 1 resta coperta nello scenario prudente in ogni anno.
+- Nello scenario avverso il buco del 2027 (−0,95) riguarda la Priorità 1 stessa, perché la Priorità 2 del 2027 è già quasi nulla. Va chiuso con il gradino 4 della salvaguardia (rinvio dei nuovi ingressi) o con un avvio più lento della sanità e del welfare nel 2027.
+- Il debito cambia di pochi decimi.
+- La quota della Priorità 2 in coda sale a 10,7–12,1 miliardi.
