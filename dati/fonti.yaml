@@ -378,3 +378,19 @@ fonti:
     url: "https://dati.istruzione.it/opendata/opendata/catalogo/elements1/?area=Personale%20Scuola"
     data: "2025-08-31"
     stato: verificato
+  naspi_estiva_supplente:
+    valore: 2250
+    decimali: 0
+    unita: "euro di NASpI per supplente con contratto al 30 giugno (circa 55 giorni)"
+    fonte: "Stima della redazione sui parametri della circolare INPS n. 4/2026, con retribuzione media di circa 2.000 euro e domanda di tutti gli aventi diritto; l'INPS non pubblica beneficiari e spesa per i supplenti della scuola (V41)"
+    url: "https://www.inps.it/content/dam/inps-site/it/scorporati/circolari-e-messaggi/2026/01/Circolare_15147/Allegati/16539_Circolare-numero-4-del-28-01-2026.pdf"
+    data: "2026-10-14"
+    stato: da_validare
+  costo_netto_31_agosto_ata:
+    valore: 2300
+    decimali: 0
+    unita: "euro per supplente ATA fino al termine: luglio e agosto al netto della NASpI (intervallo 1.900-2.700)"
+    fonte: "Stima della redazione: costo mensile ATA 2.000-2.400 euro lordo Stato, da verificare sul Conto annuale RGS; NASpI sui parametri della circolare INPS n. 4/2026 (V41)"
+    url: "https://contoannuale.rgs.mef.gov.it/"
+    data: "2026-10-14"
+    stato: da_validare

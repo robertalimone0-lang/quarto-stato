@@ -582,3 +582,32 @@ Nel 2020 la rilevazione non si è svolta. L'8,7% compare nel 2023 e nel 2025. Il
 - *Comma 828.* Dal 2026/27 la L. 207/2024 taglia 2.174 posti ATA. Con la stessa regola dei docenti (90% dei posti vacanti meno i posti tagliati) i posti ATA stabilizzabili sono 0,9 × 17.781 − 2.174 = 13.829.
 - *Costo della stabilizzazione.* I supplenti annuali hanno già lo stipendio estivo: la stabilizzazione costa la progressione di carriera, circa 1.000–2.000 euro l'anno per posto (stima della redazione, da validare sul Conto annuale RGS): 0,01–0,03 miliardi. Il file 07 indica 0,1–0,2 miliardi: la differenza corrisponde ai contratti al 31 agosto per i 38.682 supplenti fino al termine (lordo 0,15–0,19, netto della NASpI 0,07–0,10, a 2.000–2.400 euro lordo Stato al mese, da validare).
 - *Opzioni.* A) stabilizzazione dei 13.829 posti vacanti in Priorità 1, dentro i 6,8 della scuola con l'aumento salariale da 4,19 a circa 4,16 miliardi; B) A più contratti al 31 agosto per gli ATA fino al termine, uniti alla voce di coda dei docenti; C) solo la regola di legge (posto vacante da due anni in ruolo d'ufficio) con attuazione dalla seconda legislatura; D) tutto alla seconda legislatura. La condanna della Corte di giustizia UE sulla reiterazione dei contratti ATA (file 07) rende rischiose C e D.
+
+## 17. Contratti al 31 agosto e personale ATA: decisione (mercoledì 14 ottobre 2026)
+
+**Voce unificata Q16 (docenti e ATA con supplenza fino al termine).** Costo netto della NASpI evitata, sulle supplenze residue dell'anno di attivazione: docenti come nella sezione 16; ATA 38.682 supplenti fino al termine a circa 2.300 euro netti (intervallo 1.900–2.700, da validare), cioè circa 0,09 miliardi.
+
+| Opzione | Regola | Q16 | Riforma 19 ridotta (Q10) | Esito |
+|---|---|---|---|---|
+| A | davanti a Q15, con scorrimento | 2030, 0,34 | 2033 | scartata: Q10 fuori dal 2032 |
+| B | davanti a Q15, solo dopo Q10 | 2032, 0,28 | 2031 | scelta |
+| C | docenti davanti a Q15; ATA separati solo dopo Q10 | docenti 2030 (0,25); ATA 2033 | 2032 | scartata: ATA fuori dal 2032 |
+| D | come A con costo ATA basso | 2030, 0,32 | 2032 | clausola di anticipo se V41 la conferma |
+
+Soglia di A: con la voce fino a 0,33 miliardi Q10 resta nel 2032; a 0,34 passa al 2033. Scenario prudente: nessuna attivazione cambia in nessuna opzione.
+
+**Clausola di anticipo.** Se l'INPS conferma un costo della NASpI che porta Q16 a 0,32 miliardi o meno, Q16 si anticipa al 2030 senza la regola «dopo Q10» e la Riforma 19 ridotta slitta al 2032, dentro la legislatura.
+
+**Stabilizzazione ATA (M25, Priorità 1).** 13.829 posti vacanti, 0,03 miliardi (estremo alto della stima 0,01–0,03). Rientra nei 6,8 della scuola: l'aumento salariale scende da 4,19 a 4,16 miliardi, circa il 9,2% reale in cinque anni.
+
+| Voce della scuola | Miliardi |
+|---|---|
+| Resto della scuola in Priorità 2 (M07) | 5,71 |
+| Stabilizzazioni dei docenti (M21) | 0,97 |
+| Corsi di specializzazione (M24) | 0,09 |
+| Stabilizzazione ATA (M25) | 0,03 |
+| Totale | 6,80 |
+
+**Effetto sul quadro.** Priorità 2 coperta: 0,11 / 3,87 / 4,58 / 4,58 / 5,03 miliardi; Priorità 2 rinviata 11,44, uguale alla coda; prudente ≥ 0 in ogni anno. Coda nello scenario centrale: Q14 2028; Q01, Q05, Q12 2029; Q02, Q03 2030; Q04, Q06, Q10 2031; Q07 e Q16 2032. Nello scenario avverso del 2031 slitta il 26,1% dei nuovi ingressi della Priorità 1.
+
+**Regola nuova del modello.** La colonna `dopo` di `dati/coda.csv` indica un prerequisito: la voce resta fuori dalla coda attiva e dallo scorrimento finché il prerequisito non è attivo.

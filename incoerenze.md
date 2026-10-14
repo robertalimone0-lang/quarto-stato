@@ -4,7 +4,7 @@ Registro aggiornato a mercoledì 14 ottobre 2026. Codici: D = decisione richiest
 
 ## Decisioni richieste
 
-- **D28. Voci scolastiche del Piano Lavoro Stabile fuori dal quadro.** Organico di rete, contratti al 31 agosto, tutor, scuole difficili e personale ATA: costi voce per voce presentati il 14 ottobre 2026; decise scuole difficili, tutor e organico di rete; aperte D28a (contratti al 31 agosto) e D28b (ATA).
+- **D28. Voci scolastiche del Piano Lavoro Stabile fuori dal quadro.** Organico di rete, contratti al 31 agosto, tutor, scuole difficili e personale ATA: costi voce per voce presentati il 14 ottobre 2026; tutte decise (report, sezioni 16 e 17).
 - **D18. Strumenti di build.** Quarto e matplotlib non sono installati: i comandi sono stati proposti il 14 ottobre 2026.
 
 ## Decisioni prese il 14 ottobre 2026, seconda tornata (chiuse)
@@ -137,7 +137,15 @@ Chiusi il 14 ottobre 2026:
 ## Scuola: D28 in parte decisa (mercoledì 14 ottobre 2026, sesta tornata)
 
 - **Decise.** Scuole difficili assorbite nella M23, con punteggio di carriera per chi resta almeno tre anni; tutor: il DM 226/2022, art. 12, lo prevede già, quindi in questa legislatura solo il punteggio di carriera per il tutor e ore riconosciute alla seconda; organico di rete alla seconda legislatura. Dettaglio nel report, sezione 16.
-- **D28a. Contratti al 31 agosto (aperta).** Al costo netto della NASpI, davanti a Q15, la voce si attiva nel 2030 (0,25) e sposta Q10 al 2032. La posizione dopo Q10 non evita lo spostamento per effetto dello scorrimento: serve la regola "solo dopo Q10", con attivazione nel 2032 a 0,19.
-- **D28b. Personale ATA (aperta).** 17.781 supplenti annuali e 38.682 fino al termine (MIM 2024/25); 13.829 posti stabilizzabili al netto dei 2.174 tagliati dal comma 828 e del margine del 10%. Opzioni A–D nel report.
+- **D28a (decisa, vedi sotto).** Al costo netto della NASpI, davanti a Q15, la voce si attiva nel 2030 (0,25) e sposta Q10 al 2032. La posizione dopo Q10 non evita lo spostamento per effetto dello scorrimento: serve la regola "solo dopo Q10", con attivazione nel 2032 a 0,19.
+- **D28b (decisa, vedi sotto).** 17.781 supplenti annuali e 38.682 fino al termine (MIM 2024/25); 13.829 posti stabilizzabili al netto dei 2.174 tagliati dal comma 828 e del margine del 10%. Opzioni A–D nel report.
 - **V41. NASpI estiva dei supplenti.** L'INPS non pubblica beneficiari e spesa per i supplenti della scuola: la stima (circa 2.250 euro per supplente) usa i parametri della circolare n. 4/2026 e una retribuzione media di circa 2.000 euro; da validare con l'INPS. Da validare anche la quota media dello spezzone (metà posto) e il costo mensile ATA.
+
+## D28a e D28b decise (mercoledì 14 ottobre 2026, settima tornata)
+
+- **D28a: opzione B con clausola di anticipo.** Una sola voce di coda (Q16) per i contratti al 31 agosto di docenti e ATA con supplenza fino al termine, prima di Q15, attivabile solo dopo Q10. Scenario centrale: Q10 nel 2031, Q16 nel 2032 a 0,28 miliardi netti della NASpI (docenti 0,19, ATA 0,09). Se V41 porta la voce a 0,32 miliardi o meno, la voce si anticipa al 2030 (opzione D) e Q10 slitta al 2032, dentro la legislatura.
+- **Opzioni scartate.** A (voce unificata davanti a Q15 senza regola): Q16 nel 2030 a 0,34, Q10 nel 2033; C (docenti nel 2030, ATA separati dopo Q10): ATA nel 2033. Soglia: con la voce a 0,33 o meno Q10 resta nel 2032; a 0,34 passa al 2033.
+- **D28b: opzione B.** Stabilizzazione dei 13.829 posti ATA vacanti in Priorità 1 (M25, 0,03); l'aumento salariale scende a 4,16 miliardi (circa 9,2% reale); contratti al 31 agosto degli ATA dentro Q16. Priorità 2 rinviata invariata (11,44); prudente ≥ 0 in ogni anno.
+- **Regola nuova del modello.** Colonna `dopo` in `dati/coda.csv`: una voce con un prerequisito resta fuori dalla coda attiva e dallo scorrimento finché il prerequisito non è attivo.
+- **V41 (aperto).** Costo netto ATA (0,07–0,10) e NASpI estiva dei supplenti da validare con l'INPS e sul Conto annuale RGS.
 

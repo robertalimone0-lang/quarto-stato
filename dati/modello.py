@@ -147,7 +147,8 @@ def simula_coda(s, confronto=False):
         risorse = _cert(g, y) + QUOTA_ECCEDENZA * _cert(x, y)
         libero = risorse - impegnato - prenotato
         while True:
-            resto = [v for v in CODA if v["codice"] not in attiva]
+            resto = [v for v in CODA if v["codice"] not in attiva
+                     and (not v.get("dopo") or v["dopo"] in attiva)]  # colonna dopo: voce attivabile solo dopo un'altra
             if not resto:
                 break
             c0 = float(resto[0]["costo_regime"]) * MULT[s]

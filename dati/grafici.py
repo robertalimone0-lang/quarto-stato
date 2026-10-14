@@ -29,7 +29,7 @@ def flusso_attivazione():
     _box(ax, 0.36, 0.80, 0.30, 0.15, "Coperture di Fase 1\noltre lo scenario prudente\n(eccedenza a consuntivo)")
     _box(ax, 0.70, 0.80, 0.28, 0.15, "Contributi di emersi\ne regolarizzati")
     _box(ax, 0.10, 0.52, 0.56, 0.16, "Certificazione UPB\nmedia mobile di quattro trimestri, dati di cassa\nconferma annuale sul consuntivo", colore="#ffffff")
-    _box(ax, 0.02, 0.18, 0.30, 0.18, "Coda di attivazione\nQ01–Q15, soglia 110%\nscorrimento con prenotazione")
+    _box(ax, 0.02, 0.18, 0.30, 0.18, "Coda di attivazione\nQ01–Q16, soglia 110%\nscorrimento con prenotazione")
     _box(ax, 0.36, 0.18, 0.30, 0.18, "Gettito delle leve\nrimasto libero:\n50% IRPEF, 30% debito, 20% riserva")
     _box(ax, 0.70, 0.18, 0.28, 0.18, "Riduzione del debito\no saldo INPS")
     _freccia(ax, 0.17, 0.80, 0.25, 0.68)
