@@ -1,0 +1,41 @@
+name: Build e pubblicazione
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Ambiente Python
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install -r requirements.txt
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.10.19
+
+      - name: Controlli
+        run: |
+          .venv/bin/python strumenti/controlla_coperture.py
+          .venv/bin/python strumenti/controlla_fonti.py
+
+      - name: Build HTML, PDF (Typst) e DOCX
+        run: quarto render
+
+      - name: Pubblicazione su Cloudflare Pages
+        if: ${{ vars.CF_PAGES_PROJECT != '' }}
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy _book --project-name=${{ vars.CF_PAGES_PROJECT }}

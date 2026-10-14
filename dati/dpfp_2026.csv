@@ -1,0 +1,11 @@
+quadro,anno,debito_pil,crescita_pil_nominale,saldo_primario,indebitamento_netto,pil_nominale_mld
+tendenziale,2025,136.7,2.5,0.8,3.1,2265.0
+tendenziale,2026,138.1,2.7,1.2,2.9,2326.2
+tendenziale,2027,138.4,2.9,1.4,2.9,2393.6
+tendenziale,2028,137.7,2.7,1.9,2.7,2459.4
+tendenziale,2029,136.3,2.6,2.5,2.2,2524.0
+programmatico,2025,136.7,2.5,0.8,3.1,
+programmatico,2026,138.1,2.7,1.2,2.9,
+programmatico,2027,138.5,3.2,0.9,3.4,
+programmatico,2028,137.9,3.0,1.4,3.2,
+programmatico,2029,136.6,2.6,2.4,2.3,

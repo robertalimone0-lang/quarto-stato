@@ -1,0 +1,15 @@
+codice,misura,costo_regime,profilo,fase,priorita,condizione,note
+Q01,Residuo del Piano Lavoro Stabile,0.55,0.333;0.667;1,1,1,gettito certificato >= 1.10 x costo a regime,
+Q02,Capitale umano ridimensionato,1.335,capitale_umano,1,2,gettito certificato >= 1.10 x costo a regime,posti su 7 anni; 0.98 nel 2031
+Q03,Pensioni: rivalutazione piena fino a quattro volte il minimo,1.0,1,1,3,gettito certificato >= 1.10 x costo a regime,Priorita 2 rinviata
+Q04,Scuola: seconda meta dell'aumento salariale,2.25,0.333;0.667;1,1,4,gettito certificato >= 1.10 x costo a regime,Priorita 2 rinviata
+Q05,Scuola: quota residua di diritto allo studio e tempo pieno,0.19,0.333;0.667;1,1,5,gettito certificato >= 1.10 x costo a regime,Priorita 2 rinviata; 0.5 restano in Fase 1
+Q06,Casa: agenzie sociali e alloggi protetti,0.6,0.333;0.667;1,1,6,gettito certificato >= 1.10 x costo a regime,Priorita 2 rinviata
+Q07,Sanita verso il 7% del PIL: prima tranche,2.47,0.333;0.667;1,2,7,gettito certificato >= 1.10 x costo a regime,obiettivo della legislatura successiva
+Q08,Sanita verso il 7% del PIL: seconda tranche,2.47,0.333;0.667;1,2,8,gettito certificato >= 1.10 x costo a regime,obiettivo della legislatura successiva
+Q09,Cofinanziamento degli investimenti (sanita 0.4 casa 0.5 scuola 0.75),1.65,0.333;0.667;1,1,9,gettito certificato >= 1.10 x costo a regime,Priorita 2 rinviata
+Q10,Riforma 19 netta (senza congedo e dote),0.70,0.333;0.667;1,2,10,gettito certificato >= 1.10 x costo a regime,
+Q11,Conto di stabilizzazione del reddito,0.75,0.5;1,2,11,gettito certificato >= 1.10 x costo a regime,
+Q12,Trasporti: fondo di Fase 1,0.3,1,2,12,gettito certificato >= 1.10 x costo a regime,Priorita 2 rinviata
+Q13,Trasporti Fase 2,3.0,0.333;0.667;1,2,13,gettito certificato >= 1.10 x costo a regime,
+Q14,Riforma 16 sex work,0.06,1,2,14,gettito certificato >= 1.10 x costo a regime,testo da recuperare

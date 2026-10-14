@@ -1,0 +1,63 @@
+# Incoerenze e punti aperti
+
+Registro aggiornato a mercoledì 14 ottobre 2026. Codici: D = decisione richiesta, I = interpretazione adottata da confermare, V = dato da validare, S = conflitto tra sorgenti.
+
+## Decisioni richieste
+
+- **D18. Strumenti di build.** Quarto e matplotlib non sono installati: i comandi sono stati proposti il 14 ottobre 2026.
+
+## Decisioni prese il 14 ottobre 2026, seconda tornata (chiuse)
+
+D14 cofinanziamento regionale (classe C fino all'intesa, poi B); D15 cofinanziamento degli investimenti di Fase 1 dal 2028, con saldo avverso 2027 a +0,08 miliardi; D16 quota rinviata di 6,0 miliardi; D17 coda invariata, impegno al 74,5%.
+
+## Decisioni prese il 14 ottobre 2026 (chiuse)
+
+D1 opzione A; D2–D3 ordine e composizione confermati; D4 capitale umano confermato; D5–D6 leve; D7 margine centrale diviso 50% debito e 50% coda; D8 scorrimento con prenotazione; D9 fondo CDP fuori dalla coda; I1–I3 confermate; D10 prenotazione al 50%; D11 proposte A, B, C (in parte), D ed E approvate; D12 sanità circa 6,8% in questa legislatura e 7,0% nella successiva; D13 Priorità 2 del 2027 dal 1° luglio 2027.
+
+## Interpretazioni adottate da confermare
+
+- **I4.** La sanità al 7,0% del PIL vale 0,6 punti di PIL del 2031 (circa 15,9 miliardi). In coda la quota oltre gli 11 miliardi è espressa in due tranche da 2,47 miliardi.
+- **I5.** Certificazione: l'attivazione dell'anno Y usa la media degli anni Y-2 e Y-3, sia per le leve sia per l'eccedenza delle coperture rispetto al prudente.
+- **I6.** Il debito conta come riduzione tutto ciò che non viene speso: margine, quote del 30% e del 20%, prenotazioni non ancora attivate, contributi.
+- **I7.** La cella B13 dell'Excel non viene modificata, perché le sorgenti non si toccano. Il modello si ricostruisce in `dati/debito.py`.
+- **I8.** La coda attinge prima alla metà dell'eccedenza delle coperture, poi al gettito delle leve; la regola 50-30-20 si applica al gettito delle leve rimasto libero.
+- **I9.** Stime di lavoro, da validare, per due leve nuove: audit sanitario 0 / 0,5 / 1,0 miliardi dal 2029 (prudente, centrale, alta); Riforma 18 tra 0,06 e 0,12 miliardi l'anno. L'aliquota minima sui redditi altissimi resta a zero finché il Dipartimento delle Finanze non la quantifica.
+
+## Dati da validare
+
+- **V6. Precari della scuola.** 182.641 contratti a termine al 24 settembre 2025: dati del Ministero comunicati ai sindacati, riportati da stampa specializzata. Non ho trovato la pubblicazione del MIM né il Conto annuale RGS. Resta da validare.
+- **V9.** Stime delle leve (regolarizzazione, rientro, titoli, emersione) costruite su ipotesi dichiarate. Servono microsimulazioni INPS e MEF.
+- **V10.** Costo del nuovo regime impatriati (70% poi 50%, tetto 150.000 euro): non stimato.
+- **V11.** Popolazione 20–64 anni per convertire i punti di occupazione in persone (circa 345.000 per punto): da leggere su Eurostat.
+- **V12.** Contributo delle singole riforme all'obiettivo di occupazione: stime d'ordine di grandezza da sostituire con una microsimulazione.
+- **V13. Imposte sulle bevande zuccherate e sulla plastica.** La L. 199/2025 (comma 125) ha spostato la decorrenza al 1° gennaio 2027. Il rinvio è stato contabilizzato come minori entrate nel 2026 (bevande zuccherate 372 milioni secondo l'Osservatorio CPI, 312 secondo un'altra fonte; plastica 73 milioni), quindi il gettito dal 2027 è nel tendenziale. Da verificare: il testo vigente su Normattiva (commi 652 e 676 della L. 160/2019, non leggibili con gli strumenti di questa sessione) e la relazione tecnica originale (A.S. 1586, XVIII legislatura). Rischio: se la legge di bilancio 2027 le rinvia ancora, il tendenziale perde il gettito. Il programma ne vincola l'uso senza contarle come copertura.
+- **V14. Immobili non accatastati e affitti passivi.** Valori di lavoro: 0,45 miliardi (rendita presunta di circa 305 milioni secondo il piano dell'Agenzia delle Entrate 2025–2027; stima del 2013 di 589 milioni) e 0,30 miliardi (oltre i 144 milioni di risparmio previsti dal Demanio). Da validare con Agenzia delle Entrate, Dipartimento delle Finanze e Demanio.
+- **V15. Incentivi alle imprese senza effetti.** Nessun totale nazionale verificato: la riga resta a zero in classe C.
+
+Chiusi il 14 ottobre 2026:
+- **V1. Infermieri:** 7,0 per mille residenti nel 2024 e 6,9 nel 2023 (Istat, audizione del 7 luglio 2026).
+- **V3. Spesa delle famiglie:** 42,4 miliardi nel 2025, 22,3% del totale (Istat, Sistema dei conti della sanità, maggio 2026).
+- **V8. DPFP:** tutte le cifre confermate dal dossier della Camera del 7 ottobre 2026.
+- V2, V4, V5 e V7 erano già chiusi.
+
+## Conflitti tra sorgenti ancora aperti
+
+- **S1.** La parte scolastica del Piano Lavoro Stabile (1,6–2,1 miliardi) dovrebbe stare dentro i 6,8 della scuola, che però prevedono 0,5–1 per la stabilizzazione.
+- **S2.** Il riordino degli incentivi all'assunzione (1,0–1,5 miliardi) copre la Riforma 19, mentre il Piano Lavoro Stabile usa gli stessi bonus per lo sgravio sulle stabilizzazioni.
+- **S3.** La sintesi del file 04 dice "circa 11 miliardi", i costi dello stesso file valgono 13. Va scelto quali voci entrano negli 11.
+- **S4.** Il file 04 rimanda al registro "F15", che nel file 01 è il costo di cassa delle pensioni.
+- **S5.** Il file 08 dichiara che nessuna delle otto misure è applicata altrove; esistono istituti analoghi in Estonia e in Germania. Da verificare.
+- **S6.** CLAUDE.md cita come esempio di data "giovedì 2 ottobre 2026": il 2 ottobre 2026 è un venerdì.
+- **S7.** Elenco delle soglie solo amministrative da presentare prima della redazione.
+- **S8.** Mancano i testi delle Riforme 16 e 17.
+- **S9.** L'emersione non cambia il tasso di occupazione Istat, che conta già i lavoratori irregolari. Le sorgenti la presentano come leva dell'occupazione.
+
+## Capitolo 1 (mercoledì 14 ottobre 2026)
+
+- **D19. Condizione europea nella coda.** Il capitolo 1 aggiunge alla coda una seconda condizione di attivazione: la compatibilità con il percorso di spesa netta del Piano rivisto. Le leve fondate su un maggiore adempimento riducono il deficit ma non aprono spazio di spesa nelle regole UE. Va confermata.
+- **V16. Trattamento UE di ogni copertura** (colonna `riconoscimento_ue` di `dati/coperture.csv`): classificazione proposta dalla redazione, da concordare con MEF e Commissione nel Piano rivisto.
+- **V17. Definizione di spesa netta** (art. 2 del regolamento 2024/1263): letta da fonti secondarie (Consiglio UE, dossier parlamentari) perché EUR-Lex blocca le richieste automatiche. L'articolo 15 è verificato sul testo fornito dall'autrice.
+- **V18. Legge n. 243 del 2012.** Il capitolo cita l'istituzione dell'UPB e la disciplina degli scostamenti senza numeri di articolo. Gli articoli (Capo VII per l'UPB, art. 6 per gli scostamenti) vanno verificati su Normattiva prima di citarli.
+- **V19.** Quota di popolazione che non ha usato internet (16,9%): riportata dal file 08 con rimando a Istat, non verificata sul comunicato.
+- **V20.** Crescita cumulata della spesa netta (6,2% raccomandata, 5,9% tendenziale) e spesa per interessi 2027: lette dalla copia del DPFP di QualEnergia. Il dossier della Camera non le riporta.
+- **S10. Pubblicazione.** Il workflow pubblica solo se esiste la variabile `CF_PAGES_PROJECT`; servono i secret `CLOUDFLARE_API_TOKEN` e `CLOUDFLARE_ACCOUNT_ID`.

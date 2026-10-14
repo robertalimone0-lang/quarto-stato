@@ -1,0 +1,209 @@
+# Principi e metodo {#sec-principi}
+
+```{python}
+import sys
+sys.path.insert(0, "dati")
+import modello as M
+import debito as D
+from formato import it, tabella_md
+from IPython.display import Markdown
+
+pct = lambda x: it(100 * x, 0) + "%"
+prud = [M.margine_fase1("prudente", y) for y in M.Y[:5]]
+avv = M.salvaguardia()
+```
+
+Questo capitolo fissa le regole con cui il programma spende, si finanzia e si corregge. Ogni capitolo successivo le applica senza eccezioni. Le regole valgono dal primo giorno della legislatura e sono scritte per poter essere verificate da chiunque, con i dati e il codice pubblicati insieme al documento.
+
+## Il vincolo di bilancio {#sec-vincolo}
+
+Il programma opera dentro tre vincoli giuridici, in quest'ordine di rango.
+
+**La Costituzione.** L'articolo 81 impone l'equilibrio tra entrate e spese e la copertura di ogni legge che comporta nuovi o maggiori oneri. La legge 24 dicembre 2012, n. 243, approvata a maggioranza assoluta come legge rinforzata, ne attua il principio: definisce l'equilibrio in termini strutturali, disciplina gli scostamenti per eventi eccezionali e istituisce l'Ufficio parlamentare di bilancio (UPB).
+
+**Le regole europee in vigore dal 2024.** Il regolamento (UE) 2024/1263 sposta il vincolo operativo dal deficit alla spesa netta: la spesa pubblica al netto degli interessi, delle misure discrezionali sul lato delle entrate, della spesa finanziata dall'Unione e del relativo cofinanziamento nazionale, della componente ciclica dei sussidi di disoccupazione e delle misure una tantum. Il Piano strutturale di bilancio di medio termine dell'Italia, approvato dal Consiglio dell'UE il 21 gennaio 2025, copre gli anni 2025–2029 ed estende il periodo di aggiustamento a sette anni, fino al 2031. Fissa una crescita media annua della spesa netta dell'{{< dato psbmt_crescita_spesa_netta_2025_2029 >}} nel 2025–2029 e dell'{{< dato psbmt_crescita_spesa_netta_2025_2031 >}} nel 2025–2031. Il periodo di aggiustamento coincide con la legislatura 2027–2031.
+
+**Il percorso concordato con il Consiglio.** I limiti annui di crescita della spesa netta per il triennio della prima legge di bilancio sono: {{< dato spesa_netta_racc_2027 >}} nel 2027, {{< dato spesa_netta_racc_2028 >}} nel 2028 e {{< dato spesa_netta_racc_2029 >}} nel 2029. Il Documento programmatico di finanza pubblica del 2 ottobre 2026 (DPFP) stima, a legislazione vigente, questi tassi di crescita: {{< dato spesa_netta_tend_2027 >}} nel 2027, {{< dato spesa_netta_tend_2028 >}} nel 2028 e {{< dato spesa_netta_tend_2029 >}} nel 2029. Lo sforamento del 2027 è assorbito dalla clausola di salvaguardia nazionale attivata per la difesa e l'energia, che vale {{< dato clausola_nazionale_quota >}} per ciascuna delle due finalità nel 2027 e nel 2028. Nel quadro programmatico del Governo uscente la spesa netta cresce del {{< dato spesa_netta_prog_2027 >}} nel 2027 e, al netto della clausola, coincide con i limiti raccomandati. Lo spazio libero nel percorso è quindi nullo: ogni euro di spesa nuova del programma deve essere compensato dentro l'aggregato della spesa netta.
+
+**Le conseguenze per il programma.** Tre regole derivano da questo quadro.
+
+1. *Le misure discrezionali di entrata finanziano spesa.* Un'entrata introdotta per legge, con un gettito stimato in anticipo da una relazione tecnica, si sottrae dalla spesa netta: un euro di nuova imposta consente un euro di nuova spesa senza uscire dal percorso. Le riduzioni di spesa abbassano direttamente l'aggregato. Su questi due canali poggia la Fase 1.
+2. *Il gettito da maggiore adempimento riduce deficit e debito.* L'aumento delle entrate dovuto a una migliore riscossione, senza una misura di legge che lo stimi in anticipo, non conta come misura discrezionale. Riduce il deficit e il debito ma non apre spazio di spesa nel percorso. Per questo la Riforma 1 costruisce almeno metà del gettito prudente dall'evasione come gettito di misure di legge stimate in anticipo, e il resto alimenta il debito, la riserva e la coda di attivazione solo nei limiti del percorso.
+3. *La revisione del Piano cambia la composizione, mai il vincolo complessivo.* L'articolo 15, paragrafo 2, del regolamento consente a un governo appena insediato di presentare un Piano strutturale rivisto per un nuovo periodo di quattro o cinque anni, secondo la durata della legislatura. È lo strumento con cui il programma entra nel quadro europeo: il nuovo governo presenta nel primo semestre un Piano rivisto che contiene le riforme, le coperture e la classificazione di ogni misura concordata con la Commissione. Il paragrafo 5 stabilisce che la nuova traiettoria di riferimento non rinvia lo sforzo di aggiustamento e, di regola, non lo riduce. La revisione cambia quindi la composizione di spese ed entrate dentro lo stesso sforzo. Per questo ogni misura del programma è coperta da entrate certe o da risparmi, e nessuna da maggior deficit.
+
+Il Piano attuale prevede l'estensione del periodo di aggiustamento a sette anni. In caso di revisione, il paragrafo 7 affida alla Commissione la valutazione sulla conferma dell'estensione, tenendo conto delle riforme e degli investimenti già realizzati e dell'andamento del debito. Il programma mantiene gli impegni di riforma e investimento che sostengono l'estensione e li dichiara nel Piano rivisto: perdere l'estensione imporrebbe un aggiustamento più rapido e ridurrebbe lo spazio per tutte le misure.
+
+La @tbl-riconoscimento classifica ogni copertura secondo il trattamento nelle regole europee. Il capitolo sul quadro di finanza pubblica verifica anno per anno che la spesa netta del programma resti nel percorso.
+
+```{python}
+#| label: tbl-riconoscimento
+#| tbl-cap: "Coperture del programma e trattamento nel percorso di spesa netta"
+righe = [(r["codice"], r["voce"], r["classe"], r["riconoscimento_ue"]) for r in M.COPERTURE]
+Markdown(tabella_md(["Codice", "Copertura", "Classe", "Trattamento nella spesa netta"], righe))
+```
+
+## La regola delle coperture certe {#sec-coperture}
+
+Il programma non spende oggi entrate incerte di domani. Le regole sono cinque.
+
+1. **Spesa permanente solo con coperture permanenti.** Personale, servizi, stipendi e prestazioni si finanziano con entrate strutturali o con tagli strutturali di spesa.
+2. **Le entrate una tantum finanziano solo spese una tantum o la riduzione del debito.** Arretrati, vendite di patrimonio e sanzioni non coprono obblighi permanenti.
+3. **Nessun condono.** Il programma usa il ravvedimento, con sanzioni ridotte secondo curve continue, e chiude ogni sanatoria.
+4. **Una sola tabella delle coperture.** La tabella unica (`dati/coperture.csv`) elenca ogni risorsa una volta sola, con il suo valore, la classe, i tassi di realizzazione e chi ne sostiene il costo. Un controllo automatico blocca la pubblicazione se la stessa risorsa finanzia due misure.
+5. **Ogni copertura dichiara chi paga.** La colonna "chi paga" della tabella unica è parte della copertura quanto il suo importo.
+
+## Le classi di affidabilità {#sec-classi}
+
+Le coperture hanno solidità diverse e il programma le tratta in modo diverso.
+
+- **Classe A.** Dipende solo da una decisione di legge, con base imponibile nota.
+- **Classe B.** Dipende da una decisione di legge, ma l'importo va costruito voce per voce.
+- **Classe C.** Dipende da comportamenti futuri o da vincoli esterni. Entra nei conti per pianificare e autorizza spesa solo a consuntivo.
+
+Ogni copertura ha un tasso di realizzazione per scenario, fissato in anticipo. La @tbl-classi riporta il valore nominale a regime e l'intervallo dei tassi per classe.
+
+```{python}
+#| label: tbl-classi
+#| tbl-cap: "Coperture per classe: valore nominale a regime (miliardi di euro) e tassi di realizzazione"
+nom = M.per_classe("nominale", 2031)
+righe = []
+for c in ("A", "B", "C"):
+    rr = [r for r in M.COPERTURE if r["classe"] == c and float(r["nominale"]) > 0]
+    rng = lambda s: f"{pct(min(float(r['tasso_'+s]) for r in rr))}–{pct(max(float(r['tasso_'+s]) for r in rr))}"
+    righe.append((c, it(nom[c], 2), rng("centrale"), rng("prudente"), rng("avverso")))
+righe.append(("Totale", it(sum(nom.values()), 2), "", "", ""))
+Markdown(tabella_md(["Classe", "Nominale", "Centrale", "Prudente", "Avverso"], righe))
+```
+
+Due voci di classe C, il prelievo sul gioco d'azzardo e le entrate ricorrenti del patrimonio pubblico, non coprono mai la Priorità 1. Le entrate delle Regioni (canoni delle acque minerali e delle grandi derivazioni idroelettriche) entrano solo con il meccanismo di cofinanziamento regionale descritto nel capitolo sul quadro di finanza pubblica, in classe C fino all'intesa in Conferenza Stato-Regioni.
+
+## Lo scenario prudente come vincolo {#sec-prudente}
+
+Il programma calcola ogni anno tre scenari, voce per voce, con le rampe di avvio di ciascuna copertura e di ciascuna spesa:
+
+- **centrale:** coperture ai tassi centrali, costi come da schede;
+- **prudente:** coperture ai tassi prudenti, costi aumentati del `{python} it(100*(M.MULT["prudente"]-1), 0)`%;
+- **avverso:** coperture ai tassi avversi, costi aumentati del `{python} it(100*(M.MULT["avverso"]-1), 0)`%.
+
+La regola di fondo è una sola: **lo scenario prudente chiude ogni anno con un margine maggiore o uguale a zero.** Ogni voce che lo porterebbe sotto zero esce dalla Fase 1 ed entra nella coda di attivazione. Nel quadro attuale il margine prudente vale `{python} it(prud[0], 2)` miliardi nel 2027, `{python} it(prud[1], 2)` nel 2028, `{python} it(prud[2], 2)` nel 2029 e zero nel 2030 e nel 2031. La parte di Priorità 2 che non rientra, `{python} it(M.P2_RINVIATA, 1)` miliardi a regime, è in coda.
+
+## Priorità e calendario di avvio {#sec-priorita}
+
+Le spese hanno due livelli.
+
+- **Priorità 1, diritti essenziali:** salute, welfare e povertà, giustizia, carceri, contrasto alle mafie, tutele per chi evade per sopravvivere. Parte per prima e non si taglia.
+- **Priorità 2, trasformazioni:** scuola, pensioni, lavoro, casa, contrasto all'evasione, calmiere dei prezzi, Stato digitale, investimenti. Cresce nei limiti dello scenario prudente.
+
+Il calendario della prima legge di bilancio segue tre regole.
+
+1. **Tutte le coperture di classe A e B si approvano nella prima legge di bilancio**, con un calendario pubblico di soppressione delle agevolazioni. Il costo politico è concentrato nel primo anno: tutte le categorie che perdono un'agevolazione si oppongono nello stesso momento. Il programma lo accetta perché anticipa le risorse: con questa scelta la Priorità 2 coperta nel 2028 arriva a `{python} it(M.P2[2028], 1)` miliardi.
+2. **La Priorità 2 del 2027 parte dal 1° luglio 2027**, dopo la prima certificazione trimestrale delle coperture.
+3. **Il cofinanziamento degli investimenti di Fase 1 parte nel 2028.** La regola è fissa e non dipende dai dati del primo trimestre. Con queste due regole il saldo del 2027 è positivo anche nello scenario avverso: `{python} it(M.margine_fase1("avverso", 2027), 2, segno=True)` miliardi.
+
+## L'attivazione condizionata {#sec-attivazione}
+
+Le misure che non rientrano nella Fase 1 non vengono escluse: entrano in una coda e partono quando le leve di entrata del programma hanno prodotto gettito certificato sufficiente a coprirle in modo permanente.
+
+**Le leve.** Il registro delle leve (`dati/leve.csv`) indica per ciascuna la fonte del dato, il metodo di misura, il ritardo della misura, l'organo che certifica e tre stime (prudente, centrale, alta). Le leve sono: il gettito dall'evasione oltre la quota già assegnata alla Fase 1; l'IRPEF e l'IVA dei lavoratori stranieri regolarizzati; l'IRPEF dei rientrati dall'estero al netto delle esenzioni; il maggior reddito di chi ottiene la conversione del titolo di studio estero, solo se misurabile; le accise e l'IVA sulla cannabis legale dal 2030; i risparmi certificati dell'audit sanitario e della riforma elettorale; l'aliquota minima sui redditi altissimi. Il dividendo dell'occupazione, cioè le imposte dei nuovi occupati oltre la tendenza, compare solo come scenario di confronto, per il rischio di contare due volte gettito già incluso nelle altre leve.
+
+**La certificazione.** Conta solo il gettito a consuntivo, al netto dei costi della leva stessa e corretto per il ciclo economico. L'UPB lo certifica ogni trimestre sui dati di cassa, con la media mobile delle ultime quattro trimestralità, e lo conferma ogni anno sul consuntivo. Se la conferma annuale smentisce il dato trimestrale scatta la reversibilità.
+
+**La coda.** Ogni misura in coda ha costo a regime, profilo di avvio, priorità, fase e condizione di attivazione. Una misura si attiva con la legge di bilancio successiva quando il gettito certificato disponibile copre il suo costo a regime più un margine di sicurezza: la soglia è il `{python} it(100*M.SOGLIA, 0)`% del costo. L'ordine della coda è una scelta politica dichiarata. Se la voce successiva non è coperta, si attiva la prima voce minore coperta; la voce bloccata accumula una prenotazione pari al `{python} it(100*M.PRENOTAZIONE, 0)`% delle risorse libere di ogni anno successivo, così da non restare ferma.
+
+**La ripartizione.** La coda si finanzia per prima. Le sue risorse sono due:
+
+- metà della parte di coperture che a consuntivo supera lo scenario prudente (l'altra metà va alla riduzione del debito);
+- il gettito certificato delle leve.
+
+Sul gettito delle leve rimasto libero dopo la coda si applica la regola fissa: `{python} it(100*M.RIPARTIZIONE_LEVE["irpef"], 0)`% alla riduzione dell'IRPEF sui redditi bassi e medi, `{python} it(100*M.RIPARTIZIONE_LEVE["debito"], 0)`% alla riduzione del debito, `{python} it(100*M.RIPARTIZIONE_LEVE["riserva"], 0)`% alla riserva.
+
+**I contributi.** I contributi previdenziali dei lavoratori emersi e regolarizzati generano pensioni future nel sistema contributivo. Vanno alla riduzione del debito o al saldo dell'INPS, mai a nuova spesa permanente. Il programma calcola sempre separatamente la parte fiscale e quella contributiva di ogni leva.
+
+**Il vincolo europeo.** Le leve fondate su un maggiore adempimento riducono il deficit senza aprire spazio nel percorso di spesa netta (@sec-vincolo). Per questo l'attivazione di una misura in coda richiede due condizioni: gettito certificato sufficiente e compatibilità con il percorso di spesa netta del Piano rivisto. La seconda condizione si soddisfa con misure discrezionali di entrata, con riduzioni di spesa o con lo spazio che il Piano rivisto riconosce.
+
+**La reversibilità.** Se per due anni consecutivi il gettito certificato scende sotto il costo delle misure attivate, si sospendono le attivazioni successive e si usa la riserva. Le prestazioni già riconosciute non si riducono.
+
+```{python}
+#| label: fig-flusso
+#| fig-cap: "Flusso delle risorse certificate: dalle leve alla coda, al debito e alla riserva"
+from grafici import flusso_attivazione
+fig = flusso_attivazione()
+```
+
+## La clausola di salvaguardia {#sec-salvaguardia}
+
+Se il consuntivo segue lo scenario avverso, i congelamenti scattano in un ordine automatico:
+
+1. sospensione di tutte le attivazioni della coda;
+2. rinvio delle voci di Priorità 2 non ancora avviate;
+3. rallentamento dei profili di avvio della Priorità 2 già avviata;
+4. per la Priorità 1, solo il rinvio dei nuovi ingressi, mai la riduzione delle prestazioni già riconosciute.
+
+Entro trenta giorni dalla certificazione che rileva lo scostamento, il governo pubblica il piano correttivo, con il ricalcolo dei costi a regime e la nuova copertura, e lo sottopone al controllo indipendente. Contratti validamente stipulati e prestazioni già erogate hanno un trattamento giuridico specifico. La @tbl-salvaguardia mostra quanto copre ogni gradino nello scenario avverso.
+
+```{python}
+#| label: tbl-salvaguardia
+#| tbl-cap: "Scenario avverso: buco di Fase 1 e copertura dei gradini della salvaguardia (miliardi di euro)"
+righe = [(y, it(r["buco"], 2, segno=True), it(r["g1"], 2), it(r["g2"], 2), it(r["g3"], 2), it(r["g4"], 2), it(r["residuo"], 2))
+         for y, r in avv.items() if y <= 2031]
+Markdown(tabella_md(["Anno", "Saldo prima", "1. Coda", "2. P2 non avviata", "3. P2 rallentata", "4. Nuovi ingressi P1", "Residuo"], righe))
+```
+
+Il buco si chiude in ogni anno. Il peso ricade quasi per intero sul terzo gradino: nello scenario avverso la Priorità 2 resta ferma ai livelli del primo anno, e la Priorità 1 rinvia i nuovi ingressi per al massimo `{python} it(max(r["g4"] for r in avv.values()), 1)` miliardi l'anno.
+
+## Certificazione e controllo indipendente {#sec-certificazione}
+
+Chi progetta una misura non ne certifica i risultati. Il programma affida la certificazione all'Ufficio parlamentare di bilancio, che la legge n. 243 del 2012 ha istituito come organismo indipendente presso le Camere.
+
+- **Metodo pubblicato prima dell'avvio.** L'UPB certifica su dati pubblici e con un metodo pubblicato prima dell'avvio di ogni misura. Nessuno può cambiare il metodo dopo aver visto i risultati; ogni modifica successiva conserva la serie precedente e ne spiega il motivo.
+- **Relazione annuale sul gettito delle riforme.** Prima della legge di bilancio l'UPB certifica il gettito netto e strutturale di ogni leva e l'eccedenza delle coperture sul prudente. La certificazione autorizza le attivazioni della coda.
+- **Base normativa.** La certificazione del gettito delle riforme è una funzione nuova. Il programma la attribuisce all'UPB con una modifica della legge n. 243 del 2012, approvata a maggioranza assoluta come prevede l'articolo 81 della Costituzione, e con le risorse di personale necessarie.
+- **Coerenza con le regole europee.** L'articolo 15, paragrafo 3, del regolamento (UE) 2024/1263 consente allo Stato di chiedere all'istituzione di bilancio indipendente un parere sulle previsioni e sulle ipotesi macroeconomiche alla base del Piano rivisto; il parere diventa obbligatorio dal 1° maggio 2032. Il programma lo chiede fin dalla prima revisione: l'UPB valuta le previsioni del Piano e certifica i risultati delle riforme con lo stesso metodo pubblico.
+- **Valutazione indipendente.** Un valutatore esterno, senza legami con i settori interessati, pubblica rapporti a 12, 24 e 60 mesi, anche quando i risultati sono negativi. Un gruppo di esperti critici verso il programma esamina ogni scheda prima della pubblicazione.
+- **Dati e codice aperti.** Il modello finanziario, i dati e il codice di questo documento sono pubblici e permettono a chiunque di riprodurre ogni cifra.
+
+## Sperimentazione delle innovazioni {#sec-sperimentazione}
+
+Una misura senza precedenti applicativi entra nel programma solo se supera cinque prove.
+
+1. **Problema misurato:** un dato ufficiale italiano misura il costo che la misura vuole eliminare.
+2. **Meccanismo esplicito:** gli attori, gli incentivi e la catena che porta al risultato sono descritti; un passaggio affidato alla buona volontà di qualcuno rende il meccanismo inaffidabile.
+3. **Aggiramenti previsti:** per ogni comportamento opportunistico è indicato il presidio.
+4. **Sperimentazione con gruppo di confronto:** la misura si applica prima a un sottoinsieme di territori o categorie, con valutazione affidata a ricercatori indipendenti.
+5. **Clausola di interruzione:** la soglia minima di efficacia è fissata prima dell'avvio; se non viene raggiunta, la misura si ferma.
+
+Le sperimentazioni sono disegnate e registrate da un Laboratorio nazionale di valutazione delle politiche pubbliche presso la Presidenza del Consiglio, con Istat, Banca d'Italia, INPS, Agenzia delle Entrate e università. Il registro pubblica obiettivi, soglie e risultati prima di ogni decisione di estensione, compresi gli esiti negativi.
+
+## Regole sui dati e sull'accesso {#sec-dati}
+
+- **Fonti primarie.** Ogni numero viene da una fonte primaria verificata: ISTAT, MEF, Banca d'Italia, UPB, RGS, Eurostat, Gazzetta Ufficiale, norme vigenti. Il registro `dati/fonti.yaml` indica per ciascuno valore, unità, fonte, indirizzo, data e stato. Un numero non verificato resta nel testo con il segno "da validare".
+- **Confronto con il periodo pre-pandemico.** Le tendenze si misurano rispetto agli anni precedenti alla pandemia. Gli anni dal 2020 al 2022 non sono mai la base di confronto.
+- **Confronti esteri.** Un'esperienza straniera è citata come precedente solo se la misura è stata attuata, ha risultati misurati ed è trasferibile all'Italia.
+- **Accesso universale.** Ogni misura funziona anche per chi non ha un conto corrente, un computer o uno smartphone. Nel 2025 il {{< dato internet_non_usato >}} della popolazione non ha usato internet negli ultimi tre mesi, e solo il {{< dato competenze_digitali_2025 >}} delle persone tra 16 e 74 anni ha competenze digitali almeno di base. Ogni servizio ha tre canali equivalenti per tempi e diritti: digitale, sportello fisico, telefono. Le prestazioni dovute si attivano d'ufficio dagli archivi pubblici; chi non ha un conto riceve uno strumento di pagamento gratuito o riscuote allo sportello postale; ogni persona può nominare un delegato per tutti i rapporti con l'amministrazione.
+
+## Curve continue e soglie amministrative {#sec-soglie}
+
+Nessuna imposta, prestazione o sanzione del programma crea un salto tra chi sta un euro sotto e un euro sopra una soglia. Aliquote, importi e sanzioni crescono lungo curve continue.
+
+Le soglie che determinano importi, aliquote o sanzioni diventano curve continue nei capitoli delle riforme. Sono queste:
+
+- ritenuta sugli incassi elettronici dei professionisti;
+- obbligo di pagamento tracciabile per le prestazioni professionali;
+- IVA per cassa;
+- distinzione tra piccoli e grandi fornitori della pubblica amministrazione per lo split payment;
+- assistenza fiscale gratuita;
+- rivalutazione delle pensioni;
+- contributo addizionale sui contratti a termine;
+- sanzioni del ravvedimento per i redditi bassi;
+- soglie ISEE di mense, tariffa sociale e abbonamento sociale ai trasporti;
+- contributo alla procedura di conversione dei titoli esteri.
+
+Restano le soglie solo amministrative, che non producono salti d'imposta o di prestazione. Ciascuna ha una funzione organizzativa:
+
+- obbligo di pubblicare l'indice di stabilità per le imprese oltre una certa dimensione;
+- presidio di sicurezza nei pronto soccorso oltre un certo numero di accessi;
+- sportelli unici nei Comuni piccoli;
+- numero minimo di sostegni per l'obbligo di risposta nel canale di partecipazione;
+- durata massima della permanenza in pronto soccorso.
+
+Ogni capitolo di riforma riporta la propria lista.

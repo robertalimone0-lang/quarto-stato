@@ -1,0 +1,37 @@
+project:
+  type: book
+  output-dir: _book
+  execute-dir: project
+
+book:
+  title: "Quarto Stato"
+  subtitle: "Programma di governo 2027–2031"
+  author: "Quarto Stato"
+  date: 2026-10-14
+  date-format: "dddd D MMMM YYYY"
+  chapters:
+    - index.qmd
+    - capitoli/01-principi-metodo.qmd
+
+lang: it
+metadata-files:
+  - dati/fonti.yaml
+shortcodes:
+  - strumenti/dato.lua
+
+execute:
+  echo: false
+  warning: false
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: true
+  typst:
+    papersize: a4
+    toc: true
+    number-sections: true
+  docx:
+    toc: true
+    number-sections: true

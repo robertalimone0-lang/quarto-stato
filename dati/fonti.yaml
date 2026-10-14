@@ -1,0 +1,188 @@
+# Registro delle fonti. Ogni numero del testo che non viene dal modello sta qui.
+# Campi: valore (numero per i calcoli), decimali, unita, fonte, url, data, stato (verificato | da_validare).
+# Nel testo: {{< dato codice >}}; formato italiano applicato alla stampa da strumenti/dato.lua.
+fonti:
+  pil_2025:
+    valore: 2265.0
+    decimali: 0
+    unita: "miliardi di euro"
+    fonte: "Istat, Pil e indebitamento delle AP, conti nazionali rivisti"
+    url: "https://www.istat.it/comunicato-stampa/pil-e-indebitamento-delle-ap-anni-2023-2025/"
+    data: "2026-09-22"
+    stato: verificato
+  indebitamento_2025:
+    valore: 3.1
+    decimali: 1
+    unita: "% del PIL"
+    fonte: "Istat, notifica del 22 settembre 2026, riportata nel dossier della Camera sul DPFP 2026"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/gi0117.pdf"
+    data: "2026-10-07"
+    stato: verificato
+  debito_2024:
+    valore: 134.2
+    decimali: 1
+    unita: "% del PIL"
+    fonte: "Istat, notifica del 22 settembre 2026, riportata nel dossier della Camera sul DPFP 2026"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/gi0117.pdf"
+    data: "2026-10-07"
+    stato: verificato
+  debito_2025:
+    valore: 136.7
+    decimali: 1
+    unita: "% del PIL"
+    fonte: "Istat, notifica del 22 settembre 2026, riportata nel dossier della Camera sul DPFP 2026"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/gi0117.pdf"
+    data: "2026-10-07"
+    stato: verificato
+  debito_2026_tend:
+    valore: 138.1
+    decimali: 1
+    unita: "% del PIL"
+    fonte: "DPFP 2026, quadro tendenziale, dossier della Camera"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/gi0117.pdf"
+    data: "2026-10-07"
+    stato: verificato
+  debito_2027_tend:
+    valore: 138.4
+    decimali: 1
+    unita: "% del PIL"
+    fonte: "DPFP 2026, quadro tendenziale, dossier della Camera"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/gi0117.pdf"
+    data: "2026-10-07"
+    stato: verificato
+  debito_2029_tend:
+    valore: 136.3
+    decimali: 1
+    unita: "% del PIL"
+    fonte: "DPFP 2026, quadro tendenziale (tavola di sintesi)"
+    url: "https://www.qualenergia.it/wp-content/uploads/2026/10/DPFP26.pdf"
+    data: "2026-10-02"
+    stato: da_validare
+  indebitamento_2027_tend:
+    valore: 2.9
+    decimali: 1
+    unita: "% del PIL"
+    fonte: "DPFP 2026, quadro tendenziale, dossier della Camera"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/gi0117.pdf"
+    data: "2026-10-07"
+    stato: verificato
+  spesa_netta_racc_2027:
+    valore: 1.9
+    decimali: 1
+    unita: "%"
+    fonte: "Limite di crescita della spesa netta raccomandato dal Consiglio UE, dossier della Camera sul DPFP 2026"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/gi0117.pdf"
+    data: "2026-10-07"
+    stato: verificato
+  spesa_netta_racc_2028:
+    valore: 1.7
+    decimali: 1
+    unita: "%"
+    fonte: "Limite di crescita della spesa netta raccomandato dal Consiglio UE, dossier della Camera sul DPFP 2026"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/gi0117.pdf"
+    data: "2026-10-07"
+    stato: verificato
+  spesa_netta_racc_2029:
+    valore: 1.5
+    decimali: 1
+    unita: "%"
+    fonte: "Limite di crescita della spesa netta raccomandato dal Consiglio UE, dossier della Camera sul DPFP 2026"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/gi0117.pdf"
+    data: "2026-10-07"
+    stato: verificato
+  spesa_netta_tend_2027:
+    valore: 2.1
+    decimali: 1
+    unita: "%"
+    fonte: "DPFP 2026, scenario tendenziale, dossier della Camera"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/gi0117.pdf"
+    data: "2026-10-07"
+    stato: verificato
+  spesa_netta_tend_2028:
+    valore: 1.3
+    decimali: 1
+    unita: "%"
+    fonte: "DPFP 2026, scenario tendenziale, dossier della Camera"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/gi0117.pdf"
+    data: "2026-10-07"
+    stato: verificato
+  spesa_netta_tend_2029:
+    valore: 1.1
+    decimali: 1
+    unita: "%"
+    fonte: "DPFP 2026, scenario tendenziale, dossier della Camera"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/gi0117.pdf"
+    data: "2026-10-07"
+    stato: verificato
+  spesa_netta_racc_cum_2029:
+    valore: 6.2
+    decimali: 1
+    unita: "%"
+    fonte: "DPFP 2026, tavola II.1.5, crescita cumulata raccomandata dal Consiglio UE 2024-2029"
+    url: "https://www.qualenergia.it/wp-content/uploads/2026/10/DPFP26.pdf"
+    data: "2026-10-02"
+    stato: da_validare
+  spesa_netta_tend_cum_2029:
+    valore: 5.9
+    decimali: 1
+    unita: "%"
+    fonte: "DPFP 2026, crescita cumulata della spesa netta nello scenario tendenziale"
+    url: "https://www.qualenergia.it/wp-content/uploads/2026/10/DPFP26.pdf"
+    data: "2026-10-02"
+    stato: da_validare
+  clausola_nazionale_quota:
+    valore: 0.3
+    decimali: 1
+    unita: "% del PIL"
+    fonte: "DPFP 2026, clausola di salvaguardia nazionale: impatto per ciascuna finalita (difesa, energia) nel 2027 e nel 2028, dossier della Camera"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/gi0117.pdf"
+    data: "2026-10-07"
+    stato: verificato
+  spesa_netta_prog_2027:
+    valore: 3.3
+    decimali: 1
+    unita: "%"
+    fonte: "DPFP 2026, scenario programmatico, dossier della Camera"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/gi0117.pdf"
+    data: "2026-10-07"
+    stato: verificato
+  interessi_2027:
+    valore: 4.3
+    decimali: 1
+    unita: "% del PIL"
+    fonte: "DPFP 2026, tavola II.1.4 (spesa per interessi, scenario tendenziale)"
+    url: "https://www.qualenergia.it/wp-content/uploads/2026/10/DPFP26.pdf"
+    data: "2026-10-02"
+    stato: da_validare
+  internet_non_usato:
+    valore: 16.9
+    decimali: 1
+    unita: "%"
+    fonte: "Istat, Cittadini e ICT, anno 2025: persone di 6 anni e piu che non hanno usato internet negli ultimi tre mesi (citato nel file 08)"
+    url: "https://www.istat.it/comunicato-stampa/cittadini-e-ict-anno-2025/"
+    data: "2026-04-22"
+    stato: da_validare
+  competenze_digitali_2025:
+    valore: 54.3
+    decimali: 1
+    unita: "%"
+    fonte: "Istat, Cittadini e ICT, anno 2025: persone di 16-74 anni con competenze digitali almeno di base"
+    url: "https://www.istat.it/comunicato-stampa/cittadini-e-ict-anno-2025/"
+    data: "2026-04-22"
+    stato: verificato
+  psbmt_crescita_spesa_netta_2025_2029:
+    valore: 1.6
+    decimali: 1
+    unita: "%"
+    fonte: "Camera dei deputati, Piano strutturale di bilancio di medio termine 2025-2029: crescita media annua della spesa netta 2025-2029"
+    url: "https://temi.camera.it/leg19/temi/piano-strutturale-di-bilancio-italia-2025-2029.html"
+    data: "2025-02-01"
+    stato: verificato
+  psbmt_crescita_spesa_netta_2025_2031:
+    valore: 1.5
+    decimali: 1
+    unita: "%"
+    fonte: "Camera dei deputati, Piano strutturale di bilancio di medio termine 2025-2029: crescita media annua della spesa netta 2025-2031"
+    url: "https://temi.camera.it/leg19/temi/piano-strutturale-di-bilancio-italia-2025-2029.html"
+    data: "2025-02-01"
+    stato: verificato

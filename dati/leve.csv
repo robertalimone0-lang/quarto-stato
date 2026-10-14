@@ -1,0 +1,13 @@
+codice,leva,tipo,fonte_dato,metodo,ritardo,certifica,avverso,prudente,centrale,alta,rampa,note
+L01,Evasione oltre la quota di Fase 1,fiscale,Dati di cassa IVA e versamenti F24; Relazione MEF sull'economia non osservata,media mobile di quattro trimestri sui dati di cassa; controllo annuale con la Relazione MEF,1 trimestre (cassa); 3 anni (Relazione),UPB con MEF e Agenzia delle Entrate,0,0,6.0,9.6,2028:0.25;2029:0.5;2030:0.75;2031:1,scenari 03: 8 / 14.5 / 18.5 meno contributi e quota di Fase 1
+L02,Regolarizzazione: IRPEF e IVA,fiscale,Dichiarazioni dei redditi e flussi UniEmens,gettito dei regolarizzati identificati per codice fiscale,1 anno,UPB con INPS e Agenzia delle Entrate,0.02,0.045,0.12,0.25,2028:0.5;2029:1,
+L03,Rientro dei cervelli al netto delle esenzioni,fiscale,Dichiarazioni dei rientrati,IRPEF pagata meno costo delle esenzioni per chi sarebbe rientrato comunque,1 anno,UPB con Agenzia delle Entrate,-0.05,0,0.15,0.30,2028:0.25;2029:0.5;2030:0.75;2031:1,
+L04,Conversione dei titoli esteri,fiscale,CIMEA e dichiarazioni,reddito dichiarato prima e dopo il riconoscimento rispetto a un gruppo di confronto,2 anni,UPB con CIMEA e Agenzia delle Entrate,0,0,0.02,0.05,2029:0.5;2030:1,solo se misurabile
+L05,Cannabis legale,fiscale,Accise e IVA (Agenzia delle Dogane e dei Monopoli),gettito netto della quota vincolata alla prevenzione,1 trimestre,UPB con Agenzia delle Dogane,0,1.0,2.0,3.0,2030:0.7;2031:1,dal 2030
+L06,Audit sanitario: risparmi certificati,risparmio,Audit nazionale AGENAS-Corte dei conti-RGS,risparmi a consuntivo a parita di servizio,1 anno,UPB,0,0,0.5,1.0,2029:0.5;2030:1,stima di lavoro
+L07,Riforma 18: risparmi elettorali,risparmio,Rendiconti del Ministero dell'Interno,costo per consultazione a consuntivo,1 anno,UPB,0,0.06,0.09,0.12,2028:1,300-600 milioni a legislatura
+L08,Aliquota minima sui redditi altissimi,fiscale,Dichiarazioni dei redditi,gettito a consuntivo,1 anno,UPB con Dipartimento delle Finanze,0,0,0,0,2029:1,da quantificare
+C01,Evasione contributiva,contributiva,Flussi INPS,contributi recuperati,1 trimestre,UPB con INPS,0.35,1.0,1.5,1.9,2028:0.25;2029:0.5;2030:0.75;2031:1,solo debito o saldo INPS
+C02,Contributi dei regolarizzati,contributiva,Flussi UniEmens,contributi versati,1 trimestre,UPB con INPS,0.5,0.74,0.99,1.24,2028:0.5;2029:1,solo debito o saldo INPS
+C03,Emersione: arretrati contributivi,una_tantum,Flussi INPS,arretrati versati,1 trimestre,UPB con INPS,0.4,0.7,1.0,1.2,2028:1;2029:0,una tantum: solo debito
+X01,Dividendo dell'occupazione,confronto,Istat e INPS,occupati oltre la tendenza pre-pandemica,2 anni,UPB,0,0,2.2,4.2,2029:0.33;2030:0.67;2031:1,solo scenario di confronto

@@ -1,0 +1,21 @@
+codice,misura,priorita,costo_regime,rampa,tipo,note
+M01,Salute (Fase 1),1,11.0,2027:0.25;2028:0.45;2029:0.65;2030:0.85;2031:1,corrente,
+M02,Welfare e poverta,1,6.0,2027:0.183;2028:0.5;2029:0.867;2030:1,corrente,
+M03,Giustizia,1,0.8,2028:1,corrente,
+M04,Contro le mafie (netto),1,0.6,2027:1,corrente,
+M05,Carceri,1,0.55,2027:1,corrente,
+M06,Tutele per chi evade per sopravvivere,1,0.2,2027:1,corrente,
+M07,Scuola,2,6.8,2027:0.15;2028:0.336;2029:0.551;2030:0.846;2031:1,corrente,
+M08,Cofinanziamento degli investimenti,2,3.05,2027:0.41;2028:0.70;2029:1,investimento,quota di Fase 1 dal 2028 (D15)
+M09,Pensioni,2,1.8,2027:0.41;2028:0.70;2029:1,corrente,
+M10,Contrasto all'evasione (costo),2,1.5,2027:0.41;2028:0.70;2029:1,corrente,
+M11,Lavoro e salari,2,1.5,2027:0.41;2028:0.70;2029:1,corrente,
+M12,Casa,2,1.1,2027:0.41;2028:0.70;2029:1,corrente,
+M13,Calmiere dei prezzi,2,0.5,2027:0.41;2028:0.70;2029:1,corrente,
+M14,Stato digitale,2,0.4,2028:0.70;2029:1,corrente,
+M15,Trasporti Fase 1,2,0.3,2027:0.41;2028:0.70;2029:1,corrente,
+M16,Garanzia di lavoro sperimentale,2,0.3,2027:0.41;2028:0.70;2029:1,corrente,
+M17,R14 riga: riconoscimento dei titoli esteri (09),2,0.08,2028:0.5;2029:1,corrente,
+M18,R14 riga: laboratorio nazionale di valutazione (08),2,0.025,2027:1,corrente,
+M19,R14 riga: gestione dei seggi digitali (05),2,0.01,2029:1,corrente,
+M20,R14 riga: conto unico e seggi digitali (08 e 05),2,0.15,2027:0.25;2028:0.4167;2029:0.1667;2030:0.1667;2031:0,una_tantum,importi una tantum distribuiti su quattro anni
