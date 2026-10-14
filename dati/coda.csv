@@ -13,4 +13,4 @@ Q11,Conto di stabilizzazione del reddito,0.75,0.5;1,2,11,gettito certificato >= 
 Q12,Trasporti: fondo di Fase 1,0.3,1,2,12,gettito certificato >= 1.10 x costo a regime,Priorita 2 rinviata,
 Q13,Trasporti Fase 2,3.0,0.333;0.667;1,2,13,gettito certificato >= 1.10 x costo a regime,,
 Q14,Riforma 16 sex work,0.06,1,2,14,gettito certificato >= 1.10 x costo a regime,testo da recuperare,
-Q15,Priorita 2 rinviata dal profilo A: composizione in dati/q15.csv,5.54,0.333;0.667;1,1,15,gettito certificato del contrasto all'evasione (L01) >= 1.10 x costo a regime,Priorita 2 rinviata; in fondo alla coda (D26); fonte L01,L01
+Q15,Priorita 2 rinviata dal profilo A: composizione in dati/q15.csv,5.45,0.333;0.667;1,1,15,gettito certificato del contrasto all'evasione (L01) >= 1.10 x costo a regime,Priorita 2 rinviata; in fondo alla coda (D26); fonte L01,L01

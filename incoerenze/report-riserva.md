@@ -505,3 +505,50 @@ Con l'opzione A la scuola torna dentro i 6,8 anche per i corsi se l'aumento scen
 - Priorità 2 coperta: 0,13 / 3,95 / 4,79 / 4,79 / 5,28 miliardi.
 - Quota rinviata in coda: 11,53, uguale alla somma delle voci di coda.
 - Prudente ≥ 0 in ogni anno. Anni di attivazione della coda invariati.
+
+## 15. D27, riserva nei corsi di specializzazione, platea dell'indennità (mercoledì 14 ottobre 2026)
+
+**D27, opzione A.** Stabilizzazioni al perimetro massimo (0,97) e corsi (0,09) rientrano nei 6,8 miliardi della scuola riducendo l'aumento salariale da 4,5 a 4,19 miliardi.
+
+| Voce della Riforma 3 | Prima | Dopo |
+|---|---|---|
+| Aumento salariale | 4,50 | 4,19 |
+| Stabilizzazioni (M21, Priorità 1) | 0,75 | 0,97 |
+| Corsi di specializzazione (M24, Priorità 1) | 0,09 | 0,09 |
+| Resto della scuola in Priorità 2 (M07) | 6,05 | 5,74 |
+| Totale scuola | 6,89 | 6,80 |
+
+- Aumento reale: 10% × 4,19 / 4,5, circa il 9,3% in cinque anni.
+- In coda la riduzione di 0,31 assorbe le quote cedute a stabilizzazioni (0,22) e corsi (0,09): Q15 torna a 5,45 e la prima metà dell'aumento in coda resta 2,25.
+- Priorità 2 coperta: 0,11 / 3,88 / 4,61 / 4,61 / 5,06 miliardi; quota rinviata 11,44, uguale alla coda. Prudente ≥ 0 in ogni anno; anni di attivazione della coda invariati. Nello scenario avverso del 2031 slitta il 26,0% dei nuovi ingressi della Priorità 1 (Priorità 1 più grande di 0,22).
+
+**Stabilizzazioni con il perimetro 0,97 (129.765 posti)**
+
+| Anno | Stabilizzate, cumulate | di cui in deroga | Specializzati in deroga con 20.000 l'anno | Non rinnovate, cumulate | Supplenze residue | Comuni su posto vacante | Comuni fino al termine | Sostegno su posto vacante | Sostegno in deroga |
+|---|---|---|---|---|---|---|---|---|---|
+| 2027 | 19.465 | 15.000 | 20.000 | 2.326 | 214.991 | 27.881 | 64.577 | 12.072 | 110.462 |
+| 2028 | 43.601 | 33.600 | 40.000 | 4.652 | 188.529 | 24.986 | 62.251 | 9.430 | 91.862 |
+| 2029 | 71.501 | 55.100 | 60.000 | 6.978 | 158.303 | 21.640 | 59.925 | 6.377 | 70.362 |
+| 2030 | 109.781 | 84.600 | 80.000 | 9.304 | 117.697 | 17.049 | 57.599 | 2.187 | 40.862 |
+| 2031 | 129.765 | 100.000 | 100.000 | 11.630 | 95.387 | 14.652 | 55.273 | 0 | 25.462 |
+
+- Nel 2030 la rampa di spesa chiede 84.600 stabilizzazioni in deroga contro 80.000 specializzati: lo scarto di 4.600 si copre con i supplenti in deroga già specializzati (numero da V37) o slitta al 2031.
+- Mancati rinnovi: 8,2% della riduzione delle supplenze al 2031.
+- Traguardi al 2031: supplenze su posto vacante 14.652 (sotto 30.000); supplenze in deroga 25.462; supplenze residue totali 95.387, di cui 55.273 comuni fino al termine (precariato strutturale).
+
+**Riserva nei corsi di specializzazione (M24)**
+- *Situazione vigente.* Il DM MUR 926 del venerdì 26 giugno 2026 autorizza 30.241 posti per l'XI ciclo; i pareri della Funzione pubblica e del MEF coprono 90.000 posti nel triennio 2024/25–2026/27. Il decreto non prevede quote riservate: chi ha i requisiti dell'art. 4, comma 3-bis, del DM 92/2019 accede direttamente alla prova scritta. Il IX ciclo aveva una riserva del 35% (DM 549/2024, da stampa); per il X ciclo la stampa riferisce che la riserva è venuta meno. I percorsi INDIRE (DL 71/2024, art. 6) sono riservati a chi ha tre anni di servizio sul sostegno: 18.137 specializzati nel primo ciclo (da stampa).
+- *Misura.* Una norma primaria fissa ogni anno: riserva del 35% dei posti TFA per i supplenti con almeno tre anni di servizio sul sostegno negli ultimi dieci anni (circa 10.600 su 30.000); percorsi INDIRE resi stabili con circa 9.400 posti l'anno. Totale: 20.000 specializzati in deroga l'anno, a capacità degli atenei invariata. I 0,09 miliardi rendono gratuiti i posti riservati (20.000 × 3.000–3.500 euro = 0,06–0,07 miliardi) e coprono il costo dei percorsi INDIRE.
+- *Condizione.* La riserva funziona solo se i supplenti in deroga con tre anni di servizio sono almeno 20.000 l'anno fino al 2031: il dato va chiesto al MIM (V37).
+
+**Platea dell'indennità (M23)**
+- Il DM 170 del venerdì 24 giugno 2022 ha ripartito 500 milioni PNRR fra 3.198 scuole secondarie di I e II grado con dispersione implicita INVALSI pari o superiore all'8%. Pesi del riparto: 70% sulla dispersione implicita, 30% sugli iscritti; 51,16% al Mezzogiorno. L'elenco per scuola (allegato 2) è in `dati/scuola/dm170_2022_allegato2.csv`; il totale estratto è di 500 milioni.
+- Le 3.198 scuole sono circa il 39% delle istituzioni scolastiche: la platea dell'indennità (5%) va scelta dentro l'elenco. Proposta della redazione (I13): ordinare le scuole per quota per iscritto. È un'approssimazione della dispersione implicita valida dentro ciascuna regione. La primaria resta esclusa fino al dato INVALSI per scuola.
+
+**Serie della dispersione implicita (INVALSI, Rapporto nazionale 2026, slide 2)**
+
+| 2019 | 2021 | 2022 | 2023 | 2024 | 2025 | 2026 |
+|---|---|---|---|---|---|---|
+| 7,5 | 9,8 | 9,7 | 8,7 | 6,6 | 8,7 | 6,3 |
+
+Nel 2020 la rilevazione non si è svolta. L'8,7% compare nel 2023 e nel 2025. Il calo del 2026 segue un aumento nel 2025. Rispetto al 2019, ultimo anno pre-pandemico, il 2026 è più basso di 1,2 punti.

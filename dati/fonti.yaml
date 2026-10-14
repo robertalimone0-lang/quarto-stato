@@ -294,18 +294,26 @@ fonti:
     valore: 35784
     decimali: 0
     unita: "posti autorizzati nei corsi di specializzazione sul sostegno (X ciclo, 48 atenei)"
-    fonte: "DM MUR n. 436 del giovedì 26 giugno 2025, riportato da stampa specializzata; da riscontrare sul decreto"
+    fonte: "Decreto MUR del giovedì 26 giugno 2025, riportato da stampa specializzata: le fonti indicano il n. 436 o il n. 636; da riscontrare sul decreto. Secondo la stampa il X ciclo non prevede la riserva del 35% del IX ciclo (DM 549/2024)"
     url: "https://www.ticonsiglio.com/decreto-tfa-sostegno-2025-x-ciclo-pubblicato/"
     data: "2025-06-26"
     stato: da_validare
   tfa_sostegno_xi_ciclo:
     valore: 30241
     decimali: 0
-    unita: "posti autorizzati nei corsi di specializzazione sul sostegno (XI ciclo, a.a. 2025/26, senza secondaria di II grado)"
-    fonte: "Nota MUR n. 4660 del martedì 14 aprile 2026, in attesa del decreto definitivo, riportata da stampa specializzata"
-    url: "https://www.newsistruzione.it/2026/06/02/tfa-sostegno-xi-ciclo-30241-posti-preselettiva-luglio"
-    data: "2026-04-14"
-    stato: da_validare
+    unita: "posti autorizzati nei corsi di specializzazione sul sostegno (XI ciclo, a.a. 2025/26): infanzia 4.553, primaria 11.698, secondaria I grado 4.842, secondaria II grado 9.148"
+    fonte: "DM MUR n. 926 del venerdì 26 giugno 2026, art. 1 e premesse (fabbisogno MIM, nota n. 7496 del mercoledì 25 marzo 2026); nessuna quota riservata: l'art. 2 ammette direttamente alla prova scritta i soggetti dell'art. 4, comma 3-bis, del DM 92/2019. Testo letto su copia del decreto con segnatura di protocollo del MUR"
+    url: "https://www.adessoscuola.it/wp-content/uploads/2026/06/decreto-n.-926-del-26-giugno-2026.pdf"
+    data: "2026-06-26"
+    stato: verificato
+  tfa_sostegno_triennio:
+    valore: 90000
+    decimali: 0
+    unita: "posti di specializzazione sul sostegno autorizzati per gli anni accademici 2024/25, 2025/26 e 2026/27"
+    fonte: "DM MUR n. 926 del venerdì 26 giugno 2026, premesse: pareri favorevoli del Dipartimento della funzione pubblica (nota n. 1334 del 15 aprile 2025) e del MEF (nota n. 17961 del 18 aprile 2025)"
+    url: "https://www.adessoscuola.it/wp-content/uploads/2026/06/decreto-n.-926-del-26-giugno-2026.pdf"
+    data: "2026-06-26"
+    stato: verificato
   indire_specializzati:
     valore: 18137
     decimali: 0
@@ -317,8 +325,16 @@ fonti:
   dispersione_implicita_2026:
     valore: 6.3
     decimali: 1
-    unita: "% degli studenti dell'ultimo anno della secondaria di II grado (8,7% nel 2025)"
-    fonte: "INVALSI, Rapporto nazionale 2026, presentato giovedì 16 luglio 2026; riportato da stampa, da riscontrare sul rapporto. Il dato per scuola non è pubblicato: va richiesto all'INVALSI (V38)"
-    url: "https://www.invalsiopen.it/"
+    unita: "% degli studenti al termine del secondo ciclo con risultati molto bassi in italiano e matematica; serie 2019 7,5, 2021 9,8, 2022 9,7, 2023 8,7, 2024 6,6, 2025 8,7, 2026 6,3 (2020 senza rilevazione)"
+    fonte: "INVALSI, Rapporto nazionale 2026, sintesi presentata giovedì 16 luglio 2026, slide 2 (serie storica 2019-2026)"
+    url: "https://www.invalsi.it/wp-content/uploads/2026/07/Slide-Sintesi-primi-risultati-prove-INVALSI-2026.pdf"
     data: "2026-07-16"
-    stato: da_validare
+    stato: verificato
+  dm170_scuole:
+    valore: 3198
+    decimali: 0
+    unita: "istituzioni scolastiche secondarie di I e II grado con dispersione implicita pari o superiore all'8%, beneficiarie della prima tranche PNRR (500 milioni)"
+    fonte: "DM MI n. 170 del venerdì 24 giugno 2022, art. 1 (riparto alle scuole: dispersione implicita calcolata dall'INVALSI 70%, iscritti 30%; Mezzogiorno 51,16%) e allegato 2 (elenco per scuola, in dati/scuola/dm170_2022_allegato2.csv)"
+    url: "https://www.mim.gov.it/web/guest/-/decreto-ministeriale-n-170-del-24-giugno-2022"
+    data: "2022-06-24"
+    stato: verificato
