@@ -18,7 +18,6 @@ except ImportError:
 
 ANNI = list(range(2025, 2033))
 TREND_TASSO_DOPO_2029 = 0.0009  # punti di tasso implicito in piu ogni anno dopo il 2029 (D30)
-RINNOVO_DOPO_2029 = {2031: 1954, 2032: 4027}  # milioni: rinnovo 2031-2033 per analogia con il 2028-2030 (V42)
 UPB_SCARTO_2029, UPB_TASSO, UPB_AVANZO_RIDOTTO = 0.018, 0.0018, -0.005
 
 
@@ -35,7 +34,7 @@ def _quadro(nome, m=None):
     pil = (m or M).PIL
     for y in range(2030, 2033):
         g[y], i[y], sf[y] = g[2029], i[2029] + TREND_TASSO_DOPO_2029 * (y - 2029), 0.0
-        s[y] = s[2029] - RINNOVO_DOPO_2029.get(y, 0) / 1000 / pil[y]
+        s[y] = s[2029] - (m or M).RINNOVO_DOPO_2029.get(y, 0.0) / pil[y]  # V42
     return d, g, s, i, sf
 
 

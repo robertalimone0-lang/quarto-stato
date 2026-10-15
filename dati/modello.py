@@ -40,6 +40,9 @@ COSTANTI = dict(
     CRESCITA_PIL_DOPO_2029=1.026,  # ipotesi: crescita nominale invariata al livello 2029
     RICONOSCIMENTO_R1=3.85,  # quota della Riforma 1 riconosciuta in via prudente come misure discrezionali (D20)
     RAMPA_EV="2028:0.25;2029:0.5;2030:0.75;2031:1",
+    # rinnovo contrattuale 2031-2033 dei dipendenti statali, per analogia con il 2028-2030 della L. 207/2024 (V42):
+    # minore avanzo nel tendenziale del debito e spesa nel percorso di spesa netta, a carico di qualunque governo
+    RINNOVO_DOPO_2029={2031: 1.954, 2032: 4.027},
 )
 TABELLE = {"coperture": "coperture.csv", "misure": "misure.csv", "leve": "leve.csv",
            "coda": "coda.csv", "dpfp": "dpfp_2026.csv", "riserva": "riserva.csv"}
@@ -107,6 +110,7 @@ class Quadro:
         self.PRENOTAZIONE, self.QUOTA_ECCEDENZA = c["PRENOTAZIONE"], c["QUOTA_ECCEDENZA"]
         self.RIPARTIZIONE_LEVE, self.AVVIO_P2_2027 = c["RIPARTIZIONE_LEVE"], c["AVVIO_P2_2027"]
         self.RICONOSCIMENTO_R1 = c["RICONOSCIMENTO_R1"]
+        self.RINNOVO_DOPO_2029 = c["RINNOVO_DOPO_2029"]
         self._RAMPA_EV = rampa(c["RAMPA_EV"])
 
         tab = {k: _applica(k, _csv(f), self.variante.get("tabelle", {}).get(k, {})) for k, f in TABELLE.items()}
@@ -290,6 +294,7 @@ class Quadro:
     def scarto_spesa_netta(self, s, y, riconoscimento=False):
         """Coperture valide ai fini UE meno spesa di Fase 1 rilevante per la spesa netta (miliardi)."""
         spesa = self.costo_fase1(s, y) - self._cofinanziamento_fase1(y) * self.MULT[s]
+        spesa += self.RINNOVO_DOPO_2029.get(y, 0.0)  # V42: il rinnovo 2031-2033 grava sul percorso di qualunque governo
         if riconoscimento:
             valide = self.copertura(s, y)
         else:
@@ -334,6 +339,7 @@ MULT, SOGLIA, PRENOTAZIONE, QUOTA_ECCEDENZA = (_PROGRAMMA.MULT, _PROGRAMMA.SOGLI
                                                 _PROGRAMMA.PRENOTAZIONE, _PROGRAMMA.QUOTA_ECCEDENZA)
 RIPARTIZIONE_LEVE, AVVIO_P2_2027, RICONOSCIMENTO_R1 = (_PROGRAMMA.RIPARTIZIONE_LEVE, _PROGRAMMA.AVVIO_P2_2027,
                                                        _PROGRAMMA.RICONOSCIMENTO_R1)
+RINNOVO_DOPO_2029 = _PROGRAMMA.RINNOVO_DOPO_2029
 COPERTURE, MISURE, LEVE, CODA, DPFP, RISERVA = (_PROGRAMMA.COPERTURE, _PROGRAMMA.MISURE, _PROGRAMMA.LEVE,
                                                 _PROGRAMMA.CODA, _PROGRAMMA.DPFP, _PROGRAMMA.RISERVA)
 PIL, BUSTA, P2_PIENA, P2, P2_RINVIATA = (_PROGRAMMA.PIL, _PROGRAMMA.BUSTA, _PROGRAMMA.P2_PIENA,

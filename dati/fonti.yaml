@@ -418,3 +418,35 @@ fonti:
     url: "https://www.upbilancio.it/wp-content/uploads/2026/10/UPB-Audizione-DPFP-2026.pdf"
     data: "2026-10-12"
     stato: verificato
+  bonus_nuovi_nati:
+    valore: 360
+    decimali: 0
+    unita: "milioni di euro annui dal 2026 (330 nel 2025), onere valutato"
+    fonte: "L. 207/2024, art. 1, commi 206-208 (comma 208); testo e scheda nel dossier della Camera sulla legge di bilancio 2025, vol. I"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/ID0011fvol1.pdf"
+    data: "2025-01-31"
+    stato: verificato
+  ponte_stanziamenti_2027_2031:
+    valore: 5621
+    decimali: 0
+    unita: "milioni di euro sul cap. 7190 MIT nel 2027-2031 (712, 983, 1.061, 998, 1.867), dopo il DL 32/2026; piu 3.882 milioni FSC non ripartiti"
+    fonte: "Camera, dossier sul DL 32/2026, articolo 1, commi 1-8, tabella delle risorse destinate al Ponte"
+    url: "https://documenti.camera.it/leg19/dossier/pdf/D26032b.pdf"
+    data: "2026-05-07"
+    stato: verificato
+  albania_fondo_annuo:
+    valore: 118.6
+    decimali: 1
+    unita: "milioni di euro per ciascuno degli anni dal 2025 al 2028 (fondo del Ministero dell'interno)"
+    fonte: "L. 14/2024, art. 6, comma 5"
+    url: "https://www.normattiva.it/eli/id/2024/02/22/24G00028/CONSOLIDATED"
+    data: "2024-02-22"
+    stato: verificato
+  canoni_balneari_2020:
+    valore: 92.5
+    decimali: 1
+    unita: "milioni di euro incassati nel 2020 da 12.166 concessioni demaniali marittime"
+    fonte: "Corte dei conti, riportata dal file 01 delle sorgenti (QuiFinanza); gettito 2024-2025 da chiedere a MIT e Demanio (V51)"
+    url: "https://quifinanza.it/economia/governo-concessioni-balneari/784761/"
+    data: "2020-12-31"
+    stato: da_validare
