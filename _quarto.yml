@@ -12,6 +12,7 @@ book:
   chapters:
     - index.qmd
     - capitoli/01-principi-metodo.qmd
+    - capitoli/10-primi-cento-giorni.qmd
 
 lang: it
 metadata-files:

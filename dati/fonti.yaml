@@ -450,3 +450,11 @@ fonti:
     url: "https://quifinanza.it/economia/governo-concessioni-balneari/784761/"
     data: "2020-12-31"
     stato: da_validare
+  margine_acconto_buona_fede:
+    valore: 20
+    decimali: 0
+    unita: "%"
+    fonte: "Parametro del programma deciso dall'autrice (piano dei cento giorni, giovedì 15 ottobre 2026): scostamento massimo tra acconto ridotto su previsione in buona fede e imposta dovuta senza sanzione"
+    url: "https://github.com/robertalimone0-lang/quarto-stato"
+    data: "2026-10-15"
+    stato: verificato

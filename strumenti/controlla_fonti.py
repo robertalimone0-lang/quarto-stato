@@ -16,7 +16,7 @@ MESI = "gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|otto
 PREFISSI_NORMATIVI = re.compile(
     r"(art\.|artt\.|articol[oi]|comm[ai]|letter[ae]|lett\.|L\.|legge|D\.Lgs\.|DL|D\.L\.|d\.lgs\.|n\.|regolamento|"
     r"direttiva|sentenz[ae]|Riforma|Riforme|punto|capitolo|paragrafo|par\.|Cost\.|Costituzione|C-|cause|causa|"
-    r"Fase|fase|gradino|classe|DM|A\.S\.|XVIII|Q|F\d-R|COP|L|M|C|X|V|D|S|I)\s*$"
+    r"Fase|fase|gradino|classe|[Ss]ettiman[ae]|DM|A\.S\.|XVIII|Q|F\d-R|COP|L|M|C|X|V|D|S|I)\s*$"
 )
 NUMERO = re.compile(r"(?<![\w.,])(\d{1,3}(?:\.\d{3})+(?:,\d+)?|\d+(?:,\d+)?)(\s*%)?")
 
@@ -52,6 +52,8 @@ def sospetti(riga):
             continue
         if re.match(r"^\s*\d+\.\s", riga) and m.start() < 4:
             continue  # elenco numerato
+        if re.match(r"^\|\s*\d+\s*\|", riga) and m.start() < 6:
+            continue  # numero della settimana nella prima colonna di una tabella
         if re.match(r"\s*/\s*\d", dopo) or re.search(r"\d\s*/\s*$", prima):
             continue  # numero di legge del tipo 243/2012
         if not pct and "," not in tok and float(valore) < 10 and not re.search(r"(miliard|milion|euro|punt)", dopo):

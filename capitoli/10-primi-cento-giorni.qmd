@@ -1,0 +1,87 @@
+# Primi cento giorni {#sec-cento-giorni}
+
+Nei primi cento giorni il governo cambia il comportamento dello Stato verso chi lo incontra ogni giorno: allo sportello, in ospedale, al lavoro, in cantiere, davanti al fisco. Ogni misura del piano rispetta quattro criteri:
+
+1. costo zero, oppure risorse già stanziate;
+2. strumento rapido: decreto-legge, decreto ministeriale, atto amministrativo, disegno di legge presentato;
+3. effetto visibile per un gruppo sociale preciso entro i cento giorni;
+4. calendario coerente con la prima legge di bilancio.
+
+Ogni misura ha un indicatore pubblico misurato prima e dopo. Il cruscotto del programma pubblica ogni settimana lo stato di ciascun atto. Una legge presentata resta una legge presentata: il cruscotto non la conta come approvata.
+
+## Calendario
+
+**Ipotesi base.** Elezioni domenica 26 settembre 2027, come nel 2022. Il governo si insedia venerdì 22 ottobre 2027. La settimana 1 parte lunedì 25 ottobre 2027 e il centesimo giorno cade domenica 30 gennaio 2028. I cento giorni coincidono con la sessione di bilancio: il disegno di legge di bilancio va alle Camere entro lunedì 29 novembre 2027 e la legge è approvata entro venerdì 31 dicembre 2027.
+
+**Variante.** Con elezioni anticipate in primavera 2027, il governo si insedia a fine maggio e i cento giorni finiscono a fine agosto. Gli atti per decreto restano nella stessa sequenza. Le misure che passano per la legge di bilancio si spostano alla sessione d'autunno, dopo i cento giorni.
+
+## Settimana per settimana
+
+| Settimana | Misure | Strumento | Chi vede l'effetto |
+|---|---|---|---|
+| 1 | Unità di attuazione e responsabile per ministero; cruscotto pubblico; impegno a nessun nuovo condono | decreto del Presidente del Consiglio; delibera del Consiglio dei ministri | tutti; contribuenti in regola |
+| 2 | Decreto «Stato semplice», prima parte: la pubblica amministrazione non chiede ciò che sa già, con sanzione per il dirigente; termini certi, silenzio-assenso esteso e indennizzo automatico per i ritardi; compensazione automatica fra crediti verso la PA e debiti fiscali, pagamenti alle imprese entro 30 giorni con interessi d'ufficio | decreto-legge | cittadini; piccole imprese |
+| 2 | Pacchetto lavoro: salario minimo legale, tirocini retribuiti con limite alla ripetizione, limiti ai contratti a termine; ispezioni mirate su contratti pirata e caporalato | disegni di legge; principi sui tirocini per decreto-legge e accordo con le Regioni; direttiva all'Ispettorato del lavoro | giovani; dipendenti a basso salario |
+| 2 | Notifica del recesso dal Protocollo con l'Albania | atto di recesso secondo le clausole del Protocollo | persone migranti |
+| 3 | Liste d'attesa con diritto esigibile: oltre il tempo massimo la prestazione si fa nel privato convenzionato o in intramoenia al costo del ticket, a carico dell'ASL; liste pubbliche in tempo reale per ogni struttura; intramoenia sospesa nei reparti fuori tempo | decreto-legge e decreto del Ministro della salute | malati in lista d'attesa |
+| 3 | Nessuna sanzione per l'acconto ridotto su una previsione di reddito fatta in buona fede entro un margine del {{< dato margine_acconto_buona_fede >}}, in tempo per l'acconto di novembre | decreto-legge | lavoratori autonomi e piccole partite IVA |
+| 3 | Stop al Ponte sullo Stretto; le risorse vanno ad acquedotti e ferrovie del Mezzogiorno | decreto-legge | Mezzogiorno |
+| 4 | Decreto «Stato semplice», seconda parte: fattura elettronica semplice, con modulo guidato gratuito, dati del cliente compilati da partita IVA o codice fiscale, regime e bollo assegnati in automatico, messaggi d'errore chiari, autofatture precompilate, conservazione automatica | decreti attuativi e provvedimento del Direttore dell'Agenzia delle entrate | forfettari e piccole partite IVA |
+| 4 | Telemarketing: consenso esplicito per ogni chiamata commerciale, nullità dei contratti conclusi al telefono senza conferma scritta; poteri ai comuni sugli affitti brevi, con tetto ai giorni e licenza comunale per le seconde case nelle zone ad alta tensione abitativa | decreto-legge | consumatori; residenti nelle città |
+| 4 | Riserva di posti nei corsi di specializzazione sul sostegno per i supplenti con almeno tre anni di servizio | decreti del Ministro dell'università e del Ministro dell'istruzione | precari della scuola |
+| 5 | Decreto «Appalti puliti»: contratti, varianti, subappalti, pagamenti ed esiti delle ispezioni in formato aperto e in tempo reale; controllo concomitante della Corte dei conti e doppio controllo sopra soglia; divieto di subappalto a cascata sulle lavorazioni strutturali e nei settori a rischio di infiltrazione | decreto-legge e delibera ANAC | tutti; imprese oneste |
+| 6 | Disegno di legge di bilancio: coperture di classe A e B; divieto per legge di nuovi condoni; abrogazione del bonus nuovi nati; pagamenti su ciò che si incassa (IVA per cassa sotto la soglia europea, versamenti trimestrali sul reddito effettivo degli autonomi, abolizione graduale dell'acconto IVA di dicembre), con effetti certificati prima dell'approvazione | disegno di legge di bilancio | autonomi; contribuenti; famiglie |
+| 6 | Interoperabilità delle banche dati pubbliche con calendario vincolante; bonus sociale luce e gas automatico; verifiche sulle liste prefettizie di calcestruzzo, inerti e trasporti; registro delle lobby e periodo di raffreddamento; avvio con Sicilia e Sardegna degli oneri di servizio pubblico sulle rotte di continuità territoriale | decreto ministeriale e linee guida AGID; delibera ARERA; direttiva ai Prefetti; disegno di legge; procedura del regolamento europeo sui servizi aerei | tutti; famiglie povere; residenti nelle isole |
+| 8 | Indicatori automatici di rischio di corruzione pubblici; ispezioni assegnate per sorteggio con rotazione degli ispettori; censimento degli alloggi popolari sfitti e dei beni confiscati | delibera e regolamento ANAC; direttiva alla Guardia di finanza; accordi con Regioni e Comuni | tutti; famiglie senza casa |
+| 10 | Approvazione della legge di bilancio; albo nazionale degli ingegneri di controllo indipendenti e controllo sui controllori; campioni dei materiali sigillati e analizzati da laboratori sorteggiati, risultati in una banca dati pubblica | legge di bilancio; disegno di legge e regolamento ANAC; decreto del Ministro delle infrastrutture | tutti |
+| 12 | Badge digitale di cantiere incrociato ogni giorno con Cassa edile e comunicazioni obbligatorie; punteggio di carriera per tutor e insegnanti che restano almeno tre anni nelle scuole a rischio di dispersione | decreto interministeriale Lavoro–Infrastrutture; atto di indirizzo all'ARAN | lavoratori edili; insegnanti |
+| 14 | Prima verifica pubblica: valori prima e dopo per ogni indicatore, elenco dei ritardi con i responsabili | relazione dell'unità di attuazione | tutti |
+
+## Lo Stato che non chiede due volte
+
+Il principio per cui la pubblica amministrazione acquisisce d'ufficio i dati che possiede è già legge: la legge sul procedimento amministrativo (L. 241/1990, art. 18), il testo unico sulla documentazione amministrativa (DPR 445/2000, art. 43 e art. 74), la decertificazione (L. 183/2011, art. 15) e il Codice dell'amministrazione digitale con la Piattaforma digitale nazionale dati (art. 50-ter). Manca l'applicazione. Il decreto «Stato semplice» rende la richiesta di un documento già posseduto una violazione sanzionata per il dirigente responsabile, pubblica per ogni ufficio il numero di documenti ancora richiesti e fissa la scadenza entro cui ogni banca dati pubblica i propri servizi sulla Piattaforma.
+
+Lo stesso decreto dà ai termini dei procedimenti un effetto reale. Oggi l'indennizzo da ritardo vale solo per l'avvio e l'esercizio di attività d'impresa e va chiesto (L. 241/1990, art. 2-bis). Il decreto lo rende automatico per tutti i procedimenti a istanza di parte, a carico del bilancio dell'ufficio in ritardo, ed estende il silenzio-assenso con attestazione rilasciata dal portale. Restano escluse le materie che la legge sottrae al silenzio-assenso, come ambiente, salute e beni culturali.
+
+Chi non usa strumenti digitali ottiene lo stesso servizio allo sportello o per telefono: ogni procedura semplificata ha un canale fisico garantito.
+
+## Lavoro e giovani
+
+Le prime misure visibili per i giovani costano zero allo Stato: il salario minimo legale, i tirocini retribuiti con limite alla ripetizione per la stessa mansione, i limiti ai contratti a termine. I testi vanno alle Camere nella settimana 2. Sui tirocini extracurricolari la competenza è delle Regioni: il decreto fissa i principi e l'indennità minima nazionale si definisce con un accordo in Conferenza Stato-Regioni.
+
+## Sanità
+
+Il diritto a una prestazione nei tempi massimi esiste dal 1998 (D.Lgs. 124/1998, art. 3, comma 13), ma richiede un'istanza. Il decreto della settimana 3 lo rende automatico: il sistema di prenotazione, se non trova una data nei tempi, prenota d'ufficio nel pubblico, nel privato convenzionato o in intramoenia al costo del solo ticket, e l'ASL paga la differenza. Le liste d'attesa di ogni struttura diventano pubbliche in tempo reale. L'intramoenia si sospende nei reparti che non rispettano i tempi. Nei primi mesi la garanzia usa la capacità esistente; le risorse della riforma sanitaria arrivano con la legge di bilancio.
+
+## Fisco per chi lavora in proprio
+
+Il principio è uno: tasse e contributi si pagano su ciò che si incassa. Nei cento giorni il decreto della settimana 3 elimina la sanzione per chi riduce l'acconto in base a una previsione di reddito fatta in buona fede e sbaglia entro un margine del {{< dato margine_acconto_buona_fede >}}. La legge di bilancio porta l'IVA per cassa come regola sotto la soglia prevista dalla direttiva europea, con uscita volontaria (DL 83/2012, art. 32-bis); i versamenti trimestrali sul reddito maturato dall'inizio dell'anno al posto degli acconti calcolati sull'anno precedente; l'abolizione graduale dell'acconto IVA di dicembre. Gli effetti di cassa dell'anno di transizione si certificano prima dell'approvazione e non finanziano spesa.
+
+La fattura elettronica diventa semplice per chi la emette da solo: l'Agenzia delle entrate compila i dati del cliente, sceglie natura IVA, regime e bollo in base al regime del contribuente, segnala gli errori in linguaggio chiaro prima dell'invio, precompila le autofatture e conserva le fatture senza bisogno di adesione. Il formato resta allineato alla norma europea richiesta dalla direttiva sull'IVA nell'era digitale per le operazioni intracomunitarie.
+
+## Appalti e cantieri
+
+I controlli sugli appalti funzionano anche quando un singolo corpo di controllo fallisce. Il pacchetto si articola in otto parti:
+
+- pubblicazione integrale e in tempo reale di contratti, varianti, subappalti, pagamenti ed esiti delle ispezioni;
+- indicatori automatici di rischio pubblici;
+- ispezioni assegnate per sorteggio;
+- doppio controllo indipendente sopra soglia;
+- controllo sui controllori;
+- limiti al subappalto a cascata;
+- ingegneri di controllo indipendenti, pagati da un fondo centrale e assegnati per sorteggio;
+- tracciabilità dei materiali dalla cava al getto, con campioni sigillati e laboratori sorteggiati, e della manodopera con il badge di cantiere.
+
+Le norme di partenza sono il Codice dei contratti pubblici (D.Lgs. 36/2023), la legge anticorruzione (L. 190/2012), la disciplina delle segnalazioni (D.Lgs. 24/2023), le Norme tecniche per le costruzioni del 2018, il testo unico dell'edilizia (DPR 380/2001) e la patente a crediti (DL 19/2024, art. 29). Il costo degli ingegneri di controllo si copre con una quota delle spese tecniche già previste nel quadro economico di ciascuna opera.
+
+## Verifica a cento giorni
+
+Nella settimana 14 l'unità di attuazione pubblica, per ogni misura, il valore dell'indicatore prima e dopo e l'elenco dei ritardi con il nome del responsabile. Gli indicatori sono:
+
+- documenti non più richiesti e tempo mediano delle pratiche;
+- indennizzi pagati;
+- prestazioni sanitarie erogate nei tempi;
+- ispezioni svolte e lavoratori regolarizzati;
+- contratti e subappalti pubblicati;
+- famiglie raggiunte dal bonus sociale senza domanda;
+- immobili censiti, verificati, finanziati, cantierati.

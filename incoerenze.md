@@ -204,4 +204,10 @@ Analisi, nessuna modifica al quadro: l'autrice sceglie voce per voce. Quattro co
 - **S15. Calendario dei cento giorni.** Il piano conta le settimane dall'insediamento; la collocazione della prima legge di bilancio dipende dalla data delle elezioni. Da fissare.
 - **Analisi politica e piano dei cento giorni:** report, sezioni 19 e 20 (proposta, nessun capitolo scritto).
 - **S14 (decisa, giovedì 15 ottobre 2026).** I gradini della riserva si applicano in tutte le varianti, con e senza riconoscimento dell'evasione; ordine invariato. Con riconoscimento: prudente 2031 scarto −1,52, coperto dai gradini a), b) e c) (0,85 / 0,65 / 0,02); avverso scoperto dal 2027 (residuo 0,71 nel 2027, 5,67 nel 2031) dopo lo slittamento della Priorità 2.
+- **S15 (decisa).** Ipotesi base: elezioni domenica 26 settembre 2027, insediamento venerdì 22 ottobre 2027, legge di bilancio entro venerdì 31 dicembre 2027; variante con voto in primavera 2027.
+- **S16. Primo anno del quadro.** Il modello usa il 2027 come primo anno (coperture e Priorità 2 dal 1° luglio 2027). Con l'ipotesi base la prima legge di bilancio del programma è quella per il 2028. Da decidere: spostare il quadro di un anno, o dichiarare una manovra correttiva nel 2027. Dettaglio nel report, sezione 21.
+- **V54. Drenaggio fiscale per gruppo.** Costo della restituzione ai pensionati e ai redditi tra 32.000 e 45.000 euro: serve una microsimulazione (UPB o Dipartimento delle finanze).
+- **V55. Bollo sulle fatture dei forfettari.** Gettito annuo da chiedere all'Agenzia delle entrate.
+- **V56. Sondaggi.** Consenso alle misure dei cento giorni da documentare con Demos, Ipsos, YouTrend e SWG.
+- **V57. Partite IVA.** Numero delle persone fisiche titolari di partita IVA attive e dei forfettari, dall'Osservatorio sulle partite IVA del MEF; versamenti di acconti degli autonomi dai dati F24.
 
