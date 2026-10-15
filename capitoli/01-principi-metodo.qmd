@@ -137,6 +137,8 @@ fig = flusso_attivazione()
 
 ## La clausola di salvaguardia {#sec-salvaguardia}
 
+**Quando scatta lo scenario avverso.** Lo scenario avverso descrive un consuntivo in cui le coperture si realizzano solo per il `{python} it(100*M.copertura("avverso", M.ANNO_REGIME)/sum(M.per_classe("nominale", M.ANNO_REGIME).values()), 0)`% del valore nominale a regime, contro il `{python} it(100*M.copertura("centrale", M.ANNO_REGIME)/sum(M.per_classe("nominale", M.ANNO_REGIME).values()), 0)`% dello scenario centrale, e i costi superano le stime del `{python} it(100*(M.MULT["avverso"]-1), 0)`%. Le cause tipiche agiscono insieme: crescita bassa, che riduce il gettito e il rendimento della spending review; spread alto, che aumenta gli interessi e restringe lo spazio di bilancio; recupero dell'evasione fermo ai valori più bassi, che toglie la copertura più grande. La scala non scatta su una previsione. Scatta sul consuntivo certificato dall'UPB, qualunque sia la causa dello scostamento: è un freno di emergenza.
+
 Se il consuntivo segue lo scenario avverso, una sola scala copre il buco maggiore fra due: il disavanzo di Fase 1 (coperture realizzate meno costi) e lo scarto rispetto al percorso europeo di spesa netta. Usare una sola scala evita di contare due volte la stessa Priorità 2 rinviata. I congelamenti scattano in quest'ordine automatico:
 
 1. sospensione di tutte le attivazioni della coda, poi i gradini della riserva sulle entrate (sussidi dannosi, spending review, cedolare, agevolazioni edilizie);

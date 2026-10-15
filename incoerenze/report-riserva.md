@@ -782,3 +782,42 @@ Sondaggi: il consenso va documentato con le fonti di Demos, Ipsos, YouTrend e SW
 
 - Platea: circa 3,1 milioni di contribuenti, tutti nel decimo decile del reddito complessivo (il 19° ventile parte da 44.489 euro, il 20° da 61.431).
 - Restituzione del drenaggio fiscale. L'UPB stima 1,6 miliardi di drenaggio per ogni punto di inflazione (audizione sul DPFP 2026) e, nel confronto con il sistema 2021 indicizzato, un recupero parziale per i dipendenti tra 32.000 e 45.000 euro e per la maggior parte dei pensionati e degli autonomi (audizione sul DDL di bilancio 2026, fig. 4.6). L'UPB non pubblica il costo della restituzione per gruppo: serve una microsimulazione (V54). Ordine di grandezza: la restituzione piena ai pensionati e ai redditi tra 32.000 e 45.000 euro supera di più volte il gettito della correzione. Con 1,1 miliardi si finanzia una detrazione aggiuntiva di circa 180 euro l'anno per i circa 6 milioni di contribuenti tra 32.000 e 45.000 euro, oppure una restituzione mirata ai pensionati sotto 45.000 euro di importo da calcolare sulla platea.
+
+## 22. D31: restituzione del drenaggio fiscale con 0,83 miliardi (proposta, giovedì 15 ottobre 2026)
+
+**Parametri verificati.** Detrazione aggiuntiva del cuneo (L. 207/2024, art. 1, commi 4–6, dossier della Camera): 1.000 euro per reddito complessivo fra 20.000 e 32.000 euro, decrescente in linea retta fino a zero a 40.000 euro. Fra 32.000 e 40.000 euro aggiunge 12,5 punti di aliquota marginale. Detrazione per lavoro dipendente fra 28.000 e 50.000 euro: 1.910 euro in decalage fino a zero (8,7 punti); aliquote IRPEF 2026: 23%, 33% fino a 50.000, 43% oltre.
+
+**Aliquota marginale effettiva IRPEF statale, dipendente senza carichi (addizionali escluse)**
+
+| Fascia di reddito | 30–32 mila | 32–40 mila | 40–45 mila | 45–50 mila | 50–55 mila |
+|---|---|---|---|---|---|
+| Vigente 2026 | 41,7 | 54,2 | 41,7 | 41,7 | 43,0 |
+| Opzione A | 41,7 | 45,0 (fino a 63,4 fra 39 e 40 mila) | 50,9 | 41,7 | 43,0 |
+| Opzione B | 41,7 | 54,2 fino a 35 mila, 38,6 fra 35 e 40 mila | 57,3 | 41,7 | 43,0 |
+| Proposta C1 | 41,7 | 49,2 | 41,7 fino a 41.720, poi 46,7 | 46,7 fino a 49.720 | 43,0 |
+
+Grafico: `incoerenze/grafici/d31-aliquote-marginali.png`.
+
+**Proposta C1.** Restituzione che cresce del 5% del reddito da 32.000 euro (compensa 5 dei 12,5 punti del cuneo), arriva a 400 euro l'anno a 40.000 euro, resta piena fino a 41.720 euro e scende del 5% fino a zero a 49.720 euro. Costo 0,83 miliardi; beneficiari circa 4,4 milioni di dipendenti; beneficio medio 15,8 euro al mese, massimo 33,3 euro al mese; 1,1 milioni ricevono almeno 25 euro al mese. Aumento massimo dell'aliquota marginale: 5 punti, fra 41.720 e 49.720 euro.
+
+**Vincoli incompatibili con 0,83 miliardi.** Una curva continua parte da zero: chi sta appena sopra il punto di partenza riceve importi piccoli, quindi nessuna curva senza scalini dà almeno 25 euro al mese a tutti i beneficiari. Compensare per intero il salto del cuneo (12,5 punti) con discesa al 5% costa 2,5–3,2 miliardi. Con 0,83 miliardi si sceglie fra due obiettivi: compensare in parte il salto per molti (C1) o dare almeno 25 euro al mese a pochi con un salto marginale più alto (A e B).
+
+Fonte della platea: Dipartimento delle finanze, dichiarazioni 2025, contribuenti con reddito da lavoro dipendente per classe di reddito complessivo, distribuzione uniforme dentro la classe. Stima da sostituire con la microsimulazione (V54).
+
+## 23. Ricalcoli dopo lo spostamento al 2028–2032 e curva D31 (giovedì 15 ottobre 2026)
+
+**Correzione del taglio 2026 della seconda aliquota a redditi 2028.** Con la crescita del reddito per dipendente prevista dal DPFP (2,8 / 2,8 / 2,6 / 2,3% nel 2025–2028, +10,9% cumulato) i contribuenti fra 50.000 e 200.000 euro passano da 3,13 a circa 4,2 milioni e il gettito del riassorbimento completo a 80.000 euro sale da 0,83 a **1,03 miliardi** nel 2028. Le soglie non sono indicizzate: il dato cresce con i redditi nominali.
+
+**Curva della restituzione a redditi 2028, budget 1,03 miliardi**
+
+| Curva | Forma | Beneficiari | Medio | Massimo | Marginale 32–40 mila | 40–45 | 45–50 | 50–55 |
+|---|---|---|---|---|---|---|---|---|
+| Vigente 2026 | — | — | — | — | 54,2 | 41,7 | 41,7 | 43,0 |
+| C1' (C1 riproporzionata) | sale del 4,9% da 32.000 a 392 euro a 40.000, scende del 5% fino a zero a 47.841 | 5,2 milioni | 16,4 euro/mese | 32,7 | 49,3 | 46,7 | 46,7 | 43,0 |
+| D (discesa lunga) | sale del 3,6% da 32.000 a 291 euro a 40.000, scende dell'1,32% fino a zero a 62.019 | 6,6 milioni | 13,1 euro/mese | 24,2 | 50,5 | 43,0 | 43,0 | 44,3 |
+
+La discesa lunga è possibile: con una pendenza dell'1,32% l'aliquota marginale fra 45.000 e 50.000 euro resta al 43,0%, uguale a quella fra 50.000 e 55.000 nella norma vigente; quella fra 50.000 e 62.000 sale al 44,3%. Il prezzo: a parità di budget la compensazione del salto del cuneo scende da 4,9 a 3,6 punti e nessuno riceve 25 euro al mese. Iniziare la discesa prima di 40.000 euro peggiora il salto del cuneo (fino al 55,5%) ed è scartato.
+
+**Occupazione al 2032.** Eurostat (lfsi_emp_a, 20–64 anni): 63,5% nel 2019, 67,6% nel 2025. Tendenza 2015–2019 prolungata: 73,6% nel 2031 (l'impegno del 74,5% stava circa 0,9 punti sopra), 74,4% nel 2032. Con la stessa regola l'impegno per il 2032 è **75,4%**. Il 2025 è circa un punto sotto la tendenza: l'impegno richiede di recuperare circa due punti sulla tendenza in sette anni.
+
+**Tabelle della scuola al 2032.** Con il programma dal 2028 le tabelle del report (sezioni 14–15) valgono per il 2028–2032 con un anno di ritardo: stabilizzazioni cumulate 19.465 / 43.601 / 71.501 / 109.781 / 129.765 nel 2028–2032 (perimetro 0,97); supplenze residue 95.387 nel 2032, di cui 14.652 su posto vacante, 55.273 comuni fino al termine, 25.462 in deroga; dividendo demografico 0,30 miliardi nel 2032; indennità M23 0,10 / 0,15 / 0,20 miliardi nel 2030–2032; contratti al 31 agosto (Q16) nel 2031 a 0,34 miliardi. Il bacino resta quello MIM 2024/25: entro l'autunno 2027 va sostituito con i dati 2026/27 (V58), che includono due anni di calo delle classi e le immissioni in ruolo del governo in carica.

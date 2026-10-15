@@ -458,3 +458,19 @@ fonti:
     url: "https://github.com/robertalimone0-lang/quarto-stato"
     data: "2026-10-15"
     stato: verificato
+  occupazione_20_64_2025:
+    valore: 67.6
+    decimali: 1
+    unita: "% della popolazione di 20-64 anni occupata nel 2025 (2015 60,2; 2019 63,5); tendenza 2015-2019 prolungata: 73,6% nel 2031, 74,4% nel 2032"
+    fonte: "Eurostat, lfsi_emp_a (Italia, 20-64 anni, indagine sulle forze di lavoro); tendenza calcolata dalla redazione con regressione lineare 2015-2019"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/lfsi_emp_a/default/table"
+    data: "2026-10-15"
+    stato: verificato
+  reddito_per_dipendente_crescita:
+    valore: 10.9
+    decimali: 1
+    unita: "% di crescita cumulata del reddito per dipendente 2025-2028 (2,8 / 2,8 / 2,6 / 2,3 l'anno)"
+    fonte: "DPFP 2026, quadro macroeconomico tendenziale, tavola sul mercato del lavoro"
+    url: "https://www.mef.gov.it/documenti-pubblicazioni/doc-finanza-pubblica/"
+    data: "2026-10-02"
+    stato: verificato
