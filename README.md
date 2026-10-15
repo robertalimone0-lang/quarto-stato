@@ -1,125 +1,289 @@
 # Quarto Stato
 
-**Programma politico 2028–2032 · Modello finanziario in Python · Documentazione con Quarto**
+**Progetto di policy design, pianificazione strategica e modellazione economico-finanziaria delle politiche pubbliche**
 
-Quarto Stato è un progetto per elaborare e verificare un programma politico per la legislatura 2028–2032. Integra un modello di finanza pubblica sviluppato in Python, dati strutturati, fonti documentali, simulazioni pluriennali e documenti generati con Quarto.
+**Orizzonte programmatico: Italia 2028–2032**
 
-## Funzionalità
+## Introduzione
 
-- Modello parametrico di finanza pubblica in Python.
-- Simulazione pluriennale di costi, coperture, saldi e debito.
-- Scenari centrale, prudente e avverso.
-- Registro unitario delle coperture e controlli contro i doppi conteggi.
-- Coda di attivazione per le misure subordinate a entrate certificate.
-- Regole di salvaguardia e reversibilità.
-- Generazione di tabelle e grafici a partire dai dati del modello.
-- Tracciabilità di fonti, ipotesi e decisioni metodologiche.
-- Test di non regressione per individuare variazioni inattese nei risultati.
-- Produzione coordinata del programma politico e del volume tecnico tramite Quarto.
+Quarto Stato nasce dalla necessità di ripensare il rapporto tra potere politico, sistema economico e interesse collettivo. In una società in cui la capacità di decidere è sempre più condizionata dalla concentrazione delle risorse, dalle rendite private, dalle dipendenze strategiche e dai vincoli che limitano l'azione pubblica, la questione fondamentale è restituire alla politica la capacità concreta di governare i processi economici e orientare lo sviluppo in funzione degli interessi della collettività.
+Il progetto assume come punto di partenza una distinzione essenziale: la sovranità non coincide con la sola autonomia formale delle istituzioni, così come la democrazia non si esaurisce nella rappresentanza. Entrambe richiedono condizioni materiali che rendano effettiva la possibilità di decidere, intervenire e trasformare la realtà. Ciò implica affrontare le disuguaglianze, la precarietà economica, la perdita di capacità produttiva, la dipendenza tecnologica ed energetica, l'indebolimento dei servizi pubblici e gli assetti istituzionali che ostacolano l'attuazione dell'interesse generale.
+Da questa impostazione prende forma un lavoro di elaborazione politica, progettazione delle politiche pubbliche e pianificazione economico-finanziaria finalizzato alla costruzione di un programma integrato di riforme per l'Italia nel periodo 2028–2032. L'obiettivo non è limitarsi a formulare principi, denunce o promesse elettorali, ma tradurre una visione politica in interventi coordinati, valutarne le conseguenze economiche e sociali, verificarne la sostenibilità finanziaria e definire le condizioni necessarie alla loro attuazione.
+Il programma affronta le diverse dimensioni dell'azione pubblica come parti di un unico sistema: le scelte fiscali e di bilancio, la politica industriale, il lavoro, il welfare, la sanità, l'istruzione, l'energia, le infrastrutture, la ricerca, l'innovazione tecnologica, l'abitazione e il funzionamento delle istituzioni. Ogni misura deve essere valutata non soltanto per i suoi effetti immediati, ma anche per le interazioni con le altre politiche, la distribuzione dei benefici e dei costi, gli effetti di lungo periodo e la capacità di produrre risultati verificabili.
+La dimensione tecnica è parte integrante di questo metodo. Modelli economici, dati, strumenti di programmazione e simulazioni computazionali servono a rendere esplicite le ipotesi, quantificare gli effetti attesi, individuare le incompatibilità e sottoporre le proposte a verifiche riproducibili. Non sostituiscono le scelte politiche: consentono di valutarne la coerenza, i costi, i rischi e le conseguenze, distinguendo gli obiettivi dichiarati dai risultati plausibili.
+
+**Il fine del Quarto Stato è costruire un progetto di governo concretamente utilizzabile nelle decisioni politiche, nell'attività legislativa e nell'azione amministrativa.** Un programma nel quale visione politica, strumenti normativi, risorse finanziarie, priorità operative e risultati attesi siano ricondotti a un disegno unitario, sottoposto a verifica e aggiornabile alla luce dei dati e degli esiti.
+Il Quarto Stato non è quindi soltanto un esercizio di analisi economica, un manifesto di principi o una raccolta di proposte settoriali. È un processo di costruzione programmatica che mira a collegare la trasformazione degli assetti economici e istituzionali con la capacità delle persone di esercitare diritti effettivi, partecipare alle decisioni e incidere sulle condizioni materiali della propria esistenza.
+
+## Obiettivi del progetto
+
+Il progetto mira a elaborare un programma di governo integrato per il periodo 2028–2032, traducendo gli obiettivi politici in misure concrete, quantificabili e verificabili.
+
+Gli obiettivi operativi sono:
+
+- Definire le priorità strategiche e le riforme necessarie a realizzarle.
+- Progettare politiche pubbliche coordinate, valutandone gli effetti economici, sociali e distributivi.
+- Quantificare i costi delle misure e individuare le relative coperture finanziarie.
+- Modellare l'evoluzione delle entrate, delle spese e dei principali aggregati di finanza pubblica.
+- Simulare scenari alternativi e verificare la sensibilità dei risultati alle ipotesi adottate.
+- Identificare vincoli, dipendenze, rischi e condizioni necessarie all'attivazione delle misure.
+- Valutare la coerenza reciproca delle proposte e la loro compatibilità con gli obiettivi complessivi.
+- Definire indicatori di risultato e criteri per monitorare l'attuazione.
+- Documentare fonti, ipotesi, formule e procedure, rendendo il processo verificabile e riproducibile.
+
+## Funzionalità previste
+
+### 1. Progettazione delle politiche pubbliche
+
+Ogni proposta viene trattata come una misura inserita in un programma complessivo, non come un intervento isolato.
+
+La scheda di una misura dovrebbe specificare:
+
+- Problema affrontato e obiettivo perseguito.
+- Popolazione destinataria e criteri di accesso.
+- Strumento normativo o amministrativo necessario.
+- Costo iniziale e costo ricorrente.
+- Fonte di finanziamento e copertura.
+- Tempi, fasi e condizioni di attivazione.
+- Effetti economici e sociali attesi.
+- Indicatori per la valutazione dei risultati.
+- Rischi attuativi e possibili effetti indesiderati.
+
+### 2. Modello economico-finanziario parametrico
+
+Il modello in Python è destinato a tradurre le ipotesi programmatiche in grandezze quantitative, rendendo esplicite le relazioni tra misure, variabili economiche e finanza pubblica.
+L'impostazione parametrica permette di modificare le ipotesi di partenza senza riscrivere l'intero modello, confrontare scenari diversi e individuare quali variabili incidano maggiormente sui risultati.
+
+### 3. Simulazioni e scenari
+
+Il sistema deve consentire di confrontare differenti ipotesi di attuazione del programma, distinguendo tra:
+
+- Scenario di riferimento, costruito sulla base di ipotesi esplicite.
+- Scenario programmatico, relativo alle misure proposte.
+- Scenari alternativi, basati su diverse combinazioni di interventi.
+- Scenari avversi, utili a valutare la tenuta del programma in condizioni meno favorevoli.
+- Analisi di sensibilità, per misurare l'effetto delle variazioni dei parametri principali.
+
+Gli scenari non costituiscono previsioni certe: rappresentano risultati condizionati dalle ipotesi e dai parametri utilizzati.
+
+### 4. Analisi delle coperture
+
+Ogni intervento che comporti un impegno finanziario deve essere associato a una strategia di copertura identificabile.
+Il modello deve distinguere tra entrate aggiuntive, riallocazioni di spesa, riduzioni di costo, finanziamenti in conto capitale, risorse europee e altre fonti pertinenti, evitando di conteggiare più volte la stessa disponibilità.
+Le coperture devono essere valutate per consistenza, tempi di realizzazione, affidabilità e compatibilità con i vincoli di bilancio. Le entrate stimate e i risparmi attesi devono essere separati dalle risorse già disponibili o effettivamente accertate.
+
+### 5. Verifiche di coerenza
+
+La valutazione delle singole misure deve essere accompagnata da controlli sull'intero programma.
+
+Le verifiche comprendono, secondo i dati e le funzionalità effettivamente implementati:
+
+- Coerenza aritmetica tra costi, entrate e coperture.
+- Assenza di doppio conteggio delle risorse.
+- Compatibilità temporale tra finanziamenti e spese.
+- Coerenza tra criteri di accesso, platee interessate e costi stimati.
+- Compatibilità tra obiettivi settoriali e obiettivi generali.
+- Verifica delle dipendenze tra misure.
+- Identificazione di ipotesi mancanti, dati incompleti e parametri non verificati.
 
 ## Tecnologie
 
-- **Python** — modello finanziario e simulazioni.
-- **Quarto** — generazione della documentazione.
-- **CSV** — registri strutturati di dati e coperture.
-- **YAML** — fonti, configurazioni e decisioni metodologiche.
-- **JSON** — istantanee di riferimento per i test.
-- **Git** — controllo delle versioni.
+### Python
+
+Python costituisce la base del modello parametrico e degli strumenti di calcolo, simulazione e verifica.
+L'organizzazione del codice dovrà favorire modularità, leggibilità, testabilità e separazione tra dati di ingresso, ipotesi, formule, risultati e procedure di controllo.
+
+### Dati e fonti
+
+I dati utilizzati devono essere accompagnati, ove disponibili, da fonte, data di riferimento, unità di misura, ambito territoriale, metodologia e limitazioni.
+I dati ufficiali osservati devono essere distinti dalle stime, dalle ipotesi di scenario e dai parametri introdotti per finalità di simulazione.
+
+### Documentazione e versionamento
+
+Il progetto deve mantenere documentazione aggiornata, tracciabilità delle modifiche e corrispondenza tra le ipotesi descritte e quelle utilizzate dal codice.
+La struttura tecnica dovrà consentire di ricostruire il percorso che collega i dati iniziali ai risultati prodotti.
 
 ## Struttura del progetto
 
-Il repository separa il codice di calcolo, i dati, le fonti e la documentazione.
+L'organizzazione del repository deve mantenere separate le componenti del modello, i dati, la documentazione e i test.
+La struttura logica di riferimento comprende:
 
-| Percorso | Contenuto |
-|---|---|
-| `dati/modello.py` | Modello finanziario in Python |
-| `dati/grafici.py` | Generazione dei grafici |
-| `dati/coperture.csv` | Registro unitario delle coperture |
-| `dati/coda.csv` | Misure in attesa di attivazione |
-| `dati/leve.csv` | Fonti di entrata e criteri di certificazione |
-| `dati/riserva.csv` | Regole della riserva condizionata |
-| `dati/perimetro.csv` | Perimetro del modello |
-| `dati/fonti.yaml` | Fonti e stato di validazione |
-| `dati/decisioni.yaml` | Registro delle decisioni metodologiche |
-| `dati/spese_fiscali/base_proposta.csv` | Base delle spese fiscali oggetto di riordino |
-| `strumenti/istantanea.py` | Strumento per le verifiche di non regressione |
-| `strumenti/istantanea_riferimento.json` | Risultati di riferimento |
-| `sorgenti/` | Fonti documentali originali |
+- **Modello:** funzioni, moduli e procedure per i calcoli economici e finanziari.
+- **Dati:** dati di riferimento, parametri, metadati e fonti.
+- **Scenari:** configurazioni delle ipotesi e delle misure da simulare.
+- **Risultati:** output delle elaborazioni, confronti e indicatori.
+- **Verifiche:** controlli di coerenza, validazione e test automatici.
+- **Documentazione:** descrizione del modello, metodologia, ipotesi e istruzioni operative.
 
-I percorsi descrivono l'organizzazione prevista del progetto; la presenza effettiva dei singoli file dipende dalla versione del repository.
+La struttura fisica definitiva deve corrispondere ai file realmente presenti nel repository. Le directory e i moduli non ancora implementati non devono essere presentati come funzionalità già disponibili.
 
 ## Modello finanziario
 
-Il modello collega ciascuna misura al costo annuale, alla copertura, al profilo di attuazione e agli scenari di rischio.
+Il modello finanziario costituisce uno degli strumenti centrali del progetto. Il suo compito è collegare le decisioni programmatiche alle rispettive conseguenze sul bilancio pubblico e verificare la sostenibilità delle misure nel tempo.
 
-Le regole fondamentali sono:
+### Principi di costruzione
 
-1. Una risorsa può finanziare una sola misura.
-2. Lo scenario prudente deve mantenere un margine annuale non negativo.
-3. Le coperture sono classificate secondo il grado di affidabilità.
-4. Le misure condizionate si attivano soltanto quando le entrate strutturali sono certificate e sufficienti.
-5. Gli scenari avversi attivano una sequenza prestabilita di salvaguardie.
-6. Le prestazioni già riconosciute non vengono ridotte.
-7. Le ipotesi non verificate sono identificate come `da validare`.
-8. I risultati numerici pubblicati devono provenire dal modello e dai registri, evitando trascrizioni manuali.
+Il modello deve rispettare alcuni principi fondamentali:
+
+1. **Trasparenza:** formule, parametri e ipotesi devono essere documentati.
+2. **Tracciabilità:** ogni risultato deve poter essere ricondotto ai dati e alle regole che lo hanno generato.
+3. **Coerenza temporale:** costi, entrate e coperture devono essere riferiti a periodi compatibili.
+4. **Separazione tra dati e ipotesi:** valori osservati, stime e parametri di scenario non devono essere confusi.
+5. **Modularità:** le singole misure devono poter essere analizzate separatamente e poi integrate nel quadro generale.
+6. **Verificabilità:** i risultati devono essere sottoposti a controlli automatici e confronti con fonti indipendenti, quando disponibili.
+7. **Aggiornabilità:** la sostituzione di un dato o la modifica di un'ipotesi deve essere possibile senza compromettere la struttura del modello.
+
+### Parametri e variabili
+
+I parametri devono essere organizzati in modo da consentire l'aggiornamento delle ipotesi economiche, demografiche, fiscali e finanziarie pertinenti alle singole politiche.
+
+Per ogni parametro rilevante occorre documentare:
+
+- Valore adottato e unità di misura.
+- Fonte o motivazione della stima.
+- Data di riferimento.
+- Intervallo plausibile, quando determinabile.
+- Effetto sui risultati.
+- Eventuali limiti di attendibilità.
+
+I parametri privi di una base empirica sufficiente devono essere identificati come ipotesi da verificare.
+
+### Costi e benefici
+
+La valutazione economico-finanziaria deve distinguere tra costi iniziali, costi ricorrenti, investimenti, minori entrate, entrate aggiuntive e risparmi potenziali.
+
+Gli effetti macroeconomici indiretti, come quelli sulla produttività, sull'occupazione, sui consumi o sul gettito, devono essere inclusi solo quando esiste un metodo esplicito per stimarli. Non devono essere utilizzati per compensare automaticamente i costi diretti di una misura.
 
 ## Scenari e coperture
 
-Le simulazioni distinguono gli scenari centrale, prudente e avverso. I profili annuali considerano i costi delle misure, i tassi di realizzazione delle entrate e i tempi di avvio.
+Il programma deve essere valutato su un orizzonte temporale coerente con il periodo 2028–2032, considerando sia il costo delle misure sia la loro sequenza di attuazione.
 
-Il modello prevede una maggiorazione dei costi del 5% nello scenario prudente e del 10% nello scenario avverso.
+Le simulazioni devono permettere di individuare:
 
-Le coperture incerte non sono trattate automaticamente come risorse disponibili. Le misure inserite nella coda di attivazione richiedono entrate strutturali certificate sufficienti a coprire il costo a regime, con un margine aggiuntivo del 10%.
+- Il fabbisogno finanziario complessivo.
+- La distribuzione annuale di costi e coperture.
+- Le misure che richiedono finanziamenti preventivi.
+- Le risorse dipendenti da condizioni normative o amministrative.
+- Gli effetti delle variazioni delle ipotesi principali.
+- Le incompatibilità tra obiettivi, tempi e disponibilità finanziarie.
+- Le condizioni necessarie per procedere, rinviare o modificare un intervento.
 
-Il sistema contempla verifiche periodiche, conferma annuale dei risultati e sospensione delle nuove attivazioni quando le entrate non sono sufficienti a sostenere le misure già attivate.
+Le regole di attivazione devono essere esplicite. Una misura può essere subordinata, per esempio, alla disponibilità delle risorse, all'entrata in vigore della disciplina necessaria, al raggiungimento di determinati indicatori o alla conclusione di una fase precedente.
+
+Le soglie e le condizioni specifiche dovranno essere definite per ciascuna misura e motivate sulla base delle relative esigenze.
 
 ## Fonti e metodo
 
-Le fonti statistiche, normative e finanziarie devono essere identificabili e verificabili. Le elaborazioni del progetto restano distinguibili dai dati ufficiali e dalle valutazioni politiche.
+Il progetto deve basarsi su un metodo di lavoro che consenta di distinguere i fatti documentati dalle interpretazioni politiche e dalle ipotesi di programmazione.
 
-Le fonti originali conservate in `sorgenti/` non devono essere modificate. Le eventuali ipotesi non verificate devono essere dichiarate esplicitamente.
+### Gerarchia delle informazioni
 
-Il registro delle decisioni documenta le scelte metodologiche, le alternative considerate e le ragioni delle modifiche al modello.
+Nella costruzione del programma occorre distinguere tra:
+
+- Dati statistici e amministrativi ufficiali.
+- Normativa vigente e documenti istituzionali.
+- Studi scientifici e analisi economiche.
+- Valutazioni di organismi indipendenti.
+- Stime elaborate dal progetto.
+- Ipotesi adottate per le simulazioni.
+- Obiettivi politici e scelte normative proposte.
+
+Queste categorie svolgono funzioni diverse e non devono essere presentate come equivalenti.
+
+### Tracciabilità delle fonti
+
+Ogni dato rilevante deve essere accompagnato da un riferimento verificabile. Le fonti devono essere aggiornate quando cambiano la normativa, le serie statistiche o le condizioni economiche.
+Quando le fonti sono discordanti, occorre documentare le differenze metodologiche e motivare la scelta del valore adottato.
+
+### Distinzione tra analisi e decisione politica
+
+Il modello può quantificare conseguenze, costi e scenari, ma non determina autonomamente quali obiettivi sociali debbano avere priorità.
+La scelta tra alternative comporta valutazioni politiche esplicite sulla distribuzione delle risorse, sui diritti, sulle responsabilità pubbliche e sugli effetti attesi. Il compito della modellazione è rendere queste scelte più trasparenti e valutarne la coerenza, non nasconderle dietro formule tecniche.
 
 ## Riproducibilità e test
 
-Il progetto prevede test di non regressione basati su `strumenti/istantanea_riferimento.json`.
+Un risultato è utile solo se è possibile ricostruire il procedimento con cui è stato ottenuto.
 
-Ogni modifica che altera i risultati deve essere verificata e motivata. L'aggiornamento dell'istantanea di riferimento deve essere associato alla decisione metodologica pertinente e registrato nel controllo delle versioni.
+Il progetto deve prevedere procedure di verifica che consentano di controllare il comportamento del modello, individuare errori e riprodurre le simulazioni a partire dalle stesse condizioni iniziali.
 
-I comandi di installazione, test e build devono essere definiti sulla base dei file di configurazione effettivamente presenti nel repository.
+Le verifiche dovrebbero includere:
+
+- Test delle singole funzioni di calcolo.
+- Controlli sulle unità di misura e sui tipi di dato.
+- Verifiche dei totali e delle identità contabili.
+- Test sui valori limite e sui casi anomali.
+- Confronti con calcoli indipendenti o dati di riferimento.
+- Controlli sulle dipendenze tra parametri e risultati.
+- Verifiche di regressione dopo modifiche al codice.
+- Registrazione delle ipotesi e della configurazione utilizzata per ciascuno scenario.
+
+Quando una verifica non è possibile per mancanza di dati o di un riferimento indipendente, il limite deve essere documentato. Un test superato dimostra il rispetto della proprietà verificata, non la correttezza assoluta di tutte le ipotesi economiche sottostanti.
+
+Le istruzioni per installare le dipendenze, configurare l'ambiente ed eseguire i test devono essere mantenute aggiornate in base all'effettiva implementazione del repository.
 
 ## Documentazione
 
-Il programma politico e il volume tecnico condividono lo stesso sistema di build basato su Quarto.
+La documentazione deve accompagnare l'intero ciclo di sviluppo del programma e consentire di comprendere sia le scelte politiche sia il funzionamento degli strumenti di calcolo.
 
-Il volume tecnico documenta:
+Dovrà comprendere, progressivamente:
 
-- metodo e regole del modello;
-- scenari e analisi di sensibilità;
-- coperture e profili di attuazione;
-- decisioni metodologiche;
-- fonti e dati da validare;
-- procedure di riproducibilità.
+- Descrizione generale del progetto.
+- Obiettivi e principi programmatici.
+- Schede delle politiche pubbliche.
+- Quadro normativo di riferimento.
+- Fonti statistiche e metodologie di stima.
+- Specifiche del modello economico-finanziario.
+- Descrizione dei parametri e delle formule.
+- Scenari, coperture e regole di attivazione.
+- Risultati delle simulazioni e analisi di sensibilità.
+- Esiti dei test e delle verifiche di coerenza.
+- Istruzioni per la riproduzione dei risultati.
+- Registro delle modifiche e delle revisioni.
 
-Tabelle e grafici devono essere generati a partire dai dati e dal modello, mantenendo coerenti i risultati riportati nei diversi documenti.
+La documentazione deve rendere comprensibile il percorso che collega la visione politica alle proposte, le proposte alle risorse necessarie e le risorse ai risultati attesi.
 
 ## Stato del progetto
 
-Il progetto è in sviluppo. Le ipotesi non ancora validate e le decisioni metodologiche aperte devono essere dichiarate nella documentazione.
+Quarto Stato è un progetto di elaborazione programmatica e modellazione economico-finanziaria orientato alla costruzione di un programma di governo per l'Italia nel periodo 2028–2032.
 
-I risultati delle simulazioni non costituiscono, da soli, una certificazione indipendente delle coperture o della sostenibilità finanziaria.
+Il lavoro comprende la definizione degli obiettivi politici, la progettazione delle misure, la costruzione del modello parametrico, l'elaborazione di scenari, la valutazione delle coperture e l'implementazione di controlli di coerenza.
+
+Lo stato di avanzamento delle singole componenti deve essere documentato separatamente, distinguendo tra:
+
+- Obiettivi e specifiche definiti.
+- Analisi e dati raccolti.
+- Componenti progettate.
+- Funzionalità implementate.
+- Funzionalità testate.
+- Risultati verificati.
+- Elementi ancora da sviluppare o validare.
+
+Non si considera completata una misura soltanto perché ne sono stati definiti gli obiettivi o stimati i costi. La sua maturità dipende anche dalla disponibilità dei dati, dalla definizione degli strumenti attuativi, dalla copertura finanziaria e dalle verifiche necessarie.
 
 ## Principi di sviluppo
 
-- Tracciabilità delle fonti e delle ipotesi.
-- Separazione tra dati, codice e documentazione.
-- Assenza di doppi conteggi delle coperture.
-- Prudenza nelle stime delle entrate.
-- Salvaguardie esplicite per gli scenari avversi.
-- Risultati riproducibili e modifiche versionate.
-- Accessibilità delle misure pubbliche anche per chi non dispone di conto bancario, computer o smartphone.
+Lo sviluppo del progetto segue alcuni criteri metodologici.
 
----
+**Coerenza politica e tecnica.** Le scelte programmatiche devono trovare corrispondenza nelle misure, nelle risorse e negli strumenti previsti.
 
-**Quarto Stato · Orizzonte programmatico 2028–2032**
+**Trasparenza.** Ipotesi, limiti, incertezze e risultati devono essere espliciti e documentati.
+
+**Rigore quantitativo.** Le stime devono basarsi su metodi dichiarati, dati identificabili e formule verificabili.
+
+**Responsabilità finanziaria.** Ogni impegno deve essere valutato nel quadro complessivo delle risorse disponibili e dei vincoli temporali.
+
+**Centralità dell'interesse collettivo.** Le politiche devono essere valutate anche in relazione alla distribuzione dei costi e dei benefici, all'accesso ai diritti e alla riduzione delle dipendenze che limitano la capacità di autodeterminazione.
+
+**Integrazione.** Le politiche settoriali devono essere analizzate come componenti interdipendenti di un programma unitario.
+
+**Verificabilità.** Le conclusioni devono poter essere sottoposte a controlli, confronti e revisioni.
+
+**Adattabilità.** Il programma deve poter essere aggiornato alla luce di nuove evidenze, variazioni del contesto e risultati osservati, senza perdere coerenza con gli obiettivi dichiarati.
+
+## Finalità
+
+Quarto Stato mira a costruire un programma di governo che non separi la visione politica dalla sua fattibilità economica e amministrativa.
+La qualità di una proposta non dipende soltanto dalla finalità dichiarata, ma anche dalla chiarezza degli strumenti, dalla sostenibilità delle risorse, dalla coerenza con le altre misure e dalla possibilità di verificarne i risultati.
+Il progetto intende rendere esplicito questo legame, costruendo un percorso documentato dalla diagnosi dei problemi alla definizione degli obiettivi, dalla progettazione delle riforme alla valutazione dei costi, fino alle condizioni di attuazione e al monitoraggio.
+
+**La finalità ultima è restituire alla politica la capacità di trasformare gli obiettivi collettivi in decisioni attuabili, verificabili e responsabili.**
