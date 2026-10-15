@@ -482,3 +482,11 @@ fonti:
     url: "https://temi.camera.it/leg19/infoanimata/Infografiche_indicatori_economici_finanziari/obiettivi-sociali-ue.html"
     data: "2026-06-30"
     stato: verificato
+  impegno_occupazione_2032:
+    valore: 75
+    decimali: 0
+    unita: "% di occupati fra 20 e 64 anni nel 2032, impegno del programma"
+    fonte: "Decisione dell'autrice (giovedì 15 ottobre 2026): circa un punto sopra la tendenza Eurostat 2015-2019 prolungata (74,4% nel 2032), arrotondato per difetto"
+    url: "https://ec.europa.eu/eurostat/databrowser/view/lfsi_emp_a/default/table"
+    data: "2026-10-15"
+    stato: verificato

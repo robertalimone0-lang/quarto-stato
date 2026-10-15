@@ -43,3 +43,31 @@ def flusso_attivazione():
             "sospendono le attivazioni e attingono alla riserva.", fontsize=8, color=MUTED)
     fig.tight_layout()
     return fig
+
+
+def percorso_debito(scenari, anni=range(2025, 2033)):
+    """Debito/PIL: tendenziale, programma nei tre scenari, scenario UPB. scenari: output di debito.scenari()."""
+    serie = [("Tendenziale DPFP", "#a9a8a2", "-"),
+             ("Programma, centrale", "#2a78d6", "-"),
+             ("Programma, prudente", "#eb6834", "-"),
+             ("Programma, avverso con salvaguardia", "#1baf7a", "-"),
+             ("Programma, centrale con scenario UPB", "#2a78d6", "--")]
+    etichette = {"Tendenziale DPFP": "Tendenziale DPFP",
+                 "Programma, centrale": "Programma, centrale",
+                 "Programma, prudente": "Programma, prudente",
+                 "Programma, avverso con salvaguardia": "Programma, avverso",
+                 "Programma, centrale con scenario UPB": "Centrale con tassi UPB"}
+    fig, ax = plt.subplots(figsize=(8.6, 4.6))
+    x = list(anni)
+    for nome, colore, stile in serie:
+        y = [scenari[nome][a] for a in x]
+        ax.plot(x, y, color=colore, lw=2, ls=stile, label=etichette[nome])
+    for s in ("top", "right"):
+        ax.spines[s].set_visible(False)
+    ax.grid(axis="y", color="#e4e3df", lw=0.8)
+    ax.set_axisbelow(True)
+    ax.set_ylabel("Debito pubblico, % del PIL", color=MUTED)
+    ax.legend(frameon=False, fontsize=8, loc="lower left")
+    ax.tick_params(colors=MUTED)
+    fig.tight_layout()
+    return fig

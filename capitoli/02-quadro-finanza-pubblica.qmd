@@ -1,0 +1,205 @@
+# Quadro macroeconomico e di finanza pubblica {#sec-quadro}
+
+```{python}
+import sys, csv
+sys.path.insert(0, "dati")
+sys.path.insert(0, "dati/spese_fiscali")
+import yaml
+import modello as M
+import debito as D
+import analisi
+from formato import it, tabella_md
+from IPython.display import Markdown
+
+A = list(range(M.PRIMO_ANNO, M.ANNO_REGIME + 1))
+R, P0 = M.ANNO_REGIME, M.PRIMO_ANNO
+dpfp = {(r["quadro"], int(r["anno"])): r for r in M.DPFP}
+scen = D.scenari()
+avv = M.salvaguardia()
+coda_c = M.simula_coda("centrale")[0]
+coda_p = M.simula_coda("prudente")[0]
+curva = analisi.profilo_curva(M.Y)
+nom = sum(M.per_classe("nominale", R).values())
+cop = lambda s: M.copertura(s, R)
+nuovi = (M.p1(R) - M.p1(P0)) * M.MULT["avverso"]
+q_nuovi = 100 * avv[R]["g4"] / nuovi
+q_tot = 100 * avv[R]["g4"] / (M.p1(R) * M.MULT["avverso"])
+tend29 = float(dpfp[("tendenziale", 2029)]["debito_pil"])
+prog29 = float(dpfp[("programmatico", 2029)]["debito_pil"])
+upb29 = tend29  # sostituito sotto dal registro
+fonti = yaml.safe_load(open("dati/fonti.yaml", encoding="utf-8"))["fonti"]
+upb29 = fonti["upb_debito_2029_mercato"]["valore"]
+copx = {r["codice"]: r for r in M.COPERTURE}
+misx = {r["codice"]: r for r in M.MISURE}
+anno = lambda c: str(c) if c else f"dopo il {M.Y[-1]}"
+```
+
+Questo capitolo misura il programma sul bilancio pubblico. Parte dal quadro a legislazione vigente del governo in carica, dichiara cosa resta fuori, applica le regole europee, somma coperture e spese anno per anno, colloca la coda di attivazione, prova la tenuta nello scenario avverso e calcola l'effetto sul debito. Ogni tabella e ogni cifra del capitolo escono dal modello pubblicato con il documento (`dati/modello.py`, `dati/debito.py`) e dai registri dei dati (`dati/*.csv`, `dati/fonti.yaml`). L'orizzonte è la legislatura `{python} P0`–`{python} R`: la prima legge di bilancio del programma è quella per il `{python} P0`, approvata entro venerdì 31 dicembre 2027.
+
+## Il punto di partenza {#sec-partenza}
+
+La base è il quadro tendenziale del Documento programmatico di finanza pubblica presentato venerdì 2 ottobre 2026 (DPFP). Il quadro programmatico del governo in carica, che aggiunge la clausola nazionale per la difesa e la sicurezza energetica, è uno scenario di confronto.
+
+```{python}
+#| label: tbl-dpfp
+#| tbl-cap: "Quadro tendenziale e programmatico del DPFP 2026 (% del PIL e variazioni %)"
+righe = []
+for q, nome in (("tendenziale", "Tendenziale"), ("programmatico", "Programmatico")):
+    for y in range(2025, 2030):
+        r = dpfp[(q, y)]
+        righe.append((nome, y, it(float(r["crescita_pil_nominale"]), 1), it(float(r["saldo_primario"]), 1),
+                      it(float(r["indebitamento_netto"]), 1), it(float(r["debito_pil"]), 1)))
+Markdown(tabella_md(["Quadro", "Anno", "Crescita del PIL nominale", "Saldo primario", "Indebitamento netto", "Debito"], righe))
+```
+
+L'Ufficio parlamentare di bilancio ha validato le previsioni macroeconomiche tendenziali, con alcune stime all'estremo superiore del proprio panel. Con la curva dei rendimenti osservata fra il 21 settembre e il 2 ottobre 2026, l'UPB stima {{< dato upb_interessi_2029_mercato >}} di interessi in più nel 2029 e un debito al {{< dato upb_debito_2029_mercato >}} nello stesso anno, sul quadro programmatico.
+
+## Il perimetro del quadro {#sec-perimetro}
+
+Il tendenziale è a legislazione vigente fino al 2029. Per il `{python} 2030`–`{python} R` il modello lo estende con ipotesi dichiarate: crescita nominale e saldo primario al livello del 2029, tasso implicito sul debito in salita di `{python} it(100 * D.TREND_TASSO_DOPO_2029, 2)` punti l'anno come fra 2028 e 2029, saldo primario ridotto dal rinnovo contrattuale 2031–2033 dei dipendenti statali. La base definitiva sarà il documento di finanza pubblica dell'autunno 2027: il quadro va ricalcolato su quel documento prima della prima legge di bilancio.
+
+La @tbl-perimetro elenca ciò che il tendenziale contiene e ciò che resta fuori.
+
+```{python}
+#| label: tbl-perimetro
+#| tbl-cap: "Perimetro del quadro: voci dentro e fuori dal tendenziale"
+per = list(csv.DictReader(open("dati/perimetro.csv", encoding="utf-8")))
+Markdown(tabella_md(["Voce", "Dove sta", "Ordine di grandezza", "Trattamento nel programma", "Fonte"],
+                    [(r["voce"], r["dove"], r["ordine_di_grandezza"], r["trattamento"], r["fonte"]) for r in per]))
+```
+
+Tre voci contano più delle altre. Il bilancio europeo 2028–2034, se la proposta della Commissione passa invariata, aumenta i contributi nazionali in misura paragonabile a tutta la Priorità 2 coperta: la voce sta nello scenario avverso finché la Ragioneria non chiarisce cosa assume il tendenziale. Il rinnovo contrattuale 2031–2033 cade dentro la legislatura e qualunque governo lo deve finanziare. La difesa resta al livello del tendenziale, senza la clausola nazionale: è una scelta dichiarata, in divergenza dalla raccomandazione europea del 2026, che chiede una spesa per la difesa strutturalmente più alta.
+
+## Il percorso europeo di spesa netta {#sec-spesa-netta}
+
+Il @sec-principi spiega le regole. Qui le applica. Lo scarto di spesa netta è la differenza fra le coperture valide ai fini europei e la spesa del programma rilevante per il percorso, compreso il rinnovo contrattuale 2031–2033. Fino all'accordo con la Commissione sulla classificazione delle misure contro l'evasione il quadro presenta due varianti.
+
+```{python}
+#| label: tbl-scarto
+#| tbl-cap: "Scarto di spesa netta per scenario e variante (miliardi di euro; un valore negativo attiva la riserva)"
+righe = []
+for s in ("centrale", "prudente", "avverso"):
+    righe.append((s, "senza riconoscimento", *[it(M.scarto_spesa_netta(s, y), 2, segno=True) for y in A]))
+    righe.append((s, "con riconoscimento", *[it(M.scarto_spesa_netta(s, y, True), 2, segno=True) for y in A]))
+Markdown(tabella_md(["Scenario", "Variante", *[str(y) for y in A]], righe))
+```
+
+Nello scenario centrale senza riconoscimento lo scarto diventa negativo nel `{python} min(y for y in A if M.scarto_spesa_netta("centrale", y) < 0)`, l'anno in cui arriva il rinnovo contrattuale. Quando lo scarto è negativo scattano i gradini della riserva, in entrambe le varianti, solo per l'importo necessario.
+
+## Le coperture {#sec-coperture}
+
+Le coperture stanno in una sola tabella (`dati/coperture.csv`): nessuna risorsa finanzia due misure, e un controllo automatico lo verifica a ogni build. Nel `{python} R` le coperture valgono `{python} it(nom, 1)` miliardi al valore nominale, `{python} it(cop("centrale"), 1)` nello scenario centrale, `{python} it(cop("prudente"), 1)` nel prudente e `{python} it(cop("avverso"), 1)` nell'avverso.
+
+```{python}
+#| label: tbl-classi-quadro
+#| tbl-cap: "Coperture per classe di affidabilità a regime (miliardi di euro)"
+pc = {s: M.per_classe(s, R) for s in ("nominale", "centrale", "prudente", "avverso")}
+Markdown(tabella_md(["Classe", "Nominale", "Centrale", "Prudente", "Avverso"],
+                    [(k, *[it(pc[s].get(k, 0), 2) for s in ("nominale", "centrale", "prudente", "avverso")]) for k in ("A", "B", "C")]))
+```
+
+```{python}
+#| label: tbl-coperture
+#| tbl-cap: "Tabella unica delle coperture: valore nominale a regime, classe e primo anno"
+righe = [(r["codice"], r["voce"], r["classe"], it(float(r["nominale"]), 2), r["rampa"].split(":")[0],
+          "sì" if r["ammessa_priorita_1"] == "si" else "no") for r in M.COPERTURE]
+Markdown(tabella_md(["Codice", "Voce", "Classe", "Nominale", "Dal", "Copre la Priorità 1"], righe))
+```
+
+Due coperture vengono dal definanziamento di misure del governo in carica e dalla correzione di una sua scelta fiscale: l'abrogazione del bonus nuovi nati, incompatibile con la regola del programma che esclude gli incentivi alla natalità, e il riassorbimento del taglio 2026 della seconda aliquota IRPEF per i redditi fra 50.000 e 80.000 euro. La seconda è vincolata alla correzione della trappola marginale dei redditi medi (@sec-correzioni). La copertura sul patrimonio pubblico è a zero finché non viene ricostruita dai canoni statali con un elenco nominativo.
+
+## Le spese e il margine {#sec-spese}
+
+```{python}
+#| label: tbl-spese
+#| tbl-cap: "Priorità 1, Priorità 2 e margine anno per anno (miliardi di euro, prezzi dello scenario centrale)"
+righe = [(y, it(M.p1(y), 2), it(M.p2_fabbisogno(y), 2), it(M.P2[y], 2), it(M.p2_fabbisogno(y) - M.P2[y], 2),
+          it(M.margine_fase1("centrale", y), 2, segno=True), it(M.margine_fase1("prudente", y), 2, segno=True)) for y in A]
+Markdown(tabella_md(["Anno", "Priorità 1", "Priorità 2 richiesta", "Priorità 2 coperta", "Priorità 2 in coda",
+                     "Margine centrale", "Margine prudente"], righe))
+```
+
+La Priorità 1 parte per prima e non si taglia. La Priorità 2 coperta è il minimo fra il fabbisogno e la capienza dello scenario prudente nell'anno e negli anni successivi: per questo il margine prudente è zero o positivo in ogni anno. A regime la Priorità 2 coperta vale `{python} it(M.P2[R], 2)` miliardi e la parte in coda `{python} it(M.P2_RINVIATA, 2)`. Il margine dello scenario centrale non finanzia spesa: per metà va alla riduzione del debito e per metà alla coda, solo dopo la certificazione dell'UPB.
+
+## La coda di attivazione {#sec-coda}
+
+Le misure fuori dalla Fase 1 entrano in coda. Ciascuna si attiva con la legge di bilancio successiva quando il gettito certificato delle leve copre il suo costo a regime con un margine del `{python} it(100 * (M.SOGLIA - 1), 0)`%.
+
+```{python}
+#| label: tbl-coda
+#| tbl-cap: "Coda di attivazione: costo a regime e anno di attivazione nello scenario centrale e prudente"
+righe = [(v["codice"], v["misura"], it(float(v["costo_regime"]), 2), anno(coda_c.get(v["codice"])), anno(coda_p.get(v["codice"])))
+         for v in M.CODA]
+Markdown(tabella_md(["Codice", "Misura", "Costo a regime", "Centrale", "Prudente"], righe))
+```
+
+Nello scenario centrale i contratti al 31 agosto per i supplenti della scuola si attivano nel `{python} coda_c["Q16"]`. La Riforma 19 ridotta si attiva nel `{python} coda_c["Q10"]`, oltre la legislatura: il programma la presenta fra le misure della legislatura successiva. Nello scenario prudente la coda si muove solo a fine periodo. La coda è la parte del programma che dipende dal successo del contrasto all'evasione, e la sua posizione lo dichiara.
+
+## La riserva e la scala unica dello scenario avverso {#sec-avverso}
+
+Nello scenario prudente con riconoscimento dell'evasione lo scarto di spesa netta del `{python} R` vale `{python} it(M.scarto_spesa_netta("prudente", R, True), 2)` miliardi e lo coprono i gradini della riserva. Nello scenario avverso una sola scala copre il buco maggiore fra il margine di Fase 1 e lo scarto di spesa netta.
+
+```{python}
+#| label: tbl-avverso-quadro
+#| tbl-cap: "Scenario avverso: bisogno e copertura della scala unica (miliardi di euro)"
+righe = [(y, it(r["bisogno"], 2), it(r["riserva"], 2), it(r["g2"] + r["g3"], 2), it(r["g4"], 2), it(r["g4_insegnanti"], 2),
+          it(r["residuo"], 2)) for y, r in avv.items() if y <= R]
+Markdown(tabella_md(["Anno", "Bisogno", "Riserva a)–d)", "Priorità 2 rinviata", "Nuovi ingressi P1 rinviati", "di cui insegnanti", "Residuo"], righe))
+```
+
+Il dato va letto senza attenuazioni. Nel `{python} R` dello scenario avverso slitta il `{python} it(q_nuovi, 1)`% dei nuovi ingressi della Priorità 1 rispetto al primo anno, pari al `{python} it(q_tot, 1)`% della spesa di Priorità 1. Le prestazioni già riconosciute non si riducono e le stabilizzazioni degli insegnanti non slittano. Lo scenario corrisponde a coperture realizzate al `{python} it(100 * cop("avverso") / nom, 0)`% del valore nominale con costi più alti del `{python} it(100 * (M.MULT["avverso"] - 1), 0)`%: crescita bassa, spread alto e recupero dell'evasione fermo ai valori minimi insieme. La scala scatta sul consuntivo certificato.
+
+## Il debito {#sec-debito}
+
+L'effetto del programma sul debito è la somma anno per anno del margine non speso, del gettito delle leve destinato al debito e dei contributi dei regolarizzati, al netto della coda attivata e della riduzione dell'IRPEF finanziata dall'eccedenza.
+
+```{python}
+#| label: fig-debito
+#| fig-cap: "Debito pubblico in rapporto al PIL: tendenziale DPFP e programma nei tre scenari, con lo scenario dei tassi UPB"
+from grafici import percorso_debito
+fig = percorso_debito(scen)
+```
+
+```{python}
+#| label: tbl-debito
+#| tbl-cap: "Debito pubblico in rapporto al PIL (%)"
+nomi = ["Tendenziale DPFP", "Programmatico DPFP (confronto)", "Programma, centrale", "Programma, prudente",
+        "Programma, avverso con salvaguardia", "Programma, centrale con piu crescita", "Programma, centrale con stress sui tassi",
+        "Programma, centrale con scenario UPB", "Programma, centrale con scenario UPB e avanzo piu basso"]
+leggi = {n: n.replace("piu", "più") for n in nomi}
+Markdown(tabella_md(["Percorso", "2029", str(R - 1), str(R)], [(leggi[n], *[it(scen[n][y], 1) for y in (2029, R - 1, R)]) for n in nomi]))
+```
+
+Nello scenario centrale il programma porta il debito al `{python} it(scen["Programma, centrale"][R], 1)`% del PIL nel `{python} R`, `{python} it(scen["Tendenziale DPFP"][R] - scen["Programma, centrale"][R], 1)` punti sotto il tendenziale. La stima dell'UPB con i tassi di mercato (`{python} it(upb29, 1)`% nel 2029) e il valore del programma nel `{python} R` differiscono di `{python} it(upb29 - scen["Programma, centrale"][R], 1)` punti, che si scompongono così: `{python} it(prog29 - tend29, 1)` punti perché l'UPB parte dal quadro programmatico; `{python} it(upb29 - prog29, 1)` punti di tassi e crescita meno favorevoli nello scenario UPB; `{python} it(tend29 - scen["Tendenziale DPFP"][R], 1)` punti di discesa del tendenziale fra il 2029 e il `{python} R`; `{python} it(scen["Tendenziale DPFP"][R] - scen["Programma, centrale"][R], 1)` punti di effetto del programma. Con i tassi dello scenario UPB il debito del programma arriva al `{python} it(scen["Programma, centrale con scenario UPB"][R], 1)`% nel `{python} R`; con l'avanzo primario anche più basso di mezzo punto, al `{python} it(scen["Programma, centrale con scenario UPB e avanzo piu basso"][R], 1)`%.
+
+## Definanziamenti e correzioni {#sec-correzioni}
+
+Il programma cancella le misure del governo in carica che contrastano con le sue regole o con i diritti costituzionali, al netto di penali e costi residui.
+
+- **Bonus nuovi nati.** Abrogato dalla prima legge di bilancio: libera `{python} it(float(copx["COP18"]["nominale"]), 2)` miliardi l'anno di spesa corrente (L. 207/2024, art. 1, comma 208).
+- **Ponte sullo Stretto.** Gli stanziamenti dello Stato valgono {{< dato ponte_stanziamenti_2027_2031 >}}. Sono spesa per investimenti che si esaurisce nel 2034: finanziano acquedotti e ferrovie nel Mezzogiorno e mai spesa corrente permanente. Il contenzioso con il contraente generale e con il project manager si paga una volta e si accantona.
+- **Centri in Albania.** Il fondo autorizzato vale {{< dato albania_fondo_annuo >}}; il recesso dal Protocollo libera questa spesa nel `{python} P0`.
+- **Correzione IRPEF.** Il taglio 2026 della seconda aliquota ha dato metà delle risorse all'8% dei contribuenti con i redditi più alti. Il programma lo riassorbe con una detrazione decrescente fra 50.000 e 80.000 euro (`{python} it(float(copx["COP19"]["nominale"]), 2)` miliardi a redditi `{python} P0`) e usa il gettito per correggere la trappola marginale dei dipendenti fra 32.000 e 40.000 euro, dove oggi l'aliquota marginale effettiva arriva al 54,2%, più alta di quella dei redditi sopra 50.000 euro. Con la correzione scende al 49,3% fra 32.000 e 40.000 euro; fra 40.000 e 48.000 euro sale al 46,7%. La misura è a saldo zero nello scenario centrale.
+
+## Indicatori di risultato del quadro {#sec-indicatori-quadro}
+
+- **Sanità:** spesa sanitaria pubblica al `{python} it(M.sanita_pil("centrale", coda_c, R), 1)`% del PIL nel `{python} R` nello scenario centrale. Il 7% è l'obiettivo della legislatura successiva.
+- **Occupazione:** impegno al {{< dato impegno_occupazione_2032 >}} di occupati fra 20 e 64 anni nel `{python} R`, circa un punto sopra la tendenza 2015–2019 prolungata. Nel 2025 il tasso era al {{< dato occupazione_20_64_2025 >}}. L'obiettivo nazionale al 2030 nel quadro del Pilastro europeo dei diritti sociali è il {{< dato obiettivo_occupazione_2030_italia >}}.
+- **Debito:** `{python} it(scen["Programma, centrale"][R], 1)`% del PIL nel `{python} R` nello scenario centrale, `{python} it(scen["Programma, avverso con salvaguardia"][R], 1)`% nell'avverso con la scala unica.
+
+## Rischi del quadro {#sec-rischi-quadro}
+
+- **Tassi.** Ogni rialzo della curva dei rendimenti passa al costo medio del debito in modo graduale. Lo scenario UPB e lo stress sui tassi della @tbl-debito ne misurano l'effetto. La risposta è la credibilità: coperture certificate, margine al debito, durata media dei titoli più lunga.
+- **Crescita.** Una crescita più bassa riduce il gettito e il rendimento delle coperture di classe B e C. La risposta è la scala unica, che scatta sul consuntivo.
+- **Bilancio europeo 2028–2034.** I contributi nazionali possono crescere di un importo paragonabile alla Priorità 2. La posizione italiana nel negoziato chiede nuove risorse proprie europee e debito comune per i beni pubblici europei, compresa la difesa.
+- **Classificazione europea delle misure contro l'evasione.** Finché la Commissione non la riconosce, vale la variante più severa della @tbl-scarto.
+- **Evasione.** Il recupero oltre la quota di Fase 1 finanzia solo la coda: se non arriva, la coda non parte e la Fase 1 resta coperta.
+
+## Dati da validare {#sec-validare-quadro}
+
+```{python}
+#| label: tbl-validare-quadro
+#| tbl-cap: "Voci del registro delle fonti ancora da validare"
+righe = [(k, v["unita"], v["fonte"]) for k, v in fonti.items() if v.get("stato") != "verificato"]
+Markdown(tabella_md(["Codice", "Dato", "Fonte provvisoria"], righe))
+```
