@@ -474,3 +474,11 @@ fonti:
     url: "https://www.mef.gov.it/documenti-pubblicazioni/doc-finanza-pubblica/"
     data: "2026-10-02"
     stato: verificato
+  obiettivo_occupazione_2030_italia:
+    valore: 73
+    decimali: 0
+    unita: "% di occupati fra 20 e 64 anni, obiettivo nazionale al 2030 (obiettivo UE 78%)"
+    fonte: "Piano d'azione sul Pilastro europeo dei diritti sociali (Porto, maggio 2021) e obiettivi nazionali concordati con la Commissione nel 2022; Camera dei deputati, indicatori sugli obiettivi sociali UE"
+    url: "https://temi.camera.it/leg19/infoanimata/Infografiche_indicatori_economici_finanziari/obiettivi-sociali-ue.html"
+    data: "2026-06-30"
+    stato: verificato

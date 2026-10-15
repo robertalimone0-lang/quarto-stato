@@ -215,4 +215,7 @@ Analisi, nessuna modifica al quadro: l'autrice sceglie voce per voce. Quattro co
 - **D31, restituzione (in attesa).** C1 registrata come «correzione della trappola marginale fra 32.000 e 40.000 euro»: rispetta in parte (a) e (b); (c) non realizzabile con questo costo. Verifica richiesta: una discesa più lunga che tenga il 43,0% fra 45.000 e 50.000 euro è possibile (curva D, report sezione 23), quindi va scelta fra C1' e D prima di applicare. Gettito della correzione del taglio 2026 a redditi 2028: 1,03 miliardi.
 - **Occupazione 2032 (da decidere).** Con la regola usata per il 2031 (circa un punto sopra la tendenza Eurostat 2015–2019 prolungata) l'impegno per il 2032 è 75,4%; la tendenza dà 74,4%.
 - **V58. Bacino della scuola.** Sostituire i dati MIM 2024/25 con quelli 2026/27 entro l'autunno 2027.
+- **D31 restituzione (decisa).** Applicata la curva C1' (M26, 1,03 miliardi a redditi 2028) con la correzione del taglio 2026 (COP19). Nel prudente la differenza fra costo (+5%) e gettito (−5%) sposta 0,10 miliardi di Priorità 2 in Q15.
+- **Occupazione (decisa).** Impegno al 75% nel 2032 (tendenza 74,4%); obiettivo nazionale al 2030: 73% (Camera dei deputati, indicatori sugli obiettivi sociali UE, aggiornamento giugno 2026).
+- **Struttura del programma politico e scheda in 12 punti (approvate).** In CLAUDE.md.
 
