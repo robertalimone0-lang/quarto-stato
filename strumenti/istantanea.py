@@ -57,6 +57,7 @@ def raccogli(M, D, curva_bonus):
             r["spesa_netta"] = {str(y): M.scarto_spesa_netta(s, y) for y in Y}
             r["spesa_netta_riconoscimento"] = {str(y): M.scarto_spesa_netta(s, y, riconoscimento=True) for y in Y}
             r["gradini"] = _chiavi(M.gradini(s, curva_bonus))
+            r["gradini_riconoscimento"] = _chiavi(M.gradini(s, curva_bonus, riconoscimento=True))
     out["per_classe_nominale"] = {str(y): M.per_classe("nominale", y) for y in Y}
     out["salvaguardia"] = _chiavi(M.salvaguardia())
     out["salvaguardia_2029"] = _chiavi(M.salvaguardia(primo=2029))

@@ -303,12 +303,15 @@ class Quadro:
             valide += self.RICONOSCIMENTO_R1 * self._RAMPA_EV[y]
         return valide - spesa
 
-    def gradini(self, s, curva_bonus):
-        """Copertura dei gradini della riserva nella variante senza riconoscimento. curva_bonus: {anno: miliardi}."""
+    def gradini(self, s, curva_bonus, riconoscimento=False):
+        """Copertura dei gradini della riserva quando lo scarto di spesa netta e negativo, in entrambe le varianti
+        (con e senza riconoscimento dell'evasione, S14): prima i gradini a)-d), poi lo slittamento della Priorita 2.
+        curva_bonus: {anno: miliardi}."""
         out = {}
         for y in Y:
-            bisogno = max(0.0, -self.scarto_spesa_netta(s, y))
-            riga = {"scarto": self.scarto_spesa_netta(s, y)}
+            scarto = self.scarto_spesa_netta(s, y, riconoscimento)
+            bisogno = max(0.0, -scarto)
+            riga = {"scarto": scarto}
             for g in self.RISERVA:
                 k = g["gradino"]
                 if k == "d":

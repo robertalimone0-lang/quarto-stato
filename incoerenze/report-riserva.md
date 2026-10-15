@@ -628,3 +628,107 @@ Il quadro del programma si misura sul tendenziale del DPFP 2026, a legislazione 
 | Dividendi delle partecipate | nel tendenziale | circa 3 miliardi nel 2026 dalle sei principali quotate | stampa, da riscontrare sui bilanci |
 | Aste ETS ed ETS2 | ETS nel tendenziale; ETS2 da verificare | ETS 15,6 miliardi nel 2012-2024; ETS2 dal 2028; Fondo sociale per il clima 9,3 miliardi nel 2026-2032 | ECCO; accordo UE sul clima al 2040 |
 | Difesa (D29) | il programma usa il tendenziale | clausola del DPFP: circa 0,2-0,3 punti di PIL oltre il tendenziale nel 2027-2028 (circa 7 miliardi); obiettivo NATO in linea retta: circa 0,9 punti nel 2031 (circa 24 miliardi) | UPB, audizione DPFP; NATO; Osservatorio CPI |
+
+## 19. Analisi politica per il catalogo del definanziamento (D31) (giovedì 15 ottobre 2026)
+
+Fonti primarie lette: UPB, audizione sul DDL di bilancio 2026 (sintesi, novembre 2025); UPB, audizione sul DPFP 2026 (lunedì 12 ottobre 2026); dossier della Camera sulle leggi di bilancio 2025 e sul DL 32/2026; L. 14/2024. Da completare: audizioni UPB, Banca d'Italia e ISTAT sulle leggi di bilancio 2023, 2024 e 2025; Relazione della Corte dei conti sul rendiconto 2025 (testo integrale); dati del Dipartimento delle finanze sul concordato preventivo biennale.
+
+**a) Mappa distributiva (prima versione)**
+
+| Gruppo | Cosa hanno ricevuto o perso (2023–2026) | Fonte |
+|---|---|---|
+| Dipendenti con redditi medio-bassi | Benefici prevalenti: taglio del cuneo trasformato in detrazioni e bonus, con incidenza oltre 6 punti di reddito per i redditi più bassi; tra 10.000 e 32.000 euro aliquote medie sotto la semplice indicizzazione del sistema 2021 | UPB, DDLB 2026 |
+| Dipendenti tra 32.000 e 45.000 euro | Aliquote medie sopra la semplice indicizzazione: il drenaggio fiscale non è stato restituito | UPB, DDLB 2026 |
+| Redditi medio-alti | Taglio della seconda aliquota al 33% (L. 199/2025): 2,7 miliardi, 13 milioni di contribuenti; il 50% delle risorse va all'8% più ricco; dirigenti beneficiari al 96% (408 euro medi), operai al 16% (23 euro medi) | UPB, DDLB 2026 |
+| Pensionati | Per gran parte dei redditi, aliquote medie sopra la semplice indicizzazione 2021; beneficio limitato | UPB, DDLB 2026 |
+| Autonomi | Aliquote IRPEF come i pensionati; regime forfettario esteso a 85.000 euro (L. 197/2022) e soglia dei redditi da lavoro dipendente a 35.000 euro; concordato preventivo biennale; rottamazioni | norme; UPB |
+| Imprese | Nella manovra 2026 contribuiscono al miglioramento del saldo (1,0 / 4,3 / 2,1 miliardi nel 2026–2028) | UPB, DDLB 2026 |
+| Famiglie (insieme) | Manovra 2026: beneficio netto 18,6 miliardi cumulati nel 2026–2028 | UPB, DDLB 2026 |
+| Precari, giovani, Mezzogiorno, proprietari e rentier | Da completare con le analisi di Banca d'Italia e ISTAT | — |
+
+**b) Verifica della tesi**
+- *Più spesa per il controllo: confermata nella direzione, piccola negli importi.* Albania 118,6 milioni l'anno nel 2025–2028 (L. 14/2024); CPR circa 20 milioni nel 2024 (stampa); piano carceri 335 milioni più un fabbisogno di 758 milioni; oneri del decreto sicurezza modesti per articolo. In totale meno di 0,3 miliardi l'anno: la scelta pesa sui diritti più che sul bilancio.
+- *Favore a rendita ed evasione: confermato per evasione e autonomi, da precisare per la rendita.* Confermano la tesi forfettario esteso, flat tax incrementale 2023, rottamazione quater, stralcio, rottamazione quinquies (L. 199/2025, fino a nove anni di rate) e concordato preventivo biennale. L'UPB scrive che la reiterazione delle definizioni agevolate rischia di ridurre la riscossione ordinaria e la fedeltà fiscale. Per la rendita immobiliare il quadro è diverso: la cedolare sui contratti lunghi è rimasta invariata. Il dato sulla cedolare degli affitti brevi va verificato sulla norma.
+- *Taglio alla formazione del futuro: confermato in parte.* Confermano: 5.660 posti di docente in meno dal 2025/26 e 2.174 ATA dal 2026/27 (L. 207/2024, comma 828); investimenti pubblici finanziati a livello nazionale dal 3,8% al 3,4% del PIL tra 2027 e 2029 (DPFP). Contro la tesi: rinnovi contrattuali 2025–2027 e 2028–2030 finanziati (L. 207/2024, commi 128 e 131); investimenti PNRR nelle scuole fino al 2026. Da verificare: dimensionamento scolastico e spesa per istruzione sul PIL nel periodo.
+- *Fisco nel suo insieme: la tesi non regge.* L'UPB rileva che le riforme 2021–2026 hanno reso l'IRPEF più progressiva rispetto alla semplice indicizzazione, per effetto degli interventi sui dipendenti a reddito medio-basso. La critica sostenibile riguarda il taglio 2026 della seconda aliquota (concentrato in alto), il drenaggio non restituito a pensionati e redditi medi e la disparità di trattamento tra tipi di reddito, che l'UPB giudica priva di criteri di equità orizzontale.
+
+**c) Rottamazioni e concordato**
+- Rottamazione quater, 2025: 393 milioni versati sulle rate di luglio e novembre contro 1,3 miliardi previsti (Corte dei conti, rendiconto 2025, riportata dalla stampa: da riscontrare sul testo). Gettito complessivo delle sanatorie: 7,2 miliardi nel 2023, 5,4 nel 2024, 4,5 nel 2025.
+- Magazzino della riscossione (gennaio 2025): 1.881,5 miliardi affidati; 180,3 riscossi (9,6%); 1.279,8 residui, di cui 101,2 con maggiore grado di esigibilità (UPB).
+- Concordato preventivo biennale: adesioni e gettito da prendere dal Dipartimento delle finanze (V52).
+- Collegamento con il programma: i piani di rateazione in corso restano (affidamento) e il loro gettito resta nel tendenziale; il programma ferma le definizioni future, quindi non perde gettito già stimato. La leva sull'evasione (L01) conta solo gettito di misure strutturali certificato dall'UPB: ogni nuova sanatoria la ridurrebbe.
+
+**d) Controprova: cosa riceve ciascun gruppo dal programma (scenario centrale, miliardi l'anno, dal modello)**
+
+| Gruppo | 2027–2028 (media) | 2029–2031 (media) | Voci |
+|---|---|---|---|
+| Malati e lista d'attesa (tutti) | 3,85 | 9,17 | M01 Salute, Priorità 1 |
+| Persone in povertà | 2,05 | 5,73 | M02 Welfare e povertà, Priorità 1 |
+| Precari della scuola | 0,34 | 0,89 | stabilizzazioni dei docenti, corsi, ATA (M21, M24, M25); contratti al 31 agosto dal 2030 (Q16) |
+| Giustizia, vittime di mafia, detenuti | 1,75 | 2,15 | M03–M06 |
+| Pensionati | quota della Priorità 2 coperta | rivalutazione piena fino a quattro volte il minimo dal 2030 (Q03) | M09, Q03 |
+| Dipendenti a basso salario | salario minimo per legge (costo zero per lo Stato); Piano Lavoro Stabile | riduzione dell'IRPEF solo con gettito dall'evasione certificato oltre il prudente | M11, regola 50-30-20 |
+| Giovani | tenure track e capitale umano dal 2030 (Q02); fondo pensione di garanzia in Q15 (non prima del 2035) | | debole nel primo periodo |
+| Mezzogiorno | tempo pieno, sanità, indennità nelle scuole a rischio di dispersione dal 2029 | fondi del Ponte a investimenti idrici e ferroviari (da decidere) | |
+| Piccole imprese e autonomi | precompilata, assistenza fiscale gratuita, curva d'uscita dal forfettario | ritenute sugli incassi e tracciabilità (onere) | |
+| Banche, grandi imprese, multinazionali | pagano: tassazione bancaria (2,5), sussidi dannosi (6,0), offshore (classe C) | | |
+| Proprietari e rentier | prima casa oltre 60.000 euro (0,37), successione progressiva (2,0) | cedolare solo come gradino di riserva | |
+
+Priorità 2 coperta nell'insieme: 0,26 miliardi nel 2027, 4,20 nel 2028, 4,38 nel 2029–2030, 4,83 nel 2031; il resto (11,64) è in coda. Nel 2027–2028 il programma arriva soprattutto con sanità, povertà, giustizia e precari della scuola; pensioni, casa e giovani arrivano dal 2030.
+
+**e) Catalogo: strumento, tempi, rischio costituzionale**
+
+| Voce | Strumento | Tempi | Rischio |
+|---|---|---|---|
+| Ponte sullo Stretto | decreto-legge che revoca le autorizzazioni di spesa dal 2027 (L. 213/2023, c. 272) e le destina a investimenti idrici e ferroviari nel Mezzogiorno | settimane 3–4 | contenzioso con il contraente generale (circa 0,7 miliardi) e con il project manager; nessun rischio costituzionale |
+| Protocollo con l'Albania | atto di recesso secondo le clausole del Protocollo; decreto-legge che abroga le autorizzazioni della L. 14/2024 | settimane 2–6 | basso; obbligo internazionale da rispettare nei tempi di recesso |
+| Bonus nuovi nati | legge di bilancio (abrogazione dal 2027) | prima legge di bilancio | basso |
+| CPR, decreto sicurezza | legge ordinaria di riforma | anno 1 | basso; più alto per i rimpatri (diritto UE) |
+| Scuole paritarie | nessun intervento (decisione dell'autrice) | — | — |
+| Forfettario, rottamazioni, concordato | legge delega sul fisco; stop per legge alle nuove definizioni | prima legge di bilancio | basso; affidamento dei piani in corso da tutelare |
+| Riforma elettorale | legge ordinaria (Riforma 18) | anno 1 | politico |
+
+## 20. Piano dei primi cento giorni: elenco per settimane (proposta, giovedì 15 ottobre 2026)
+
+Settimane contate dall'insediamento del governo. Criteri: costo zero o risorse già stanziate; strumento rapido; effetto visibile per i gruppi della sezione 19.d; coerenza con la prima legge di bilancio. Il calendario della legge di bilancio dipende dalla data delle elezioni (S15). Incorpora il Patto dei primi 100 giorni del file 01.
+
+| Sett. | Misura | Strumento | Costo e copertura | Chi vede l'effetto | Rischio giuridico | Indicatore a 100 giorni |
+|---|---|---|---|---|---|---|
+| 1 | Unità di attuazione, responsabile per ministero, cruscotto pubblico di impegni, costi e scadenze | DPCM | zero (personale esistente) | tutti | nessuno | cruscotto online, aggiornamento settimanale |
+| 1 | Impegno a nessun nuovo condono; stop per legge alle nuove definizioni agevolate | delibera del Consiglio dei ministri; norma nella prima legge di bilancio | zero; il gettito dei piani in corso resta | contribuenti in regola, piccole imprese | basso | norma approvata |
+| 2 | Ispezioni mirate su contratti pirata e caporalato | direttiva al Ministero del lavoro e all'Ispettorato | risorse esistenti | dipendenti a basso salario | nessuno | ispezioni svolte, irregolarità, lavoratori regolarizzati |
+| 2 | Notifica del recesso dal Protocollo con l'Albania | atto di recesso secondo le clausole del Protocollo | risparmio 0,12 miliardi l'anno nel 2027–2028 | diritti dei migranti | basso (obbligo internazionale) | recesso notificato |
+| 3 | Stop al Ponte sullo Stretto; fondi a investimenti idrici e ferroviari nel Mezzogiorno | decreto-legge (revoca delle autorizzazioni dal 2027, L. 213/2023, c. 272; nuova destinazione) | 0,7–1,9 miliardi l'anno di spesa in conto capitale; contenzioso circa 0,7 miliardi una tantum | Mezzogiorno | contenzioso contrattuale | decreto approvato; elenco delle opere idriche e ferroviarie finanziate |
+| 3 | Decreto sulla garanzia automatica dei tempi in sanità; agende tutte nel CUP | decreto-legge e decreto del Ministro della salute | risorse della Riforma 4 dalla legge di bilancio; nei primi mesi capacità esistente | malati in lista d'attesa | basso | prestazioni aggiuntive; tempi mediani e al 90° percentile |
+| 4 | **Una sola volta** su sette procedure ad alto volume, con sanzioni per gli uffici inadempienti | decreto-legge «Stato semplice» | risorse PNRR e AGID già stanziate; sportello fisico garantito | tutti, in particolare chi non usa il digitale | basso | documenti non più richiesti; tempo mediano delle pratiche |
+| 4 | **Termini certi**, silenzio-assenso con attestazione automatica e **indennizzo automatico per il ritardo** esteso a tutti i procedimenti a istanza di parte | stesso decreto-legge | indennizzo a carico dei bilanci degli uffici in ritardo, con tetto annuo | cittadini e piccole imprese | basso; restano le esclusioni dell'art. 20, c. 4, L. 241/1990 | procedimenti con termine pubblicato; indennizzi pagati |
+| 4 | Riserva del 35% dei posti TFA e percorsi INDIRE per i supplenti in deroga | decreto del MUR (modifica del DM 92/2019) e del MIM | zero (corsi in M24 dalla legge di bilancio) | precari del sostegno | basso | decreto adottato in tempo per il ciclo successivo |
+| 5 | Appalti (a): pubblicazione integrale e in tempo reale di contratti, varianti, subappalti, pagamenti ed esiti delle ispezioni | decreto-legge «Appalti puliti» (modifica degli artt. 23 e 28 D.Lgs. 36/2023) e delibera ANAC | circa 0,1 miliardi già previsti per la banca dati (file 01) | tutti | basso | quota di contratti con subappalti e pagamenti pubblicati |
+| 5 | Appalti (d): controllo concomitante della Corte dei conti ripristinato; protocollo GdF–ANAC sopra soglia | stesso decreto-legge | risorse esistenti | tutti | basso | protocollo firmato |
+| 5 | Appalti (f): divieto di subappalto a cascata sulle lavorazioni strutturali e nei settori a rischio di infiltrazione, salvo motivazione | stesso decreto-legge (modifica dell'art. 119, c. 17, D.Lgs. 36/2023) | zero | imprese oneste, lavoratori | medio: diritto UE sui limiti al subappalto (Corte di giustizia, C-63/18) | bandi con il divieto |
+| 6 | Interoperabilità con scadenze: calendario di adesione alla Piattaforma digitale nazionale dati per ANPR, INPS, Agenzia delle entrate, catasto, registro imprese, MIM | decreto del Ministro per la PA e linee guida AGID; sanzioni dell'art. 18-bis CAD | risorse PNRR esistenti | tutti | nessuno | servizi pubblicati sulla Piattaforma |
+| 6 | Bonus sociale luce e gas automatico per tutti gli aventi diritto | decreto ministeriale e delibera ARERA | risorse esistenti del bonus | famiglie povere | nessuno | famiglie raggiunte senza domanda |
+| 6 | Controlli effettivi sulle white list prefettizie per calcestruzzo, inerti e trasporti, con verifiche sulle cave | direttiva del Ministro dell'interno ai Prefetti | risorse esistenti | imprese oneste | nessuno | verifiche svolte, iscrizioni negate |
+| 6 | Presentazione delle leggi su salario minimo e tetto ai contratti a termine | disegni di legge | zero per lo Stato | dipendenti a basso salario | nessuno | testi presentati (mai contati come approvati) |
+| 8 | Appalti (b) e (c): indicatori automatici di rischio pubblici; ispezioni assegnate per sorteggio con rotazione degli ispettori | delibera e regolamento ANAC; direttiva alla Guardia di finanza | risorse esistenti | tutti | nessuno | indicatori pubblicati; ispezioni sorteggiate |
+| 8 | Censimento degli alloggi popolari sfitti e dei beni confiscati utilizzabili | direttiva e accordi con Regioni e Comuni | risorse esistenti | famiglie senza casa | nessuno | immobili censiti, verificati, finanziati, cantierati |
+| 10 | Appalti (e) e (g): controllo sui controllori; albo nazionale ANAC degli ingegneri di controllo indipendenti, assegnati per sorteggio | disegno di legge, con regolamento ANAC | ingegneri: circa 0,15–0,25 miliardi l'anno (stima da validare); copertura proposta: quota delle spese tecniche del quadro economico delle opere, oppure quota degli incentivi per funzioni tecniche (art. 45 D.Lgs. 36/2023) | tutti | basso | disegno di legge presentato; progetto pilota sui cantieri PNRR e FSC del Mezzogiorno |
+| 10 | Appalti (h): campioni sigillati con catena di custodia, laboratorio sorteggiato, risultati in banca dati pubblica; tracciabilità dalla cava al getto | decreto del MIT (modifica delle NTC 2018, sentito il Consiglio superiore dei lavori pubblici) | a carico delle imprese come oggi per le prove; banca dati nei 0,1 miliardi del punto (a) | tutti | basso | decreto adottato |
+| 12 | Badge digitale di cantiere incrociato ogni giorno con Cassa edile e comunicazioni obbligatorie; patente a crediti e congruità applicate | decreto interministeriale Lavoro–MIT (DL 19/2024, art. 29; DM 143/2021) | risorse esistenti INL e INPS | lavoratori edili | basso | cantieri con badge; irregolarità rilevate |
+| 12 | Punteggio di carriera per tutor e docenti che restano tre anni nelle scuole a rischio di dispersione | atto di indirizzo all'ARAN; ordinanza sulla mobilità | zero | insegnanti delle scuole difficili | basso (materia contrattuale) | atto di indirizzo approvato |
+| 14 | Prima verifica pubblica: valori prima e dopo, ritardi con i responsabili | relazione dell'unità di attuazione | zero | tutti | nessuno | relazione pubblicata |
+
+**Norme vigenti e cosa manca (burocrazia)**
+- *Una sola volta.* Già legge: L. 241/1990, art. 18 (acquisizione d'ufficio); DPR 445/2000, art. 43; L. 183/2011, art. 15 (decertificazione); CAD, artt. 50 e 50-ter (Piattaforma digitale nazionale dati, DL 76/2020, art. 34); regolamento UE 2018/1724 (sportello digitale unico). Manca: sanzione effettiva per l'ufficio che chiede documenti già posseduti (oggi solo responsabilità dirigenziale generica), obbligo di pubblicare i servizi sulla Piattaforma con scadenza, misura pubblica del rispetto.
+- *Termini certi e indennizzo.* Già legge: L. 241/1990, artt. 2 (termini, potere sostitutivo), 2-bis (danno da ritardo; indennizzo di 30 euro al giorno fino a 2.000 euro, DL 69/2013, art. 28, solo per l'avvio e l'esercizio di attività d'impresa e su domanda), 20 (silenzio-assenso, con attestazione telematica dal DL 76/2020, art. 12). Manca: indennizzo automatico per tutti i procedimenti a istanza di parte, registro pubblico dei termini, attestazione del silenzio-assenso effettivamente rilasciata dai portali.
+- *Interoperabilità.* Già legge: CAD, art. 50-ter, e linee guida AGID; sanzioni AGID (art. 18-bis CAD). Manca: calendario vincolante per singola banca dati.
+
+**Norme vigenti e cosa manca (appalti e cantieri)**
+- (a) D.Lgs. 36/2023, artt. 23–28 (banca dati nazionale dei contratti pubblici, trasparenza); D.Lgs. 33/2013, art. 37. Manca: subappalti, pagamenti ed esiti delle ispezioni in formato aperto e in tempo reale.
+- (b) ANAC ha già costruito indicatori di rischio di corruzione (progetto «Misura la corruzione»). Manca: obbligo d'uso e pubblicazione per singola procedura.
+- (c) D.Lgs. 36/2023, art. 222 (vigilanza ANAC). Manca: sorteggio e rotazione degli ispettori.
+- (d) DL 76/2020, art. 22 (controllo concomitante della Corte dei conti), ridotto da interventi successivi da verificare; Procura europea (regolamento UE 2017/1939, D.Lgs. 9/2021). Manca: doppio controllo obbligatorio sopra soglia.
+- (e) L. 190/2012; D.Lgs. 24/2023 (segnalazioni); D.Lgs. 33/2013, art. 14 (obblighi patrimoniali dei dirigenti). Manca: verifiche patrimoniali sugli ispettori e unità esterna alla catena di comando.
+- (f) D.Lgs. 36/2023, art. 119, c. 17: la stazione appaltante può già vietare l'ulteriore subappalto, con motivazione. Manca: divieto di legge per le lavorazioni strutturali e i settori a rischio.
+- (g) Collaudo e direzione lavori (D.Lgs. 36/2023, art. 116 e allegati); incentivi per funzioni tecniche fino al 2% dell'importo a base di gara (art. 45). Stima da validare: lavori 2025 per 54,3 miliardi su 64.211 procedure sopra 40.000 euro (ANAC, Relazione annuale 2025; l'86% senza confronto competitivo); il numero dei cantieri sopra soglia UE va preso dalla banca dati ANAC (V53); con 3.000–5.000 cantieri attivi e squadre di due ingegneri su quattro cantieri, servono 1.500–2.500 ingegneri, circa 0,15–0,25 miliardi l'anno. Copertura senza nuova spesa: una quota delle spese tecniche già previste nel quadro economico di ciascuna opera; in alternativa una quota degli incentivi dell'art. 45 (fino a 1,1 miliardi teorici sui lavori 2025), che ridurrebbe gli incentivi al personale delle stazioni appaltanti. Scorte nei territori ad alto rischio: costo da stimare con il Ministero dell'interno.
+- (h) NTC 2018 (DM 17 gennaio 2018), cap. 11 (accettazione dei materiali, prelievi del direttore dei lavori); DPR 380/2001, art. 59 (laboratori autorizzati); L. 190/2012, commi 52–57 (white list); DL 19/2024, art. 29 (patente a crediti); DM 143/2021 (congruità della manodopera); art. 356 c.p. (frode nelle pubbliche forniture). Manca: sorteggio del laboratorio, sigilli e catena di custodia, banca dati pubblica dei risultati, prove a sorpresa sull'opera finita, tracciabilità delle betoniere, incrocio quotidiano badge–Cassa edile–comunicazioni obbligatorie, qualificazione obbligatoria per le lavorazioni strutturali.
