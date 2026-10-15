@@ -9,7 +9,7 @@ COP07,Evasione diffusa: quota fiscale di Fase 1,C,7.0,1.00,1.00,0.35,2028:0.25;2
 COP08,Contributo di solidarieta sulle polizze sanitarie,C,0.175,1.00,0.60,0.30,2028:0.5;2029:1,compagnie sanitarie,si,misura discrezionale di entrata,da_validare,,1
 COP09,Rimborsi delle compagnie al SSN,C,0.2,1.00,0.60,0.30,2029:1,compagnie sanitarie,si,non discrezionale,da_validare,,1
 COP10,Gioco d'azzardo: prelievo sugli operatori,C,1.0,0.80,0.55,0.30,2028:0.5;2029:1,operatori del gioco,no,misura discrezionale di entrata,da_validare,mai per la Priorita 1,1
-COP11,Patrimonio pubblico: entrate ricorrenti,C,1.0,0.80,0.55,0.30,2029:0.5;2030:1,nessuno,no,da verificare voce per voce,da_validare,mai per la Priorita 1,0
+COP11,Patrimonio pubblico: entrate ricorrenti,C,0.0,0.80,0.55,0.30,2029:0.5;2030:1,nessuno,no,da verificare voce per voce,da_validare,"a zero (V49): sovrapposta ad affitti (COP13), canoni regionali (COP15), minori interessi (solo debito) e dividendi del tendenziale; da ricostruire dai canoni statali, a partire dal demanio marittimo",0
 COP12,Immobili non accatastati,B,0.45,0.90,0.70,0.50,2028:0.5;2029:1,proprietari di immobili non dichiarati,si,non discrezionale (adempimento),da_validare,,0
 COP13,Affitti passivi dello Stato al netto del Demanio,B,0.30,0.90,0.70,0.50,2028:0.333;2029:0.667;2030:1,nessuno,si,riduzione di spesa,da_validare,,1
 COP14,Incentivi alle imprese senza effetti misurati,C,0.0,0.80,0.55,0.30,2029:1,imprese beneficiarie,si,riduzione di spesa,da_validare,zero fino alla valutazione con gruppo di confronto,1

@@ -611,3 +611,20 @@ Soglia di A: con la voce fino a 0,33 miliardi Q10 resta nel 2032; a 0,34 passa a
 **Effetto sul quadro.** Priorità 2 coperta: 0,11 / 3,87 / 4,58 / 4,58 / 5,03 miliardi; Priorità 2 rinviata 11,44, uguale alla coda; prudente ≥ 0 in ogni anno. Coda nello scenario centrale: Q14 2028; Q01, Q05, Q12 2029; Q02, Q03 2030; Q04, Q06, Q10 2031; Q07 e Q16 2032. Nello scenario avverso del 2031 slitta il 26,1% dei nuovi ingressi della Priorità 1.
 
 **Regola nuova del modello.** La colonna `dopo` di `dati/coda.csv` indica un prerequisito: la voce resta fuori dalla coda attiva e dallo scorrimento finché il prerequisito non è attivo.
+
+## 18. Perimetro del quadro (mercoledì 14 ottobre 2026)
+
+Il quadro del programma si misura sul tendenziale del DPFP 2026, a legislazione vigente fino al 2029. Per ogni voce: dove sta, ordine di grandezza, fonte. Registro in `incoerenze.md` (V42–V50, D29).
+
+| Voce | Dove sta | Ordine di grandezza | Fonte primaria |
+|---|---|---|---|
+| Politiche invariate e misure in scadenza | assente | rinnovo contrattuale 2031-2033 non finanziato: circa 2 miliardi nel 2031 per i soli statali (per analogia con il 2028); Ape sociale in scadenza al 31 dicembre 2026; missioni internazionali da verificare | L. 207/2024, commi 128 e 131; L. di bilancio 2026 |
+| Strutture PNRR dopo il 2026 | in parte nel tendenziale | personale dell'assistenza territoriale 1,0 miliardi l'anno dal 2026; investimenti nazionali dal 3,8% al 3,4% del PIL tra 2027 e 2029, senza voce per la manutenzione | L. 234/2021, art. 1, comma 274; DPFP 2026 |
+| Bilancio UE 2028-2034 e rimborso NGEU | probabilmente assente | circa 3,1 miliardi l'anno per NGEU; circa 8,7 miliardi l'anno di contributi in più dal 2028 con la proposta della Commissione | UPB, audizione QFP (17 giugno 2026) |
+| Pensioni | nel tendenziale | rischio inflazione: +1% di inflazione, circa 3,7 miliardi di spesa in più l'anno dopo | UPB, audizione DPFP (12 ottobre 2026) |
+| Passività potenziali | fuori dal quadro | garanzie 294 miliardi (13,4% del PIL) a fine 2024; escussioni 2,5 miliardi nel 2024 | DFP 2025 (via Osservatorio CPI), da riprendere dalla fonte MEF |
+| Drenaggio fiscale | nel tendenziale | +1% di inflazione, circa 1,6 miliardi di IRPEF; conta come misura discrezionale di entrata per la UE | UPB, audizione DPFP; DPFP, nota 97 |
+| Entrate una tantum | nel tendenziale, esaurite | 0,3% del PIL nel 2025, 0,2% nel 2026, zero dal 2027 | DPFP, tav. II.1.10 |
+| Dividendi delle partecipate | nel tendenziale | circa 3 miliardi nel 2026 dalle sei principali quotate | stampa, da riscontrare sui bilanci |
+| Aste ETS ed ETS2 | ETS nel tendenziale; ETS2 da verificare | ETS 15,6 miliardi nel 2012-2024; ETS2 dal 2028; Fondo sociale per il clima 9,3 miliardi nel 2026-2032 | ECCO; accordo UE sul clima al 2040 |
+| Difesa (D29) | il programma usa il tendenziale | clausola del DPFP: circa 0,2-0,3 punti di PIL oltre il tendenziale nel 2027-2028 (circa 7 miliardi); obiettivo NATO in linea retta: circa 0,9 punti nel 2031 (circa 24 miliardi) | UPB, audizione DPFP; NATO; Osservatorio CPI |

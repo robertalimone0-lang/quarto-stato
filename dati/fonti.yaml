@@ -394,3 +394,27 @@ fonti:
     url: "https://contoannuale.rgs.mef.gov.it/"
     data: "2026-10-14"
     stato: da_validare
+  upb_debito_2029_mercato:
+    valore: 138.4
+    decimali: 1
+    unita: "% del PIL nel 2029, quadro programmatico DPFP con scenario macro UPB e curva dei rendimenti del 21 settembre-2 ottobre 2026 (1,8 punti sopra il DPFP)"
+    fonte: "UPB, audizione sul DPFP 2026, lunedì 12 ottobre 2026, par. 3.3.1"
+    url: "https://www.upbilancio.it/wp-content/uploads/2026/10/UPB-Audizione-DPFP-2026.pdf"
+    data: "2026-10-12"
+    stato: verificato
+  upb_interessi_2029_mercato:
+    valore: 4.5
+    decimali: 1
+    unita: "miliardi di interessi in piu nel 2029 con le aspettative di mercato del 2 ottobre 2026 (0,25 nel 2026, 2 nel 2027, 3,3 nel 2028)"
+    fonte: "UPB, audizione sul DPFP 2026, lunedì 12 ottobre 2026"
+    url: "https://www.upbilancio.it/wp-content/uploads/2026/10/UPB-Audizione-DPFP-2026.pdf"
+    data: "2026-10-12"
+    stato: verificato
+  difesa_clausola_dpfp:
+    valore: 0.3
+    decimali: 1
+    unita: "punti di PIL l'anno di spesa per la difesa coperta dalla clausola nazionale rispetto al 2024 (circa 14,5 miliardi nel 2027-2028); aggiuntivi rispetto alla legislazione vigente circa 0,2 punti nel 2027; spesa dall'1,3% del PIL nel 2026 all'1,6% nel 2027-2028"
+    fonte: "UPB, audizione sul DPFP 2026, lunedì 12 ottobre 2026"
+    url: "https://www.upbilancio.it/wp-content/uploads/2026/10/UPB-Audizione-DPFP-2026.pdf"
+    data: "2026-10-12"
+    stato: verificato

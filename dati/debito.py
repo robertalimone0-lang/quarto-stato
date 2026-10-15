@@ -4,7 +4,12 @@ d(t) = d(t-1) * (1 + i) / (1 + g) - s + SF
 Base: quadro tendenziale del DPFP del 2 ottobre 2026; il programmatico (con la clausola
 di salvaguardia nazionale per difesa ed energia) e uno scenario di confronto.
 Tasso implicito i = interessi(t) * (1 + g) / d(t-1), con interessi = indebitamento + saldo primario.
-Stock-flussi SF ricavato come residuo fino al 2029; dal 2030 zero. Dal 2030 g e s invariati al 2029.
+Stock-flussi SF ricavato come residuo fino al 2029; dal 2030 zero. Dal 2030 g invariato al 2029.
+Dal 2030 il tasso implicito sale di 0,09 punti l'anno, come tra 2028 e 2029 (D30); il saldo primario resta
+al livello del 2029, al netto del rinnovo contrattuale 2031-2033 dei dipendenti statali (V42, opzione a),
+stimato per analogia con il rinnovo 2028-2030 della L. 207/2024, art. 1, comma 131.
+Scenario UPB (audizione sul DPFP 2026, 12 ottobre 2026): debito 2029 piu alto di 1,8 punti e tasso implicito
+piu alto di 0,18 punti dal 2030 (4,5 miliardi di interessi in piu nel 2029); variante con avanzo piu basso di 0,5 punti.
 """
 try:
     from . import modello as M
@@ -12,6 +17,9 @@ except ImportError:
     import modello as M
 
 ANNI = list(range(2025, 2033))
+TREND_TASSO_DOPO_2029 = 0.0009  # punti di tasso implicito in piu ogni anno dopo il 2029 (D30)
+RINNOVO_DOPO_2029 = {2031: 1954, 2032: 4027}  # milioni: rinnovo 2031-2033 per analogia con il 2028-2030 (V42)
+UPB_SCARTO_2029, UPB_TASSO, UPB_AVANZO_RIDOTTO = 0.018, 0.0018, -0.005
 
 
 def _quadro(nome, m=None):
@@ -24,19 +32,26 @@ def _quadro(nome, m=None):
     for y in range(2026, 2030):
         i[y] = (n[y] + s[y]) * (1 + g[y]) / d[y - 1]
         sf[y] = d[y] - d[y - 1] * (1 + i[y]) / (1 + g[y]) + s[y]
+    pil = (m or M).PIL
     for y in range(2030, 2033):
-        g[y], s[y], i[y], sf[y] = g[2029], s[2029], i[2029], 0.0
+        g[y], i[y], sf[y] = g[2029], i[2029] + TREND_TASSO_DOPO_2029 * (y - 2029), 0.0
+        s[y] = s[2029] - RINNOVO_DOPO_2029.get(y, 0) / 1000 / pil[y]
     return d, g, s, i, sf
 
 
-def percorso(quadro="tendenziale", ds=None, dg=0.0, dg_da=2029, shock=0.0, shock_da=2028, vita=7.9, m=None):
-    """Debito/PIL in percentuale. ds: avanzo aggiuntivo in quota di PIL per anno. m: quadro (None = programma)."""
+def percorso(quadro="tendenziale", ds=None, dg=0.0, dg_da=2029, shock=0.0, shock_da=2028, vita=7.9, m=None,
+             upb=False, avanzo_ridotto=False):
+    """Debito/PIL in percentuale. ds: avanzo aggiuntivo in quota di PIL per anno. m: quadro (None = programma).
+    upb: scenario UPB dopo il 2029; avanzo_ridotto: con upb, avanzo primario piu basso di 0,5 punti dal 2030."""
     d0, g, s, i, sf = _quadro(quadro, m)
     d = {2025: d0[2025]}
     for y in range(2026, 2033):
         gg = g[y] + (dg if y >= dg_da else 0.0)
-        ii = i[y] + shock * min(1.0, max(0, y - shock_da + 1) / vita)
-        d[y] = d[y - 1] * (1 + ii) / (1 + gg) - (s[y] + (ds or {}).get(y, 0.0)) + sf[y]
+        ii = i[y] + shock * min(1.0, max(0, y - shock_da + 1) / vita) + (UPB_TASSO if upb and y >= 2030 else 0.0)
+        ss = s[y] + (UPB_AVANZO_RIDOTTO if upb and avanzo_ridotto and y >= 2030 else 0.0)
+        d[y] = d[y - 1] * (1 + ii) / (1 + gg) - (ss + (ds or {}).get(y, 0.0)) + sf[y]
+        if upb and y == 2029:
+            d[y] += UPB_SCARTO_2029
     return {y: 100 * v for y, v in d.items()}
 
 
@@ -61,9 +76,12 @@ def scenari(m=None):
     out["Programma, avverso con salvaguardia"] = percorso(ds=avanzo_avverso_con_salvaguardia(m), m=m)
     out["Programma, centrale con piu crescita"] = percorso(ds=avanzo_programma("centrale", m=m), dg=0.003, m=m)
     out["Programma, centrale con stress sui tassi"] = percorso(ds=avanzo_programma("centrale", m=m), shock=0.01, m=m)
+    out["Programma, centrale con scenario UPB"] = percorso(ds=avanzo_programma("centrale", m=m), m=m, upb=True)
+    out["Programma, centrale con scenario UPB e avanzo piu basso"] = percorso(
+        ds=avanzo_programma("centrale", m=m), m=m, upb=True, avanzo_ridotto=True)
     return out
 
 
 if __name__ == "__main__":
     for k, v in scenari().items():
-        print(f"{k:42s} 2031 {v[2031]:6.2f}  2032 {v[2032]:6.2f}")
+        print(f"{k:56s} 2031 {v[2031]:6.2f}  2032 {v[2032]:6.2f}")
