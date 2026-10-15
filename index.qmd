@@ -1,5 +1,5 @@
 # Premessa {.unnumbered}
 
-Questo documento è il programma di governo del partito Quarto Stato per la legislatura 2027–2031, redatto come un piano pubblico: ogni misura ha un problema misurato, una norma da modificare, un costo, una copertura, tempi e indicatori.
+Questo documento è il programma di governo del partito Quarto Stato per la legislatura 2028–2032, redatto come un piano pubblico: ogni misura ha un problema misurato, una norma da modificare, un costo, una copertura, tempi e indicatori.
 
 Ogni numero del testo proviene dal registro delle fonti (`dati/fonti.yaml`) o dal modello finanziario (`dati/modello.py`, `dati/debito.py`), pubblicati insieme al documento. I numeri non ancora verificati su fonte primaria sono marcati "da validare".

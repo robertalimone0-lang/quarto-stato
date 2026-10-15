@@ -21,9 +21,9 @@ Il programma opera dentro tre vincoli giuridici, in quest'ordine di rango.
 
 **La Costituzione.** L'articolo 81 impone l'equilibrio tra entrate e spese e la copertura di ogni legge che comporta nuovi o maggiori oneri. La legge 24 dicembre 2012, n. 243, approvata a maggioranza assoluta come legge rinforzata, ne attua il principio: definisce l'equilibrio in termini strutturali, disciplina gli scostamenti per eventi eccezionali e istituisce l'Ufficio parlamentare di bilancio (UPB).
 
-**Le regole europee in vigore dal 2024.** Il regolamento (UE) 2024/1263 sposta il vincolo operativo dal deficit alla spesa netta: la spesa pubblica al netto degli interessi, delle misure discrezionali sul lato delle entrate, della spesa finanziata dall'Unione e del relativo cofinanziamento nazionale, della componente ciclica dei sussidi di disoccupazione e delle misure una tantum. Il Piano strutturale di bilancio di medio termine dell'Italia, approvato dal Consiglio dell'UE il 21 gennaio 2025, copre gli anni 2025–2029 ed estende il periodo di aggiustamento a sette anni, fino al 2031. Fissa una crescita media annua della spesa netta dell'{{< dato psbmt_crescita_spesa_netta_2025_2029 >}} nel 2025–2029 e dell'{{< dato psbmt_crescita_spesa_netta_2025_2031 >}} nel 2025–2031. Il periodo di aggiustamento coincide con la legislatura 2027–2031.
+**Le regole europee in vigore dal 2024.** Il regolamento (UE) 2024/1263 sposta il vincolo operativo dal deficit alla spesa netta: la spesa pubblica al netto degli interessi, delle misure discrezionali sul lato delle entrate, della spesa finanziata dall'Unione e del relativo cofinanziamento nazionale, della componente ciclica dei sussidi di disoccupazione e delle misure una tantum. Il Piano strutturale di bilancio di medio termine dell'Italia, approvato dal Consiglio dell'UE il 21 gennaio 2025, copre gli anni 2025–2029 ed estende il periodo di aggiustamento a sette anni, fino al 2031. Fissa una crescita media annua della spesa netta dell'{{< dato psbmt_crescita_spesa_netta_2025_2029 >}} nel 2025–2029 e dell'{{< dato psbmt_crescita_spesa_netta_2025_2031 >}} nel 2025–2031. Il periodo di aggiustamento copre i primi quattro anni della legislatura 2028–2032.
 
-**Il percorso concordato con il Consiglio.** I limiti annui di crescita della spesa netta per il triennio della prima legge di bilancio sono: {{< dato spesa_netta_racc_2027 >}} nel 2027, {{< dato spesa_netta_racc_2028 >}} nel 2028 e {{< dato spesa_netta_racc_2029 >}} nel 2029. Il Documento programmatico di finanza pubblica del 2 ottobre 2026 (DPFP) stima, a legislazione vigente, questi tassi di crescita: {{< dato spesa_netta_tend_2027 >}} nel 2027, {{< dato spesa_netta_tend_2028 >}} nel 2028 e {{< dato spesa_netta_tend_2029 >}} nel 2029. Lo sforamento del 2027 è assorbito dalla clausola di salvaguardia nazionale attivata per la difesa e l'energia, che vale {{< dato clausola_nazionale_quota >}} per ciascuna delle due finalità nel 2027 e nel 2028. Nel quadro programmatico del Governo uscente la spesa netta cresce del {{< dato spesa_netta_prog_2027 >}} nel 2027 e, al netto della clausola, coincide con i limiti raccomandati. Lo spazio libero nel percorso è quindi nullo: ogni euro di spesa nuova del programma deve essere compensato dentro l'aggregato della spesa netta.
+**Il percorso concordato con il Consiglio.** I limiti annui di crescita della spesa netta per il 2027–2029, ultimi anni del Piano in corso, sono: {{< dato spesa_netta_racc_2027 >}} nel 2027, {{< dato spesa_netta_racc_2028 >}} nel 2028 e {{< dato spesa_netta_racc_2029 >}} nel 2029. Il Documento programmatico di finanza pubblica del 2 ottobre 2026 (DPFP) stima, a legislazione vigente, questi tassi di crescita: {{< dato spesa_netta_tend_2027 >}} nel 2027, {{< dato spesa_netta_tend_2028 >}} nel 2028 e {{< dato spesa_netta_tend_2029 >}} nel 2029. Lo sforamento del 2027 è assorbito dalla clausola di salvaguardia nazionale attivata per la difesa e l'energia, che vale {{< dato clausola_nazionale_quota >}} per ciascuna delle due finalità nel 2027 e nel 2028. Nel quadro programmatico del Governo uscente la spesa netta cresce del {{< dato spesa_netta_prog_2027 >}} nel 2027 e, al netto della clausola, coincide con i limiti raccomandati. Lo spazio libero nel percorso è quindi nullo: ogni euro di spesa nuova del programma deve essere compensato dentro l'aggregato della spesa netta.
 
 **Le conseguenze per il programma.** Tre regole derivano da questo quadro.
 
@@ -65,7 +65,7 @@ Ogni copertura ha un tasso di realizzazione per scenario, fissato in anticipo. L
 ```{python}
 #| label: tbl-classi
 #| tbl-cap: "Coperture per classe: valore nominale a regime (miliardi di euro) e tassi di realizzazione"
-nom = M.per_classe("nominale", 2031)
+nom = M.per_classe("nominale", M.ANNO_REGIME)
 righe = []
 for c in ("A", "B", "C"):
     rr = [r for r in M.COPERTURE if r["classe"] == c and float(r["nominale"]) > 0]
@@ -85,7 +85,7 @@ Il programma calcola ogni anno tre scenari, voce per voce, con le rampe di avvio
 - **prudente:** coperture ai tassi prudenti, costi aumentati del `{python} it(100*(M.MULT["prudente"]-1), 0)`%;
 - **avverso:** coperture ai tassi avversi, costi aumentati del `{python} it(100*(M.MULT["avverso"]-1), 0)`%.
 
-La regola di fondo è una sola: **lo scenario prudente chiude ogni anno con un margine maggiore o uguale a zero.** Ogni voce che lo porterebbe sotto zero esce dalla Fase 1 ed entra nella coda di attivazione. Nel quadro attuale il margine prudente vale `{python} it(prud[0], 2)` miliardi nel 2027, `{python} it(prud[1], 2)` nel 2028, `{python} it(prud[2], 2)` nel 2029 e zero nel 2030 e nel 2031. La parte di Priorità 2 che non rientra, `{python} it(M.P2_RINVIATA, 1)` miliardi a regime, è in coda.
+La regola di fondo è una sola: **lo scenario prudente chiude ogni anno con un margine maggiore o uguale a zero.** Ogni voce che lo porterebbe sotto zero esce dalla Fase 1 ed entra nella coda di attivazione. Nel quadro attuale il margine prudente vale `{python} it(prud[0], 2)` miliardi nel `{python} M.Y[0]`, `{python} it(prud[1], 2)` nel `{python} M.Y[1]`, `{python} it(prud[2], 2)` nel `{python} M.Y[2]` e zero nel `{python} M.Y[3]` e nel `{python} M.Y[4]`. La parte di Priorità 2 che non rientra, `{python} it(M.P2_RINVIATA, 1)` miliardi a regime, è in coda.
 
 ## Priorità e calendario di avvio {#sec-priorita}
 
@@ -96,17 +96,17 @@ Le spese hanno due livelli. In ogni slittamento, anche dentro la Priorità 1, le
 
 Il calendario della prima legge di bilancio segue tre regole.
 
-1. **Tutte le coperture di classe A e B si approvano nella prima legge di bilancio**, con un calendario pubblico di soppressione delle agevolazioni. Il costo politico è concentrato nel primo anno: tutte le categorie che perdono un'agevolazione si oppongono nello stesso momento. Il programma lo accetta perché anticipa le risorse: con questa scelta la Priorità 2 coperta nel 2028 arriva a `{python} it(M.P2[2028], 1)` miliardi.
-2. **La Priorità 2 del 2027 parte dal 1° luglio 2027**, dopo la prima certificazione trimestrale delle coperture.
-3. **Il cofinanziamento degli investimenti di Fase 1 parte nel 2028.** La regola è fissa e non dipende dai dati del primo trimestre.
+1. **Tutte le coperture di classe A e B si approvano nella prima legge di bilancio**, con un calendario pubblico di soppressione delle agevolazioni. Il costo politico è concentrato nel primo anno: tutte le categorie che perdono un'agevolazione si oppongono nello stesso momento. Il programma lo accetta perché anticipa le risorse: con questa scelta la Priorità 2 coperta nel `{python} M.PRIMO_ANNO + 1` arriva a `{python} it(M.P2[M.PRIMO_ANNO + 1], 1)` miliardi.
+2. **La Priorità 2 del primo anno parte dal 1° luglio `{python} M.PRIMO_ANNO`**, dopo la prima certificazione trimestrale delle coperture.
+3. **Il cofinanziamento degli investimenti di Fase 1 parte nel `{python} M.PRIMO_ANNO + 1`.** La regola è fissa e non dipende dai dati del primo trimestre.
 
-Nello scenario avverso il 2027 resta scoperto per `{python} it(-M.margine_fase1("avverso", 2027), 2)` miliardi anche con queste regole, perché le coperture del primo anno sono basse. La certificazione del primo trimestre blocca l'avvio di luglio della Priorità 2; il resto si chiude con il rinvio dei nuovi ingressi della Priorità 1, il quarto gradino della salvaguardia, che scatta solo in quello scenario. Un avvio più lento di sanità e welfare costerebbe invece in tutti gli scenari.
+Nello scenario avverso il `{python} M.PRIMO_ANNO` resta scoperto per `{python} it(-M.margine_fase1("avverso", M.PRIMO_ANNO), 2)` miliardi anche con queste regole, perché le coperture del primo anno sono basse. La certificazione del primo trimestre blocca l'avvio di luglio della Priorità 2; il resto si chiude con il rinvio dei nuovi ingressi della Priorità 1, il quarto gradino della salvaguardia, che scatta solo in quello scenario. Un avvio più lento di sanità e welfare costerebbe invece in tutti gli scenari.
 
 ## L'attivazione condizionata {#sec-attivazione}
 
 Le misure che non rientrano nella Fase 1 non vengono escluse: entrano in una coda e partono quando le leve di entrata del programma hanno prodotto gettito certificato sufficiente a coprirle in modo permanente.
 
-**Le leve.** Il registro delle leve (`dati/leve.csv`) indica per ciascuna la fonte del dato, il metodo di misura, il ritardo della misura, l'organo che certifica e tre stime (prudente, centrale, alta). Le leve sono: il gettito dall'evasione oltre la quota già assegnata alla Fase 1; l'IRPEF e l'IVA dei lavoratori stranieri regolarizzati; l'IRPEF dei rientrati dall'estero al netto delle esenzioni; il maggior reddito di chi ottiene la conversione del titolo di studio estero, solo se misurabile; le accise e l'IVA sulla cannabis legale dal 2030; i risparmi certificati dell'audit sanitario e della riforma elettorale; l'aliquota minima sui redditi altissimi. Il dividendo dell'occupazione, cioè le imposte dei nuovi occupati oltre la tendenza, compare solo come scenario di confronto, per il rischio di contare due volte gettito già incluso nelle altre leve.
+**Le leve.** Il registro delle leve (`dati/leve.csv`) indica per ciascuna la fonte del dato, il metodo di misura, il ritardo della misura, l'organo che certifica e tre stime (prudente, centrale, alta). Le leve sono: il gettito dall'evasione oltre la quota già assegnata alla Fase 1; l'IRPEF e l'IVA dei lavoratori stranieri regolarizzati; l'IRPEF dei rientrati dall'estero al netto delle esenzioni; il maggior reddito di chi ottiene la conversione del titolo di studio estero, solo se misurabile; le accise e l'IVA sulla cannabis legale dal 2031; i risparmi certificati dell'audit sanitario e della riforma elettorale; l'aliquota minima sui redditi altissimi. Il dividendo dell'occupazione, cioè le imposte dei nuovi occupati oltre la tendenza, compare solo come scenario di confronto, per il rischio di contare due volte gettito già incluso nelle altre leve.
 
 **La certificazione.** Conta solo il gettito a consuntivo, al netto dei costi della leva stessa e corretto per il ciclo economico. L'UPB lo certifica ogni trimestre sui dati di cassa, con la media mobile delle ultime quattro trimestralità, e lo conferma ogni anno sul consuntivo. Se la conferma annuale smentisce il dato trimestrale scatta la reversibilità.
 
@@ -147,11 +147,11 @@ Entro trenta giorni dalla certificazione che rileva lo scostamento, il governo p
 #| label: tbl-salvaguardia
 #| tbl-cap: "Scenario avverso: buco di Fase 1 e copertura dei gradini della salvaguardia (miliardi di euro)"
 righe = [(y, it(r["buco"], 2, segno=True), it(r["g1"], 2), it(r["g2"], 2), it(r["g3"], 2), it(r["g4"], 2), it(r["residuo"], 2))
-         for y, r in avv.items() if y <= 2031]
+         for y, r in avv.items() if y <= M.ANNO_REGIME]
 Markdown(tabella_md(["Anno", "Saldo prima", "1. Coda", "2. P2 non avviata", "3. P2 rallentata", "4. Nuovi ingressi P1", "Residuo"], righe))
 ```
 
-Il buco si chiude in ogni anno. In ogni anno tutta la Priorità 2 slitta prima di qualsiasi rinvio della Priorità 1. Il quarto gradino interviene solo per la parte del buco che supera l'intera Priorità 2: e la Priorità 1 rinvia i nuovi ingressi fino a `{python} it(avv[2031]["g4"], 1)` miliardi nel 2031. **Nello scenario avverso slitta quindi il `{python} it(100*avv[2031]["g4"]/(M.p1(2031)*M.MULT["avverso"]), 1)`% dei nuovi ingressi della Priorità 1 del 2031, senza alcuna riduzione delle prestazioni già riconosciute.**
+Il buco si chiude in ogni anno. In ogni anno tutta la Priorità 2 slitta prima di qualsiasi rinvio della Priorità 1. Il quarto gradino interviene solo per la parte del buco che supera l'intera Priorità 2: e la Priorità 1 rinvia i nuovi ingressi fino a `{python} it(avv[M.ANNO_REGIME]["g4"], 1)` miliardi nel `{python} M.ANNO_REGIME`. **Nello scenario avverso slitta quindi il `{python} it(100*avv[M.ANNO_REGIME]["g4"]/(M.p1(M.ANNO_REGIME)*M.MULT["avverso"]), 1)`% dei nuovi ingressi della Priorità 1 del `{python} M.ANNO_REGIME`, senza alcuna riduzione delle prestazioni già riconosciute.**
 
 ## Certificazione e controllo indipendente {#sec-certificazione}
 

@@ -1,6 +1,6 @@
 gradino,voce,avverso,prudente,centrale,dal,stato,note
-a,Sussidi ambientalmente dannosi: quota aggiuntiva con compensazioni,0.70,0.85,0.95,2029,approvato,+1 miliardo nominale netto
-b,Spending review: quota aggiuntiva,0.40,0.65,0.85,2029,approvato,+1 miliardo nominale
-c,Cedolare al 21% sul libero mercato: curva oltre 60.000 euro,0.30,0.38,0.45,2029,approvato,stima netta della risposta comportamentale; evidenze da stampa (V26)
-d,Agevolazioni edilizie oltre 60.000 euro: curva sulle spese nuove,,,,2028,approvato,profilo da dati/spese_fiscali/analisi.py
-e,Slittamento della Priorita 2 per l'importo residuo,,,,2027,automatico,partendo dalle voci non ancora avviate; le stabilizzazioni degli insegnanti slittano per ultime
+a,Sussidi ambientalmente dannosi: quota aggiuntiva con compensazioni,0.70,0.85,0.95,2030,approvato,+1 miliardo nominale netto
+b,Spending review: quota aggiuntiva,0.40,0.65,0.85,2030,approvato,+1 miliardo nominale
+c,Cedolare al 21% sul libero mercato: curva oltre 60.000 euro,0.30,0.38,0.45,2030,approvato,stima netta della risposta comportamentale; evidenze da stampa (V26)
+d,Agevolazioni edilizie oltre 60.000 euro: curva sulle spese nuove,,,,2029,approvato,profilo da dati/spese_fiscali/analisi.py
+e,Slittamento della Priorita 2 per l'importo residuo,,,,2028,automatico,partendo dalle voci non ancora avviate; le stabilizzazioni degli insegnanti slittano per ultime

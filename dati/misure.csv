@@ -1,25 +1,25 @@
 codice,misura,priorita,costo_regime,rampa,tipo,note
-M01,Salute (Fase 1),1,11.0,2027:0.25;2028:0.45;2029:0.65;2030:0.85;2031:1,corrente,
-M02,Welfare e poverta,1,6.0,2027:0.183;2028:0.5;2029:0.867;2030:1,corrente,
-M03,Giustizia,1,0.8,2028:1,corrente,
-M04,Contro le mafie (netto),1,0.6,2027:1,corrente,
-M05,Carceri,1,0.55,2027:1,corrente,
-M06,Tutele per chi evade per sopravvivere,1,0.2,2027:1,corrente,
-M07,Scuola,2,5.71,2027:0.15;2028:0.336;2029:0.551;2030:0.846;2031:1,corrente,"6,8 meno stabilizzazioni (0,97, M21) e corsi (0,09, M24); aumento salariale ridotto da 4,5 a 4,16 miliardi (D27, D28b); meno stabilizzazione ATA (0,03, M25)"
-M08,Cofinanziamento degli investimenti,2,3.05,2027:0.41;2028:0.70;2029:1,investimento,quota di Fase 1 dal 2028 (D15)
-M09,Pensioni,2,1.8,2027:0.41;2028:0.70;2029:1,corrente,
-M10,Contrasto all'evasione (costo),2,1.5,2027:0.41;2028:0.70;2029:1,corrente,
-M11,Lavoro e salari,2,1.5,2027:0.41;2028:0.70;2029:1,corrente,
-M12,Casa,2,1.1,2027:0.41;2028:0.70;2029:1,corrente,
-M13,Calmiere dei prezzi,2,0.5,2027:0.41;2028:0.70;2029:1,corrente,
-M14,Stato digitale,2,0.4,2028:0.70;2029:1,corrente,
-M15,Trasporti Fase 1,2,0.3,2027:0.41;2028:0.70;2029:1,corrente,
-M16,Garanzia di lavoro sperimentale,2,0.3,2027:0.41;2028:0.70;2029:1,corrente,
-M17,R14 riga: riconoscimento dei titoli esteri (09),2,0.08,2028:0.5;2029:1,corrente,
-M18,R14 riga: laboratorio nazionale di valutazione (08),2,0.025,2027:1,corrente,
-M19,R14 riga: gestione dei seggi digitali (05),2,0.01,2029:1,corrente,
-M20,R14 riga: conto unico e seggi digitali (08 e 05),2,0.15,2027:0.25;2028:0.4167;2029:0.1667;2030:0.1667;2031:0,una_tantum,importi una tantum distribuiti su quattro anni
-M21,Stabilizzazioni degli insegnanti,1,0.97,2027:0.15;2028:0.336;2029:0.551;2030:0.846;2031:1,corrente,"perimetro massimo (D27): 15.563 posti comuni vacanti (90% di 30.215 meno la riduzione cumulata al 2031), 14.202 sostegno su posto vacante, 100.000 sostegno in deroga al ritmo delle specializzazioni (riserva nei corsi, M24); nella salvaguardia slittano per ultime anche dentro la Priorita 1"
-M23,Indennita per gli insegnanti delle scuole a rischio di dispersione (scuole difficili del Piano Lavoro Stabile),2,0.198,2029:0.491;2030:0.745;2031:1,corrente,"5% delle 3.198 scuole del DM 170/2022 per dispersione implicita INVALSI, circa 48.800 docenti, 338 euro lordo Stato al mese a regime; punteggio di carriera per chi resta almeno tre anni, senza costo; finanziata da COP17 al tasso prudente"
-M24,Corsi gratuiti di specializzazione sul sostegno con riserva per i supplenti in deroga,1,0.09,2027:1,corrente,"riserva del 35% dei posti TFA e percorsi INDIRE annuali per chi ha almeno tre anni di servizio sul sostegno: 20.000 specializzati in deroga l'anno"
-M25,Stabilizzazione del personale ATA su posto vacante,1,0.03,2027:0.15;2028:0.336;2029:0.551;2030:0.846;2031:1,corrente,"13.829 posti: 90% dei 17.781 supplenti annuali ATA (MIM 2024/25) meno i 2.174 posti tagliati dal comma 828; costo della progressione di carriera, stima 0,01-0,03 (D28b)"
+M01,Salute (Fase 1),1,11.0,2028:0.25;2029:0.45;2030:0.65;2031:0.85;2032:1,corrente,
+M02,Welfare e poverta,1,6.0,2028:0.183;2029:0.5;2030:0.867;2031:1,corrente,
+M03,Giustizia,1,0.8,2029:1,corrente,
+M04,Contro le mafie (netto),1,0.6,2028:1,corrente,
+M05,Carceri,1,0.55,2028:1,corrente,
+M06,Tutele per chi evade per sopravvivere,1,0.2,2028:1,corrente,
+M07,Scuola,2,5.71,2028:0.15;2029:0.336;2030:0.551;2031:0.846;2032:1,corrente,"6,8 meno stabilizzazioni (0,97, M21) e corsi (0,09, M24); aumento salariale ridotto da 4,5 a 4,16 miliardi (D27, D28b); meno stabilizzazione ATA (0,03, M25)"
+M08,Cofinanziamento degli investimenti,2,3.05,2028:0.41;2029:0.70;2030:1,investimento,quota di Fase 1 dal 2028 (D15)
+M09,Pensioni,2,1.8,2028:0.41;2029:0.70;2030:1,corrente,
+M10,Contrasto all'evasione (costo),2,1.5,2028:0.41;2029:0.70;2030:1,corrente,
+M11,Lavoro e salari,2,1.5,2028:0.41;2029:0.70;2030:1,corrente,
+M12,Casa,2,1.1,2028:0.41;2029:0.70;2030:1,corrente,
+M13,Calmiere dei prezzi,2,0.5,2028:0.41;2029:0.70;2030:1,corrente,
+M14,Stato digitale,2,0.4,2029:0.70;2030:1,corrente,
+M15,Trasporti Fase 1,2,0.3,2028:0.41;2029:0.70;2030:1,corrente,
+M16,Garanzia di lavoro sperimentale,2,0.3,2028:0.41;2029:0.70;2030:1,corrente,
+M17,R14 riga: riconoscimento dei titoli esteri (09),2,0.08,2029:0.5;2030:1,corrente,
+M18,R14 riga: laboratorio nazionale di valutazione (08),2,0.025,2028:1,corrente,
+M19,R14 riga: gestione dei seggi digitali (05),2,0.01,2030:1,corrente,
+M20,R14 riga: conto unico e seggi digitali (08 e 05),2,0.15,2028:0.25;2029:0.4167;2030:0.1667;2031:0.1667;2032:0,una_tantum,importi una tantum distribuiti su quattro anni
+M21,Stabilizzazioni degli insegnanti,1,0.97,2028:0.15;2029:0.336;2030:0.551;2031:0.846;2032:1,corrente,"perimetro massimo (D27): 15.563 posti comuni vacanti (90% di 30.215 meno la riduzione cumulata al 2031), 14.202 sostegno su posto vacante, 100.000 sostegno in deroga al ritmo delle specializzazioni (riserva nei corsi, M24); nella salvaguardia slittano per ultime anche dentro la Priorita 1"
+M23,Indennita per gli insegnanti delle scuole a rischio di dispersione (scuole difficili del Piano Lavoro Stabile),2,0.198,2030:0.491;2031:0.745;2032:1,corrente,"5% delle 3.198 scuole del DM 170/2022 per dispersione implicita INVALSI, circa 48.800 docenti, 338 euro lordo Stato al mese a regime; punteggio di carriera per chi resta almeno tre anni, senza costo; finanziata da COP17 al tasso prudente"
+M24,Corsi gratuiti di specializzazione sul sostegno con riserva per i supplenti in deroga,1,0.09,2028:1,corrente,riserva del 35% dei posti TFA e percorsi INDIRE annuali per chi ha almeno tre anni di servizio sul sostegno: 20.000 specializzati in deroga l'anno
+M25,Stabilizzazione del personale ATA su posto vacante,1,0.03,2028:0.15;2029:0.336;2030:0.551;2031:0.846;2032:1,corrente,"13.829 posti: 90% dei 17.781 supplenti annuali ATA (MIM 2024/25) meno i 2.174 posti tagliati dal comma 828; costo della progressione di carriera, stima 0,01-0,03 (D28b)"

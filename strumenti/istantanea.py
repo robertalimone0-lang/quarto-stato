@@ -29,7 +29,7 @@ def raccogli(M, D, curva_bonus):
     Y = M.Y
     out = {"P2_RINVIATA": M.P2_RINVIATA}
     out["costanti"] = dict(SOGLIA=M.SOGLIA, PRENOTAZIONE=M.PRENOTAZIONE, QUOTA_ECCEDENZA=M.QUOTA_ECCEDENZA,
-                           RIPARTIZIONE_LEVE=M.RIPARTIZIONE_LEVE, AVVIO_P2_2027=M.AVVIO_P2_2027, MULT=M.MULT)
+                           RIPARTIZIONE_LEVE=M.RIPARTIZIONE_LEVE, AVVIO_P2_PRIMO_ANNO=M.AVVIO_P2_PRIMO_ANNO, MULT=M.MULT)
     out["PIL"] = _chiavi(M.PIL)
     for nome in ("BUSTA", "P2_PIENA", "P2"):
         out[nome] = _chiavi(getattr(M, nome))
@@ -60,7 +60,7 @@ def raccogli(M, D, curva_bonus):
             r["gradini_riconoscimento"] = _chiavi(M.gradini(s, curva_bonus, riconoscimento=True))
     out["per_classe_nominale"] = {str(y): M.per_classe("nominale", y) for y in Y}
     out["salvaguardia"] = _chiavi(M.salvaguardia())
-    out["salvaguardia_2029"] = _chiavi(M.salvaguardia(primo=2029))
+    out["salvaguardia_2030"] = _chiavi(M.salvaguardia(primo=2030))
     out["debito"] = {k: _chiavi(v) for k, v in D["scenari"]().items()}
     out["debito_confronto"] = _chiavi(D["percorso"](ds=D["avanzo_programma"]("centrale", True)))
     out["debito_prudente_stress"] = _chiavi(D["percorso"](ds=D["avanzo_programma"]("prudente"), dg=-0.005, shock=0.01))

@@ -2,13 +2,14 @@
 
 Legge la tabella unica delle coperture (coperture.csv), i costi di Fase 1 (misure.csv),
 le leve di entrata (leve.csv) e la coda di attivazione (coda.csv). Valori in miliardi
-di euro correnti. Anni 2027-2035: legislatura 2027-2031, poi valori a regime.
+di euro correnti. Anni 2028-2036: programma 2028-2032 (prima legge di bilancio: quella per il 2028,
+approvata entro il 31 dicembre 2027, S16), poi valori a regime.
 
 Regole applicate (CLAUDE.md):
 - scenari per voce con tassi di realizzazione e rampe; costi +5% nel prudente, +10% nell'avverso;
 - lo scenario prudente chiude ogni anno con margine >= 0: la Priorita 2 impegnata e il minimo
   tra fabbisogno e busta prudente presente e futura;
-- Priorita 2 del 2027 dal 1 luglio, cofinanziamento degli investimenti dal 2028;
+- Priorita 2 del primo anno dal 1 luglio, cofinanziamento degli investimenti dal secondo anno;
 - coda: certificazione trimestrale (media di quattro trimestri, quindi anni Y-1 e Y-2),
   soglia 110% del costo a regime, scorrimento con prenotazione del 50%;
 - la coda si copre prima con il 50% dell'eccedenza delle coperture sul prudente, poi con le leve;
@@ -29,17 +30,18 @@ import copy
 import csv
 
 DIR = Path(__file__).resolve().parent
-Y = list(range(2027, 2036))
+PRIMO_ANNO, ANNO_REGIME = 2028, 2032  # S16: orizzonte del programma 2028-2032
+Y = list(range(PRIMO_ANNO, PRIMO_ANNO + 9))
 SC = ["centrale", "prudente", "avverso"]
 
 COSTANTI = dict(
     MULT={"centrale": 1.00, "prudente": 1.05, "avverso": 1.10, "alta": 1.00},
     SOGLIA=1.10, PRENOTAZIONE=0.50, QUOTA_ECCEDENZA=0.50,
     RIPARTIZIONE_LEVE={"irpef": 0.50, "debito": 0.30, "riserva": 0.20},  # gettito delle leve rimasto libero
-    AVVIO_P2_2027=0.5,  # Priorita 2 del 2027 dal 1 luglio
+    AVVIO_P2_PRIMO_ANNO=0.5,  # Priorita 2 del primo anno dal 1 luglio
     CRESCITA_PIL_DOPO_2029=1.026,  # ipotesi: crescita nominale invariata al livello 2029
     RICONOSCIMENTO_R1=3.85,  # quota della Riforma 1 riconosciuta in via prudente come misure discrezionali (D20)
-    RAMPA_EV="2028:0.25;2029:0.5;2030:0.75;2031:1",
+    RAMPA_EV="2029:0.25;2030:0.5;2031:0.75;2032:1",
     # rinnovo contrattuale 2031-2033 dei dipendenti statali, per analogia con il 2028-2030 della L. 207/2024 (V42):
     # minore avanzo nel tendenziale del debito e spesa nel percorso di spesa netta, a carico di qualunque governo
     RINNOVO_DOPO_2029={2031: 1.954, 2032: 4.027},
@@ -108,7 +110,7 @@ class Quadro:
         self.Y, self.SC = Y, SC
         self.MULT, self.SOGLIA = c["MULT"], c["SOGLIA"]
         self.PRENOTAZIONE, self.QUOTA_ECCEDENZA = c["PRENOTAZIONE"], c["QUOTA_ECCEDENZA"]
-        self.RIPARTIZIONE_LEVE, self.AVVIO_P2_2027 = c["RIPARTIZIONE_LEVE"], c["AVVIO_P2_2027"]
+        self.RIPARTIZIONE_LEVE, self.AVVIO_P2_PRIMO_ANNO = c["RIPARTIZIONE_LEVE"], c["AVVIO_P2_PRIMO_ANNO"]
         self.RICONOSCIMENTO_R1 = c["RICONOSCIMENTO_R1"]
         self.RINNOVO_DOPO_2029 = c["RINNOVO_DOPO_2029"]
         self._RAMPA_EV = rampa(c["RAMPA_EV"])
@@ -118,7 +120,7 @@ class Quadro:
         self.CODA, self.DPFP, self.RISERVA = tab["coda"], tab["dpfp"], tab["riserva"]
 
         self.PIL = {int(r["anno"]): float(r["pil_nominale_mld"]) for r in self.DPFP if r["quadro"] == "tendenziale"}
-        for y in range(2030, 2036):
+        for y in range(2030, Y[-1] + 1):
             self.PIL[y] = self.PIL[y - 1] * c["CRESCITA_PIL_DOPO_2029"]
 
         self.BUSTA = {y: (self.copertura("prudente", y) - self.p1(y) * self.MULT["prudente"]) / self.MULT["prudente"]
@@ -127,12 +129,13 @@ class Quadro:
         self._cof = next(r for r in self.MISURE if r["codice"] == "M08")
         _cof_rinviato = float(next(v for v in self.CODA if v["codice"] == "Q09")["costo_regime"])
         self._cof_fase1 = float(self._cof["costo_regime"]) - _cof_rinviato  # quota del cofinanziamento rimasta in Fase 1
-        _cof_2027 = self._cof_fase1 * rampa(self._cof["rampa"])[2027] * self.P2_PIENA[2027] / self.p2_fabbisogno(2027)
+        p0 = PRIMO_ANNO
+        _cof_0 = self._cof_fase1 * rampa(self._cof["rampa"])[p0] * self.P2_PIENA[p0] / self.p2_fabbisogno(p0)
         self.P2 = dict(self.P2_PIENA)
-        self.P2[2027] = self.AVVIO_P2_2027 * (self.P2_PIENA[2027] - _cof_2027)  # dal 1 luglio 2027, cofinanziamento dal 2028
-        self.P2_RINVIATA = self.p2_fabbisogno(2031) - self.P2[2031]
+        self.P2[p0] = self.AVVIO_P2_PRIMO_ANNO * (self.P2_PIENA[p0] - _cof_0)  # dal 1 luglio del primo anno, cofinanziamento dal secondo
+        self.P2_RINVIATA = self.p2_fabbisogno(ANNO_REGIME) - self.P2[ANNO_REGIME]
         self._TARDIVE = [r for r in self.MISURE if r["priorita"] == "2"
-                         and min(int(p.split(":")[0]) for p in r["rampa"].split(";")) >= 2028]
+                         and min(int(p.split(":")[0]) for p in r["rampa"].split(";")) >= PRIMO_ANNO + 1]
 
     # ---------------- coperture di Fase 1 ----------------
     @staticmethod
@@ -254,9 +257,9 @@ class Quadro:
         return attiva, out
 
     # ---------------- clausola di salvaguardia (scenario avverso) ----------------
-    def salvaguardia(self, primo=2028):
+    def salvaguardia(self, primo=PRIMO_ANNO + 1):
         s, righe = "avverso", {}
-        base_p2, base_p1 = 0.0, self.p1(primo - 1)  # nello scenario avverso la Priorita 2 del 2027 non e mai partita
+        base_p2, base_p1 = 0.0, self.p1(primo - 1)  # nello scenario avverso la Priorita 2 del primo anno non e mai partita
         for y in Y:
             buco = self.margine_fase1(s, y)
             if buco >= 0:
@@ -286,8 +289,8 @@ class Quadro:
 
     # ---------------- percorso di spesa netta e riserva condizionata (D19, D20, D22) ----------------
     def _cofinanziamento_fase1(self, y):
-        """Cofinanziamento di programmi UE, escluso dalla spesa netta (quota di Fase 1, dal 2028)."""
-        if y <= 2027:
+        """Cofinanziamento di programmi UE, escluso dalla spesa netta (quota di Fase 1, dal secondo anno)."""
+        if y <= PRIMO_ANNO:
             return 0.0
         return self._cof_fase1 * rampa(self._cof["rampa"])[y] * (self.P2[y] / self.p2_fabbisogno(y))
 
@@ -340,7 +343,7 @@ def quadro(variante=None):
 # Interfaccia del modulo: il quadro del programma, come prima del refactoring.
 MULT, SOGLIA, PRENOTAZIONE, QUOTA_ECCEDENZA = (_PROGRAMMA.MULT, _PROGRAMMA.SOGLIA,
                                                 _PROGRAMMA.PRENOTAZIONE, _PROGRAMMA.QUOTA_ECCEDENZA)
-RIPARTIZIONE_LEVE, AVVIO_P2_2027, RICONOSCIMENTO_R1 = (_PROGRAMMA.RIPARTIZIONE_LEVE, _PROGRAMMA.AVVIO_P2_2027,
+RIPARTIZIONE_LEVE, AVVIO_P2_PRIMO_ANNO, RICONOSCIMENTO_R1 = (_PROGRAMMA.RIPARTIZIONE_LEVE, _PROGRAMMA.AVVIO_P2_PRIMO_ANNO,
                                                        _PROGRAMMA.RICONOSCIMENTO_R1)
 RINNOVO_DOPO_2029 = _PROGRAMMA.RINNOVO_DOPO_2029
 COPERTURE, MISURE, LEVE, CODA, DPFP, RISERVA = (_PROGRAMMA.COPERTURE, _PROGRAMMA.MISURE, _PROGRAMMA.LEVE,

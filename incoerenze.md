@@ -210,4 +210,5 @@ Analisi, nessuna modifica al quadro: l'autrice sceglie voce per voce. Quattro co
 - **V55. Bollo sulle fatture dei forfettari.** Gettito annuo da chiedere all'Agenzia delle entrate.
 - **V56. Sondaggi.** Consenso alle misure dei cento giorni da documentare con Demos, Ipsos, YouTrend e SWG.
 - **V57. Partite IVA.** Numero delle persone fisiche titolari di partita IVA attive e dei forfettari, dall'Osservatorio sulle partite IVA del MEF; versamenti di acconti degli autonomi dai dati F24.
+- **S16 (decisa, giovedì 15 ottobre 2026).** Quadro spostato di un anno: orizzonte 2028–2032, prima legge di bilancio quella per il 2028. Tendenziale DPFP e rinnovo 2031–2033 restano agli anni di calendario; l'estensione del tendenziale 2030–2032 è un'ipotesi del modello, da sostituire con il documento di finanza pubblica dell'autunno 2027. Conseguenze: Q16 nel 2031; la Riforma 19 ridotta (Q10) nel 2034, fuori dalla legislatura, registrata fra le misure della legislatura successiva; debito del programma centrale 131,6% nel 2032. Da ricalcolare per il 2032: impegno sull'occupazione (74,5% nel 2031) e tabelle della scuola (supplenze residue).
 
