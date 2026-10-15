@@ -97,6 +97,14 @@ def _applica(tabella, righe, mod):
     return righe
 
 
+def _curva_bonus():
+    """Gettito della curva sulle agevolazioni edilizie (gradino d), dalle tavole del Dipartimento delle finanze."""
+    import sys
+    sys.path.insert(0, str(DIR / "spese_fiscali"))
+    import analisi
+    return analisi.profilo_curva(Y)
+
+
 class Quadro:
     """Quadro finanziario completo per una variante delle ipotesi (None = quadro del programma)."""
 
@@ -256,30 +264,50 @@ class Quadro:
                           saldo=m1 + g[y] - cc - irpef + contributi)
         return attiva, out
 
-    # ---------------- clausola di salvaguardia (scenario avverso) ----------------
-    def salvaguardia(self, primo=PRIMO_ANNO + 1):
+    # ---------------- scala unica dello scenario avverso ----------------
+    INSEGNANTI = ("M21", "M24", "M25")  # stabilizzazioni dei docenti, corsi di specializzazione, ATA: slittano per ultime
+
+    def _p1_parti(self, y):
+        ins = sum(float(r["costo_regime"]) * rampa(r["rampa"])[y] for r in self.MISURE
+                  if r["priorita"] == "1" and r["codice"] in self.INSEGNANTI)
+        return self.p1(y) - ins, ins
+
+    def salvaguardia(self, primo=PRIMO_ANNO + 1, curva_bonus=None):
+        """Scala unica dello scenario avverso (decisione del 15 ottobre 2026): dimensionata sul buco maggiore fra
+        il margine di Fase 1 e lo scarto di spesa netta (peggiore delle due varianti di riconoscimento), copre in
+        quest'ordine: 1) sospensione della coda; riserva a)-d); 2) Priorita 2 non avviata; 3) Priorita 2 gia avviata;
+        4) rinvio dei nuovi ingressi della Priorita 1, con stabilizzazioni degli insegnanti per ultime."""
         s, righe = "avverso", {}
-        base_p2, base_p1 = 0.0, self.p1(primo - 1)  # nello scenario avverso la Priorita 2 del primo anno non e mai partita
+        if curva_bonus is None:
+            curva_bonus = _curva_bonus()
+        base_alt, base_ins = self._p1_parti(primo - 1)  # nello scenario avverso la Priorita 2 del primo anno non parte
         for y in Y:
             buco = self.margine_fase1(s, y)
-            if buco >= 0:
-                righe[y] = dict(buco=buco, g1=0.0, g2=0.0, g3=0.0, g4=0.0, residuo=0.0)
+            scarto = min(self.scarto_spesa_netta(s, y), self.scarto_spesa_netta(s, y, True))
+            bisogno = max(0.0, -buco, -scarto)
+            riga = dict(buco=buco, scarto_ue=scarto, bisogno=bisogno, g1=0.0, riserva=0.0, g2=0.0, g3=0.0,
+                        g4=0.0, g4_insegnanti=0.0, residuo=0.0)
+            if bisogno == 0:
+                righe[y] = riga
                 continue
-            if y < primo:  # primo anno: la Priorita 2 di luglio non parte (gradino 2), poi rinvio dei nuovi ingressi P1 (gradino 4)
-                g2 = min(-buco, self.P2[y] * self.MULT[s])
-                g4 = min(-buco - g2, self.p1(y) * self.MULT[s])
-                righe[y] = dict(buco=buco, g1=0.0, g2=g2, g3=0.0, g4=g4, residuo=min(0.0, buco + g2 + g4))
-                continue
-            tardive = (sum(float(r["costo_regime"]) * rampa(r["rampa"])[y] for r in self._TARDIVE)
-                       * self.P2[y] / self.p2_fabbisogno(y) * self.MULT[s])
-            cap = [0.0, tardive, max(0.0, (self.P2[y] - base_p2) * self.MULT[s] - tardive),
-                   max(0.0, (self.p1(y) - base_p1) * self.MULT[s])]
-            bisogno, usati = -buco, []
+            riserva = sum(float(g[s]) for g in self.RISERVA if g["gradino"] in "abc" and y >= int(g["dal"]))
+            riserva += curva_bonus.get(y, 0.0)
+            alt, ins = self._p1_parti(y)
+            if y < primo:  # primo anno: la Priorita 2 di luglio non parte, poi rinvio dei nuovi ingressi della Priorita 1
+                cap = [riserva, self.P2[y] * self.MULT[s], 0.0, alt * self.MULT[s], ins * self.MULT[s]]
+            else:
+                tardive = (sum(float(r["costo_regime"]) * rampa(r["rampa"])[y] for r in self._TARDIVE)
+                           * self.P2[y] / self.p2_fabbisogno(y) * self.MULT[s])
+                cap = [riserva, tardive, max(0.0, self.P2[y] * self.MULT[s] - tardive),
+                       max(0.0, (alt - base_alt) * self.MULT[s]), max(0.0, (ins - base_ins) * self.MULT[s])]
+            usati, resto = [], bisogno
             for c in cap:
-                u = min(c, max(0.0, bisogno))
+                u = min(c, max(0.0, resto))
                 usati.append(u)
-                bisogno -= u
-            righe[y] = dict(buco=buco, g1=usati[0], g2=usati[1], g3=usati[2], g4=usati[3], residuo=-max(0.0, bisogno))
+                resto -= u
+            riga.update(riserva=usati[0], g2=usati[1], g3=usati[2], g4=usati[3] + usati[4], g4_insegnanti=usati[4],
+                        residuo=-max(0.0, resto))
+            righe[y] = riga
         return righe
 
     def sanita_pil(self, s, attiva, y, base=6.4):

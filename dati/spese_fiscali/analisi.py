@@ -134,6 +134,6 @@ def gettito_curva(massimo=1.0, phi=0.55):
                 coorte_netta=regime / 10 - TETTO_L207_PER_COORTE)
 
 
-def profilo_curva(anni, primo_anno=2028, **kw):
+def profilo_curva(anni, primo_anno=2029, **kw):  # secondo anno del programma (S16)
     c = gettito_curva(**kw)["coorte_netta"]
     return {y: max(0, y - primo_anno + 1) * c if y >= primo_anno else 0.0 for y in anni}

@@ -64,7 +64,7 @@ def avanzo_avverso_con_salvaguardia(m=None):
     m = m or M
     _, fl = m.flussi("avverso")
     sv = m.salvaguardia()
-    return {y: (fl[y]["saldo"] + sv[y]["g2"] + sv[y]["g3"] + sv[y]["g4"]) / m.PIL[y] for y in m.Y}
+    return {y: (fl[y]["saldo"] + sv[y]["riserva"] + sv[y]["g2"] + sv[y]["g3"] + sv[y]["g4"]) / m.PIL[y] for y in m.Y}
 
 
 def scenari(m=None):

@@ -11,6 +11,9 @@ from IPython.display import Markdown
 pct = lambda x: it(100 * x, 0) + "%"
 prud = [M.margine_fase1("prudente", y) for y in M.Y[:5]]
 avv = M.salvaguardia()
+_nuovi = (M.p1(M.ANNO_REGIME) - M.p1(M.PRIMO_ANNO)) * M.MULT["avverso"]
+quota_p1_nuovi = 100 * avv[M.ANNO_REGIME]["g4"] / _nuovi
+quota_p1_totale = 100 * avv[M.ANNO_REGIME]["g4"] / (M.p1(M.ANNO_REGIME) * M.MULT["avverso"])
 ```
 
 Questo capitolo fissa le regole con cui il programma spende, si finanzia e si corregge. Ogni capitolo successivo le applica senza eccezioni. Le regole valgono dal primo giorno della legislatura e sono scritte per poter essere verificate da chiunque, con i dati e il codice pubblicati insieme al documento.
@@ -134,24 +137,26 @@ fig = flusso_attivazione()
 
 ## La clausola di salvaguardia {#sec-salvaguardia}
 
-Se il consuntivo segue lo scenario avverso, i congelamenti scattano in un ordine automatico:
+Se il consuntivo segue lo scenario avverso, una sola scala copre il buco maggiore fra due: il disavanzo di Fase 1 (coperture realizzate meno costi) e lo scarto rispetto al percorso europeo di spesa netta. Usare una sola scala evita di contare due volte la stessa Priorità 2 rinviata. I congelamenti scattano in quest'ordine automatico:
 
-1. sospensione di tutte le attivazioni della coda;
+1. sospensione di tutte le attivazioni della coda, poi i gradini della riserva sulle entrate (sussidi dannosi, spending review, cedolare, agevolazioni edilizie);
 2. rinvio delle voci di Priorità 2 non ancora avviate;
 3. rallentamento dei profili di avvio della Priorità 2 già avviata;
-4. per la Priorità 1, solo il rinvio dei nuovi ingressi, mai la riduzione delle prestazioni già riconosciute.
+4. per la Priorità 1, solo il rinvio dei nuovi ingressi, mai la riduzione delle prestazioni già riconosciute; le stabilizzazioni degli insegnanti slittano per ultime.
 
 Entro trenta giorni dalla certificazione che rileva lo scostamento, il governo pubblica il piano correttivo, con il ricalcolo dei costi a regime e la nuova copertura, e lo sottopone al controllo indipendente. Contratti validamente stipulati e prestazioni già erogate hanno un trattamento giuridico specifico. La @tbl-salvaguardia mostra quanto copre ogni gradino nello scenario avverso.
 
 ```{python}
 #| label: tbl-salvaguardia
-#| tbl-cap: "Scenario avverso: buco di Fase 1 e copertura dei gradini della salvaguardia (miliardi di euro)"
-righe = [(y, it(r["buco"], 2, segno=True), it(r["g1"], 2), it(r["g2"], 2), it(r["g3"], 2), it(r["g4"], 2), it(r["residuo"], 2))
+#| tbl-cap: "Scenario avverso: buco di Fase 1, scarto di spesa netta e copertura della scala unica (miliardi di euro)"
+righe = [(y, it(r["buco"], 2, segno=True), it(r["scarto_ue"], 2, segno=True), it(r["g1"] + r["riserva"], 2), it(r["g2"], 2),
+          it(r["g3"], 2), it(r["g4"], 2), it(r["g4_insegnanti"], 2), it(r["residuo"], 2))
          for y, r in avv.items() if y <= M.ANNO_REGIME]
-Markdown(tabella_md(["Anno", "Saldo prima", "1. Coda", "2. P2 non avviata", "3. P2 rallentata", "4. Nuovi ingressi P1", "Residuo"], righe))
+Markdown(tabella_md(["Anno", "Saldo di Fase 1", "Scarto di spesa netta", "1. Coda e riserva", "2. P2 non avviata",
+                     "3. P2 rallentata", "4. Nuovi ingressi P1", "di cui insegnanti", "Residuo"], righe))
 ```
 
-Il buco si chiude in ogni anno. In ogni anno tutta la Priorità 2 slitta prima di qualsiasi rinvio della Priorità 1. Il quarto gradino interviene solo per la parte del buco che supera l'intera Priorità 2: e la Priorità 1 rinvia i nuovi ingressi fino a `{python} it(avv[M.ANNO_REGIME]["g4"], 1)` miliardi nel `{python} M.ANNO_REGIME`. **Nello scenario avverso slitta quindi il `{python} it(100*avv[M.ANNO_REGIME]["g4"]/(M.p1(M.ANNO_REGIME)*M.MULT["avverso"]), 1)`% dei nuovi ingressi della Priorità 1 del `{python} M.ANNO_REGIME`, senza alcuna riduzione delle prestazioni già riconosciute.**
+Il buco si chiude in ogni anno. In ogni anno la riserva e tutta la Priorità 2 intervengono prima di qualsiasi rinvio della Priorità 1, e le stabilizzazioni degli insegnanti non slittano mai. Nel `{python} M.ANNO_REGIME` la Priorità 1 rinvia nuovi ingressi per `{python} it(avv[M.ANNO_REGIME]["g4"], 2)` miliardi. **Nello scenario avverso del `{python} M.ANNO_REGIME` slitta il `{python} it(quota_p1_nuovi, 1)`% dei nuovi ingressi della Priorità 1 rispetto al primo anno, pari al `{python} it(quota_p1_totale, 1)`% della spesa di Priorità 1 di quell'anno. Le prestazioni già riconosciute non si riducono.** È la prova di solidità del programma: anche se le coperture si realizzano ai tassi più bassi, i diritti già in essere restano garantiti e il percorso europeo resta rispettato.
 
 ## Certificazione e controllo indipendente {#sec-certificazione}
 
